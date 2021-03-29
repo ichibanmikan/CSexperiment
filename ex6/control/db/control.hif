@@ -1,0 +1,173 @@
+Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+7
+3344
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+74273
+# storage
+db|control.(2).cnf
+db|control.(2).cnf
+# case_insensitive
+# source_file
+d:|quartus|libraries|others|maxplus2|74273.bdf
+43247217913d17ab51bbea92feb3e38
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74273:inst3
+74273:inst4
+74273:inst8
+74273:inst2
+}
+# macro_sequence
+
+# end
+# entity
+7474
+# storage
+db|control.(3).cnf
+db|control.(3).cnf
+# case_insensitive
+# source_file
+d:|quartus|libraries|others|maxplus2|7474.bdf
+f0d781b738e7134a9d686c0ea27f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+7474:inst7
+7474:inst5
+7474:inst6
+}
+# macro_sequence
+
+# end
+# entity
+74244
+# storage
+db|control.(5).cnf
+db|control.(5).cnf
+# case_insensitive
+# source_file
+d:|quartus|libraries|others|maxplus2|74244.bdf
+b991c4e54d71024b356407b6c66fc4
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74244:inst1
+}
+# macro_sequence
+
+# end
+# entity
+rom
+# storage
+db|control.(1).cnf
+db|control.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+blocks|rom.vhd
+f097f86115616f0776a7a3c8a6e1a5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+rom:inst9
+}
+# lmf
+d:|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+shixu
+# storage
+db|control.(4).cnf
+db|control.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+blocks|shixu.vhd
+c5bac296c630871447e4ee3a3b86e5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+shixu:inst
+}
+# lmf
+d:|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+control
+# storage
+db|control.(0).cnf
+db|control.(0).cnf
+# case_insensitive
+# source_file
+control.bdf
+afd1d2f16da1cfd966d62fb3ea9ad4e9
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

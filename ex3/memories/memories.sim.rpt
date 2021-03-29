@@ -1,0 +1,313 @@
+Simulator report for memories
+Tue Mar 09 20:44:31 2021
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. |memories|lpm_ram_io:inst|altram:sram|content
+  6. Coverage Summary
+  7. Complete 1/0-Value Coverage
+  8. Missing 1-Value Coverage
+  9. Missing 0-Value Coverage
+ 10. Simulator INI Usage
+ 11. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------+
+; Simulator Summary                             ;
++-----------------------------+-----------------+
+; Type                        ; Value           ;
++-----------------------------+-----------------+
+; Simulation Start Time       ; 0 ps            ;
+; Simulation End Time         ; 1.0 us          ;
+; Simulation Netlist Size     ; 94 nodes        ;
+; Simulation Coverage         ;      68.32 %    ;
+; Total Number of Transitions ; 712             ;
+; Simulation Breakpoints      ; 0               ;
+; Family                      ; FLEX10K         ;
+; Device                      ; EPF10K20TI144-4 ;
++-----------------------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++-----------------------------------------------+
+; |memories|lpm_ram_io:inst|altram:sram|content ;
++-----------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II to view the memory report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      68.32 % ;
+; Total nodes checked                                 ; 94           ;
+; Total output ports checked                          ; 101          ;
+; Total output ports with complete 1/0-value coverage ; 69           ;
+; Total output ports with no 1/0-value coverage       ; 28           ;
+; Total output ports with no 1-value coverage         ; 29           ;
+; Total output ports with no 0-value coverage         ; 31           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                         ;
++----------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                    ; Output Port Name                                                                                  ; Output Port Type ;
++----------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+------------------+
+; |memories|sw_pc_ar:inst1|bus_Reg[7]~10                                                       ; |memories|sw_pc_ar:inst1|bus_Reg[7]~10                                                            ; data_out0        ;
+; |memories|sw_pc_ar:inst1|bus_Reg[7]~11                                                       ; |memories|sw_pc_ar:inst1|bus_Reg[7]~11                                                            ; data_out0        ;
+; |memories|lpm_ram_io:inst|datatri[7]~10                                                      ; |memories|lpm_ram_io:inst|datatri[7]~10                                                           ; data_out0        ;
+; |memories|lpm_ram_io:inst|datatri[7]~11                                                      ; |memories|lpm_ram_io:inst|datatri[7]~11                                                           ; data_out0        ;
+; |memories|sw_pc_ar:inst1|bus_Reg[6]~12                                                       ; |memories|sw_pc_ar:inst1|bus_Reg[6]~12                                                            ; data_out0        ;
+; |memories|lpm_ram_io:inst|datatri[6]~12                                                      ; |memories|lpm_ram_io:inst|datatri[6]~12                                                           ; data_out0        ;
+; |memories|lpm_ram_io:inst|datatri[6]~13                                                      ; |memories|lpm_ram_io:inst|datatri[6]~13                                                           ; data_out0        ;
+; |memories|sw_pc_ar:inst1|bus_Reg[5]~13                                                       ; |memories|sw_pc_ar:inst1|bus_Reg[5]~13                                                            ; data_out0        ;
+; |memories|lpm_ram_io:inst|datatri[5]~14                                                      ; |memories|lpm_ram_io:inst|datatri[5]~14                                                           ; data_out0        ;
+; |memories|lpm_ram_io:inst|altram:sram|segment[0][5]                                          ; |memories|lpm_ram_io:inst|altram:sram|q[5]                                                        ; dataout          ;
+; |memories|lpm_ram_io:inst|datatri[5]~15                                                      ; |memories|lpm_ram_io:inst|datatri[5]~15                                                           ; data_out0        ;
+; |memories|sw_pc_ar:inst1|bus_Reg[4]~14                                                       ; |memories|sw_pc_ar:inst1|bus_Reg[4]~14                                                            ; data_out0        ;
+; |memories|lpm_ram_io:inst|datatri[4]~16                                                      ; |memories|lpm_ram_io:inst|datatri[4]~16                                                           ; data_out0        ;
+; |memories|lpm_ram_io:inst|altram:sram|segment[0][4]                                          ; |memories|lpm_ram_io:inst|altram:sram|q[4]                                                        ; dataout          ;
+; |memories|lpm_ram_io:inst|datatri[4]~17                                                      ; |memories|lpm_ram_io:inst|datatri[4]~17                                                           ; data_out0        ;
+; |memories|sw_pc_ar:inst1|bus_Reg[3]~15                                                       ; |memories|sw_pc_ar:inst1|bus_Reg[3]~15                                                            ; data_out0        ;
+; |memories|lpm_ram_io:inst|datatri[3]~18                                                      ; |memories|lpm_ram_io:inst|datatri[3]~18                                                           ; data_out0        ;
+; |memories|lpm_ram_io:inst|altram:sram|segment[0][3]                                          ; |memories|lpm_ram_io:inst|altram:sram|q[3]                                                        ; dataout          ;
+; |memories|lpm_ram_io:inst|datatri[3]~19                                                      ; |memories|lpm_ram_io:inst|datatri[3]~19                                                           ; data_out0        ;
+; |memories|sw_pc_ar:inst1|bus_Reg[2]~16                                                       ; |memories|sw_pc_ar:inst1|bus_Reg[2]~16                                                            ; data_out0        ;
+; |memories|lpm_ram_io:inst|datatri[2]~20                                                      ; |memories|lpm_ram_io:inst|datatri[2]~20                                                           ; data_out0        ;
+; |memories|lpm_ram_io:inst|altram:sram|segment[0][2]                                          ; |memories|lpm_ram_io:inst|altram:sram|q[2]                                                        ; dataout          ;
+; |memories|lpm_ram_io:inst|datatri[2]~21                                                      ; |memories|lpm_ram_io:inst|datatri[2]~21                                                           ; data_out0        ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]~COUT ; cout             ;
+; |memories|sw_pc_ar:inst1|bus_Reg[1]~17                                                       ; |memories|sw_pc_ar:inst1|bus_Reg[1]~17                                                            ; data_out0        ;
+; |memories|lpm_ram_io:inst|datatri[1]~22                                                      ; |memories|lpm_ram_io:inst|datatri[1]~22                                                           ; data_out0        ;
+; |memories|lpm_ram_io:inst|datatri[1]~23                                                      ; |memories|lpm_ram_io:inst|datatri[1]~23                                                           ; data_out0        ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]      ; data_out0        ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]~COUT ; cout             ;
+; |memories|sw_pc_ar:inst1|bus_Reg[0]~18                                                       ; |memories|sw_pc_ar:inst1|bus_Reg[0]~18                                                            ; data_out0        ;
+; |memories|lpm_ram_io:inst|datatri[0]~24                                                      ; |memories|lpm_ram_io:inst|datatri[0]~24                                                           ; data_out0        ;
+; |memories|lpm_ram_io:inst|altram:sram|segment[0][0]                                          ; |memories|lpm_ram_io:inst|altram:sram|q[0]                                                        ; dataout          ;
+; |memories|lpm_ram_io:inst|datatri[0]~25                                                      ; |memories|lpm_ram_io:inst|datatri[0]~25                                                           ; data_out0        ;
+; |memories|lpm_ram_io:inst|_~3                                                                ; |memories|lpm_ram_io:inst|_~3                                                                     ; data_out0        ;
+; |memories|sw_pc_ar:inst1|ar[0]                                                               ; |memories|sw_pc_ar:inst1|ar[0]                                                                    ; data_out0        ;
+; |memories|sw_pc_ar:inst1|seq2~1                                                              ; |memories|sw_pc_ar:inst1|seq2~1                                                                   ; data_out0        ;
+; |memories|sw_pc_ar:inst1|seq2~0                                                              ; |memories|sw_pc_ar:inst1|seq2~0                                                                   ; data_out0        ;
+; |memories|sw_pc_ar:inst1|bus_Reg[6]~19                                                       ; |memories|sw_pc_ar:inst1|bus_Reg[6]~19                                                            ; data_out0        ;
+; |memories|sw_pc_ar:inst1|bus_Reg[5]~20                                                       ; |memories|sw_pc_ar:inst1|bus_Reg[5]~20                                                            ; data_out0        ;
+; |memories|sw_pc_ar:inst1|bus_Reg[4]~21                                                       ; |memories|sw_pc_ar:inst1|bus_Reg[4]~21                                                            ; data_out0        ;
+; |memories|sw_pc_ar:inst1|bus_Reg[3]~22                                                       ; |memories|sw_pc_ar:inst1|bus_Reg[3]~22                                                            ; data_out0        ;
+; |memories|sw_pc_ar:inst1|bus_Reg[2]~23                                                       ; |memories|sw_pc_ar:inst1|bus_Reg[2]~23                                                            ; data_out0        ;
+; |memories|sw_pc_ar:inst1|bus_Reg[1]~24                                                       ; |memories|sw_pc_ar:inst1|bus_Reg[1]~24                                                            ; data_out0        ;
+; |memories|sw_pc_ar:inst1|bus_Reg[0]~25                                                       ; |memories|sw_pc_ar:inst1|bus_Reg[0]~25                                                            ; data_out0        ;
+; |memories|rd                                                                                 ; |memories|rd~corein                                                                               ; dataout          ;
+; |memories|sw_bus                                                                             ; |memories|sw_bus~corein                                                                           ; dataout          ;
+; |memories|pc_bus                                                                             ; |memories|pc_bus~corein                                                                           ; dataout          ;
+; |memories|inputd[0]                                                                          ; |memories|inputd[0]~corein                                                                        ; dataout          ;
+; |memories|clk_cdu                                                                            ; |memories|clk_cdu~corein                                                                          ; dataout          ;
+; |memories|we                                                                                 ; |memories|we~corein                                                                               ; dataout          ;
+; |memories|pcld                                                                               ; |memories|pcld~corein                                                                             ; dataout          ;
+; |memories|pcen                                                                               ; |memories|pcen~corein                                                                             ; dataout          ;
+; |memories|ldar                                                                               ; |memories|ldar~corein                                                                             ; dataout          ;
+; |memories|d[7]                                                                               ; |memories|d~0                                                                                     ; dataout          ;
+; |memories|d[7]                                                                               ; |memories|d[7]~output                                                                             ; padio            ;
+; |memories|d[6]                                                                               ; |memories|d~1                                                                                     ; dataout          ;
+; |memories|d[6]                                                                               ; |memories|d[6]~output                                                                             ; padio            ;
+; |memories|d[5]                                                                               ; |memories|d~2                                                                                     ; dataout          ;
+; |memories|d[5]                                                                               ; |memories|d[5]~output                                                                             ; padio            ;
+; |memories|d[4]                                                                               ; |memories|d~3                                                                                     ; dataout          ;
+; |memories|d[4]                                                                               ; |memories|d[4]~output                                                                             ; padio            ;
+; |memories|d[3]                                                                               ; |memories|d~4                                                                                     ; dataout          ;
+; |memories|d[3]                                                                               ; |memories|d[3]~output                                                                             ; padio            ;
+; |memories|d[2]                                                                               ; |memories|d~5                                                                                     ; dataout          ;
+; |memories|d[2]                                                                               ; |memories|d[2]~output                                                                             ; padio            ;
+; |memories|d[1]                                                                               ; |memories|d~6                                                                                     ; dataout          ;
+; |memories|d[1]                                                                               ; |memories|d[1]~output                                                                             ; padio            ;
+; |memories|d[0]                                                                               ; |memories|d~7                                                                                     ; dataout          ;
+; |memories|d[0]                                                                               ; |memories|d[0]~output                                                                             ; padio            ;
++----------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                            ;
++----------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                    ; Output Port Name                                                                                  ; Output Port Type ;
++----------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+------------------+
+; |memories|lpm_ram_io:inst|altram:sram|segment[0][7]                                          ; |memories|lpm_ram_io:inst|altram:sram|q[7]                                                        ; dataout          ;
+; |memories|lpm_ram_io:inst|datatri[7]~9                                                       ; |memories|lpm_ram_io:inst|datatri[7]~9                                                            ; data_out0        ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]      ; data_out0        ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]      ; data_out0        ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]~COUT ; cout             ;
+; |memories|lpm_ram_io:inst|altram:sram|segment[0][6]                                          ; |memories|lpm_ram_io:inst|altram:sram|q[6]                                                        ; dataout          ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]      ; data_out0        ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]~COUT ; cout             ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]      ; data_out0        ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]~COUT ; cout             ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]      ; data_out0        ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]~COUT ; cout             ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]      ; data_out0        ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]~COUT ; cout             ;
+; |memories|sw_pc_ar:inst1|ar[2]                                                               ; |memories|sw_pc_ar:inst1|ar[2]                                                                    ; data_out0        ;
+; |memories|sw_pc_ar:inst1|ar[3]                                                               ; |memories|sw_pc_ar:inst1|ar[3]                                                                    ; data_out0        ;
+; |memories|sw_pc_ar:inst1|ar[4]                                                               ; |memories|sw_pc_ar:inst1|ar[4]                                                                    ; data_out0        ;
+; |memories|sw_pc_ar:inst1|ar[5]                                                               ; |memories|sw_pc_ar:inst1|ar[5]                                                                    ; data_out0        ;
+; |memories|sw_pc_ar:inst1|ar[6]                                                               ; |memories|sw_pc_ar:inst1|ar[6]                                                                    ; data_out0        ;
+; |memories|sw_pc_ar:inst1|ar[7]                                                               ; |memories|sw_pc_ar:inst1|ar[7]                                                                    ; data_out0        ;
+; |memories|memenab                                                                            ; |memories|memenab~corein                                                                          ; dataout          ;
+; |memories|inputd[7]                                                                          ; |memories|inputd[7]~corein                                                                        ; dataout          ;
+; |memories|inputd[6]                                                                          ; |memories|inputd[6]~corein                                                                        ; dataout          ;
+; |memories|inputd[5]                                                                          ; |memories|inputd[5]~corein                                                                        ; dataout          ;
+; |memories|inputd[4]                                                                          ; |memories|inputd[4]~corein                                                                        ; dataout          ;
+; |memories|inputd[3]                                                                          ; |memories|inputd[3]~corein                                                                        ; dataout          ;
+; |memories|inputd[2]                                                                          ; |memories|inputd[2]~corein                                                                        ; dataout          ;
+; |memories|inputd[1]                                                                          ; |memories|inputd[1]~corein                                                                        ; dataout          ;
+; |memories|pcclr                                                                              ; |memories|pcclr~corein                                                                            ; dataout          ;
++----------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                            ;
++----------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                    ; Output Port Name                                                                                  ; Output Port Type ;
++----------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+------------------+
+; |memories|lpm_ram_io:inst|altram:sram|segment[0][7]                                          ; |memories|lpm_ram_io:inst|altram:sram|q[7]                                                        ; dataout          ;
+; |memories|lpm_ram_io:inst|datatri[7]~9                                                       ; |memories|lpm_ram_io:inst|datatri[7]~9                                                            ; data_out0        ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]      ; data_out0        ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]      ; data_out0        ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]~COUT ; cout             ;
+; |memories|lpm_ram_io:inst|altram:sram|segment[0][6]                                          ; |memories|lpm_ram_io:inst|altram:sram|q[6]                                                        ; dataout          ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]      ; data_out0        ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]~COUT ; cout             ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]      ; data_out0        ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]~COUT ; cout             ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]      ; data_out0        ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]~COUT ; cout             ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]      ; data_out0        ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]~COUT ; cout             ;
+; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1] ; |memories|sw_pc_ar:inst1|lpm_counter:pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]      ; data_out0        ;
+; |memories|lpm_ram_io:inst|altram:sram|segment[0][1]                                          ; |memories|lpm_ram_io:inst|altram:sram|q[1]                                                        ; dataout          ;
+; |memories|sw_pc_ar:inst1|ar[1]                                                               ; |memories|sw_pc_ar:inst1|ar[1]                                                                    ; data_out0        ;
+; |memories|sw_pc_ar:inst1|ar[2]                                                               ; |memories|sw_pc_ar:inst1|ar[2]                                                                    ; data_out0        ;
+; |memories|sw_pc_ar:inst1|ar[3]                                                               ; |memories|sw_pc_ar:inst1|ar[3]                                                                    ; data_out0        ;
+; |memories|sw_pc_ar:inst1|ar[4]                                                               ; |memories|sw_pc_ar:inst1|ar[4]                                                                    ; data_out0        ;
+; |memories|sw_pc_ar:inst1|ar[5]                                                               ; |memories|sw_pc_ar:inst1|ar[5]                                                                    ; data_out0        ;
+; |memories|sw_pc_ar:inst1|ar[6]                                                               ; |memories|sw_pc_ar:inst1|ar[6]                                                                    ; data_out0        ;
+; |memories|sw_pc_ar:inst1|ar[7]                                                               ; |memories|sw_pc_ar:inst1|ar[7]                                                                    ; data_out0        ;
+; |memories|inputd[7]                                                                          ; |memories|inputd[7]~corein                                                                        ; dataout          ;
+; |memories|inputd[6]                                                                          ; |memories|inputd[6]~corein                                                                        ; dataout          ;
+; |memories|inputd[5]                                                                          ; |memories|inputd[5]~corein                                                                        ; dataout          ;
+; |memories|inputd[4]                                                                          ; |memories|inputd[4]~corein                                                                        ; dataout          ;
+; |memories|inputd[3]                                                                          ; |memories|inputd[3]~corein                                                                        ; dataout          ;
+; |memories|inputd[2]                                                                          ; |memories|inputd[2]~corein                                                                        ; dataout          ;
+; |memories|inputd[1]                                                                          ; |memories|inputd[1]~corein                                                                        ; dataout          ;
+; |memories|pcclr                                                                              ; |memories|pcclr~corein                                                                            ; dataout          ;
++----------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Mar 09 20:44:31 2021
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off memories -c memories
+Info: Using vector source file "C:/Users/86150/Desktop/mylearn/CSexperiment/ex3/memories/memories.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning: Found logic contention at time 300.0 ns on bus node "|memories|d[5]~result"
+    Info: Node "d[5]~output" has logic level of 0
+    Info: Node "d[5]" has logic level of 1
+Warning: Found logic contention at time 300.0 ns on bus node "|memories|d[4]~result"
+    Info: Node "d[4]~output" has logic level of 1
+    Info: Node "d[4]" has logic level of 0
+Warning: Found logic contention at time 300.0 ns on bus node "|memories|d[3]~result"
+    Info: Node "d[3]~output" has logic level of 0
+    Info: Node "d[3]" has logic level of 1
+Warning: Found logic contention at time 300.0 ns on bus node "|memories|d[2]~result"
+    Info: Node "d[2]~output" has logic level of 0
+    Info: Node "d[2]" has logic level of 1
+Warning: Found logic contention at time 314.7 ns on bus node "|memories|d[0]~result"
+    Info: Node "d[0]~output" has logic level of 1
+    Info: Node "d[0]" has logic level of 0
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      68.32 %
+Info: Number of transitions in simulation is 712
+Info: Quartus II Simulator was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 164 megabytes
+    Info: Processing ended: Tue Mar 09 20:44:31 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

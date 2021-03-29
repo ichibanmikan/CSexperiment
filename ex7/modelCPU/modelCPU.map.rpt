@@ -1,0 +1,561 @@
+Analysis & Synthesis report for modelCPU
+Mon Mar 29 10:49:59 2021
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Analysis & Synthesis RAM Summary
+  8. State Machine - |modelCPU|control:inst|shixu:inst|fstate
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for CPU:inst6|memories:inst1|LPM_RAM_IO:inst|altram:sram|altsyncram:ram_block|altsyncram_m1a1:auto_generated
+ 14. Parameter Settings for User Entity Instance: CPU:inst6|memories:inst1|LPM_RAM_IO:inst
+ 15. Parameter Settings for User Entity Instance: getData:inst2|74161:inst
+ 16. Parameter Settings for User Entity Instance: getData:inst2|74161:inst1
+ 17. Parameter Settings for User Entity Instance: showOut:inst5|74161:inst4
+ 18. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++-------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status   ; Successful - Mon Mar 29 10:49:59 2021        ;
+; Quartus II Version            ; 9.0 Build 184 04/29/2009 SP 1 SJ Web Edition ;
+; Revision Name                 ; modelCPU                                     ;
+; Top-level Entity Name         ; modelCPU                                     ;
+; Family                        ; Stratix II                                   ;
+; Logic utilization             ; N/A                                          ;
+;     Combinational ALUTs       ; 201                                          ;
+;     Dedicated logic registers ; 87                                           ;
+; Total registers               ; 87                                           ;
+; Total pins                    ; 62                                           ;
+; Total virtual pins            ; 0                                            ;
+; Total block memory bits       ; 2,048                                        ;
+; DSP block 9-bit elements      ; 0                                            ;
+; Total PLLs                    ; 0                                            ;
+; Total DLLs                    ; 0                                            ;
++-------------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                        ; modelCPU           ; modelCPU           ;
+; Family name                                                  ; Stratix II         ; Stratix II         ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; DSP Block Balancing                                          ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Auto ROM Replacement                                         ; On                 ; On                 ;
+; Auto RAM Replacement                                         ; On                 ; On                 ;
+; Auto DSP Block Replacement                                   ; On                 ; On                 ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Strict RAM Replacement                                       ; Off                ; Off                ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto RAM Block Balancing                                     ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                            ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing          ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Timing-Driven Synthesis                                      ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                  ; Off                ; Off                ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; SDC constraint protection                                    ; Off                ; Off                ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                           ; Medium             ; Medium             ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
++------------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path   ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                                ;
++------------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------------------+
+; blocks/sourceDesign/mux4_6_1.vhd   ; yes             ; User VHDL File                           ; C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/blocks/sourceDesign/mux4_6_1.vhd   ;
+; blocks/sourceDesign/decoder3_6.vhd ; yes             ; User VHDL File                           ; C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/blocks/sourceDesign/decoder3_6.vhd ;
+; blocks/sourceDesign/getHex.vhd     ; yes             ; User VHDL File                           ; C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/blocks/sourceDesign/getHex.vhd     ;
+; blocks/sourceDesign/showOut.bdf    ; yes             ; User Block Diagram/Schematic File        ; C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/blocks/sourceDesign/showOut.bdf    ;
+; blocks/sourceDesign/getData.bdf    ; yes             ; User Block Diagram/Schematic File        ; C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/blocks/sourceDesign/getData.bdf    ;
+; blocks/sourceDesign/aluBus.vhd     ; yes             ; User VHDL File                           ; C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/blocks/sourceDesign/aluBus.vhd     ;
+; blocks/sourceDesign/control.bdf    ; yes             ; User Block Diagram/Schematic File        ; C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/blocks/sourceDesign/control.bdf    ;
+; blocks/sourceDesign/CPU.bdf        ; yes             ; User Block Diagram/Schematic File        ; C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/blocks/sourceDesign/CPU.bdf        ;
+; blocks/sourceDesign/memories.bdf   ; yes             ; User Block Diagram/Schematic File        ; C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/blocks/sourceDesign/memories.bdf   ;
+; blocks/sourceDesign/rom.vhd        ; yes             ; User VHDL File                           ; C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/blocks/sourceDesign/rom.vhd        ;
+; blocks/sourceDesign/shixu.vhd      ; yes             ; User VHDL File                           ; C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/blocks/sourceDesign/shixu.vhd      ;
+; blocks/sourceDesign/sw_pc_ar.vhd   ; yes             ; User VHDL File                           ; C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/blocks/sourceDesign/sw_pc_ar.vhd   ;
+; modelCPU.bdf                       ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/modelCPU.bdf                       ;
+; 7474.bdf                           ; yes             ; Megafunction                             ; d:/quartus/libraries/others/maxplus2/7474.bdf                                               ;
+; 74244.bdf                          ; yes             ; Megafunction                             ; d:/quartus/libraries/others/maxplus2/74244.bdf                                              ;
+; 74273.bdf                          ; yes             ; Megafunction                             ; d:/quartus/libraries/others/maxplus2/74273.bdf                                              ;
+; LPM_RAM_IO.tdf                     ; yes             ; Megafunction                             ; d:/quartus/libraries/megafunctions/LPM_RAM_IO.tdf                                           ;
+; altram.inc                         ; yes             ; Megafunction                             ; d:/quartus/libraries/megafunctions/altram.inc                                               ;
+; lpm_mux.inc                        ; yes             ; Megafunction                             ; d:/quartus/libraries/megafunctions/lpm_mux.inc                                              ;
+; lpm_decode.inc                     ; yes             ; Megafunction                             ; d:/quartus/libraries/megafunctions/lpm_decode.inc                                           ;
+; aglobal90.inc                      ; yes             ; Megafunction                             ; d:/quartus/libraries/megafunctions/aglobal90.inc                                            ;
+; altram.tdf                         ; yes             ; Megafunction                             ; d:/quartus/libraries/megafunctions/altram.tdf                                               ;
+; memmodes.inc                       ; yes             ; Megafunction                             ; d:/quartus/libraries/others/maxplus2/memmodes.inc                                           ;
+; altsyncram.inc                     ; yes             ; Megafunction                             ; d:/quartus/libraries/megafunctions/altsyncram.inc                                           ;
+; altqpram.inc                       ; yes             ; Megafunction                             ; d:/quartus/libraries/megafunctions/altqpram.inc                                             ;
+; altsyncram.tdf                     ; yes             ; Megafunction                             ; d:/quartus/libraries/megafunctions/altsyncram.tdf                                           ;
+; stratix_ram_block.inc              ; yes             ; Megafunction                             ; d:/quartus/libraries/megafunctions/stratix_ram_block.inc                                    ;
+; a_rdenreg.inc                      ; yes             ; Megafunction                             ; d:/quartus/libraries/megafunctions/a_rdenreg.inc                                            ;
+; altrom.inc                         ; yes             ; Megafunction                             ; d:/quartus/libraries/megafunctions/altrom.inc                                               ;
+; altdpram.inc                       ; yes             ; Megafunction                             ; d:/quartus/libraries/megafunctions/altdpram.inc                                             ;
+; db/altsyncram_m1a1.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/db/altsyncram_m1a1.tdf             ;
+; 74161.tdf                          ; yes             ; Megafunction                             ; d:/quartus/libraries/others/maxplus2/74161.tdf                                              ;
+; aglobal.inc                        ; yes             ; Megafunction                             ; d:/quartus/libraries/megafunctions/aglobal.inc                                              ;
+; f74161.bdf                         ; yes             ; Megafunction                             ; d:/quartus/libraries/others/maxplus2/f74161.bdf                                             ;
++------------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                ;
++-----------------------------------------------+----------------------------+
+; Resource                                      ; Usage                      ;
++-----------------------------------------------+----------------------------+
+; Estimated ALUTs Used                          ; 201                        ;
+; Dedicated logic registers                     ; 87                         ;
+;                                               ;                            ;
+; Estimated ALUTs Unavailable                   ; 27                         ;
+;                                               ;                            ;
+; Total combinational functions                 ; 201                        ;
+; Combinational ALUT usage by number of inputs  ;                            ;
+;     -- 7 input functions                      ; 8                          ;
+;     -- 6 input functions                      ; 34                         ;
+;     -- 5 input functions                      ; 53                         ;
+;     -- 4 input functions                      ; 32                         ;
+;     -- <=3 input functions                    ; 74                         ;
+;                                               ;                            ;
+; Combinational ALUTs by mode                   ;                            ;
+;     -- normal mode                            ; 153                        ;
+;     -- extended LUT mode                      ; 8                          ;
+;     -- arithmetic mode                        ; 40                         ;
+;     -- shared arithmetic mode                 ; 0                          ;
+;                                               ;                            ;
+; Estimated ALUT/register pairs used            ; 222                        ;
+;                                               ;                            ;
+; Total registers                               ; 87                         ;
+;     -- Dedicated logic registers              ; 87                         ;
+;     -- I/O registers                          ; 0                          ;
+;                                               ;                            ;
+; Estimated ALMs:  partially or completely used ; 115                        ;
+;                                               ;                            ;
+; I/O pins                                      ; 62                         ;
+; Total block memory bits                       ; 2048                       ;
+; Maximum fan-out node                          ; control:inst|shixu:inst|t2 ;
+; Maximum fan-out                               ; 38                         ;
+; Total fan-out                                 ; 1268                       ;
+; Average fan-out                               ; 3.54                       ;
++-----------------------------------------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                  ;
++----------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                ; Library Name ;
++----------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+--------------+
+; |modelCPU                                          ; 201 (0)           ; 87 (0)       ; 2048              ; 0            ; 0       ; 0         ; 0         ; 62   ; 0            ; |modelCPU                                                                                                          ; work         ;
+;    |CPU:inst6|                                     ; 129 (0)           ; 40 (0)       ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|CPU:inst6                                                                                                ; work         ;
+;       |aluBus:inst|                                ; 111 (111)         ; 24 (24)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|CPU:inst6|aluBus:inst                                                                                    ; work         ;
+;       |memories:inst1|                             ; 18 (0)            ; 16 (0)       ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|CPU:inst6|memories:inst1                                                                                 ; work         ;
+;          |lpm_ram_io:inst|                         ; 1 (1)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|CPU:inst6|memories:inst1|lpm_ram_io:inst                                                                 ; work         ;
+;             |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|CPU:inst6|memories:inst1|lpm_ram_io:inst|altram:sram                                                     ; work         ;
+;                |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|CPU:inst6|memories:inst1|lpm_ram_io:inst|altram:sram|altsyncram:ram_block                                ; work         ;
+;                   |altsyncram_m1a1:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|CPU:inst6|memories:inst1|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_m1a1:auto_generated ; work         ;
+;          |sw_pc_ar:inst1|                          ; 17 (17)           ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|CPU:inst6|memories:inst1|sw_pc_ar:inst1                                                                  ; work         ;
+;    |control:inst|                                  ; 37 (4)            ; 35 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|control:inst                                                                                             ; work         ;
+;       |74273:inst2|                                ; 0 (0)             ; 7 (7)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|control:inst|74273:inst2                                                                                 ; work         ;
+;       |74273:inst3|                                ; 0 (0)             ; 5 (5)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|control:inst|74273:inst3                                                                                 ; work         ;
+;       |74273:inst4|                                ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|control:inst|74273:inst4                                                                                 ; work         ;
+;       |74273:inst8|                                ; 0 (0)             ; 7 (7)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|control:inst|74273:inst8                                                                                 ; work         ;
+;       |7474:inst5|                                 ; 0 (0)             ; 2 (2)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|control:inst|7474:inst5                                                                                  ; work         ;
+;       |7474:inst6|                                 ; 0 (0)             ; 2 (2)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|control:inst|7474:inst6                                                                                  ; work         ;
+;       |7474:inst7|                                 ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|control:inst|7474:inst7                                                                                  ; work         ;
+;       |rom:inst9|                                  ; 22 (22)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|control:inst|rom:inst9                                                                                   ; work         ;
+;       |shixu:inst|                                 ; 11 (11)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|control:inst|shixu:inst                                                                                  ; work         ;
+;    |getData:inst2|                                 ; 9 (0)             ; 8 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|getData:inst2                                                                                            ; work         ;
+;       |74161:inst1|                                ; 4 (0)             ; 4 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|getData:inst2|74161:inst1                                                                                ; work         ;
+;          |f74161:sub|                              ; 4 (4)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|getData:inst2|74161:inst1|f74161:sub                                                                     ; work         ;
+;       |74161:inst|                                 ; 5 (0)             ; 4 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|getData:inst2|74161:inst                                                                                 ; work         ;
+;          |f74161:sub|                              ; 5 (5)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|getData:inst2|74161:inst|f74161:sub                                                                      ; work         ;
+;    |showOut:inst5|                                 ; 26 (1)            ; 4 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|showOut:inst5                                                                                            ; work         ;
+;       |74161:inst4|                                ; 3 (0)             ; 3 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|showOut:inst5|74161:inst4                                                                                ; work         ;
+;          |f74161:sub|                              ; 3 (3)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|showOut:inst5|74161:inst4|f74161:sub                                                                     ; work         ;
+;       |decoder3_6:inst|                            ; 7 (7)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|showOut:inst5|decoder3_6:inst                                                                            ; work         ;
+;       |getHex:inst7|                               ; 7 (7)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|showOut:inst5|getHex:inst7                                                                               ; work         ;
+;       |mux4_6_1:inst2|                             ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |modelCPU|showOut:inst5|mux4_6_1:inst2                                                                             ; work         ;
++----------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                             ;
++---------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
+; Name                                                                                                                ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF            ;
++---------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
+; CPU:inst6|memories:inst1|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_m1a1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; ./memories.mif ;
++---------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |modelCPU|control:inst|shixu:inst|fstate                                                                    ;
++--------------+--------------+--------------+--------------+------------+------------+------------+------------+-------------+
+; Name         ; fstate.s_st4 ; fstate.s_st3 ; fstate.s_st2 ; fstate.st4 ; fstate.st3 ; fstate.st2 ; fstate.st1 ; fstate.idle ;
++--------------+--------------+--------------+--------------+------------+------------+------------+------------+-------------+
+; fstate.idle  ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0           ;
+; fstate.st1   ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 1          ; 1           ;
+; fstate.st2   ; 0            ; 0            ; 0            ; 0          ; 0          ; 1          ; 0          ; 1           ;
+; fstate.st3   ; 0            ; 0            ; 0            ; 0          ; 1          ; 0          ; 0          ; 1           ;
+; fstate.st4   ; 0            ; 0            ; 0            ; 1          ; 0          ; 0          ; 0          ; 1           ;
+; fstate.s_st2 ; 0            ; 0            ; 1            ; 0          ; 0          ; 0          ; 0          ; 1           ;
+; fstate.s_st3 ; 0            ; 1            ; 0            ; 0          ; 0          ; 0          ; 0          ; 1           ;
+; fstate.s_st4 ; 1            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 1           ;
++--------------+--------------+--------------+--------------+------------+------------+------------+------------+-------------+
+
+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++----------------------------------------+-----------------------------------------+
+; Register name                          ; Reason for Removal                      ;
++----------------------------------------+-----------------------------------------+
+; control:inst|74273:inst8|18            ; Stuck at GND due to stuck port data_in  ;
+; control:inst|74273:inst3|18            ; Stuck at GND due to stuck port data_in  ;
+; control:inst|74273:inst2|15            ; Merged with control:inst|74273:inst2|19 ;
+; CPU:inst6|aluBus:inst|r4[1..7]         ; Merged with CPU:inst6|aluBus:inst|r4[0] ;
+; CPU:inst6|aluBus:inst|r4[0]            ; Stuck at GND due to stuck port data_in  ;
+; control:inst|74273:inst3|19            ; Merged with control:inst|74273:inst3|16 ;
+; Total Number of Removed Registers = 12 ;                                         ;
++----------------------------------------+-----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                      ;
++-----------------------------+---------------------------+----------------------------------------+
+; Register name               ; Reason for Removal        ; Registers Removed due to This Register ;
++-----------------------------+---------------------------+----------------------------------------+
+; control:inst|74273:inst3|18 ; Stuck at GND              ; CPU:inst6|aluBus:inst|r4[0]            ;
+;                             ; due to stuck port data_in ;                                        ;
++-----------------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 87    ;
+; Number of registers using Synchronous Clear  ; 1     ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 46    ;
+; Number of registers using Asynchronous Load  ; 5     ;
+; Number of registers using Clock Enable       ; 34    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 32:1               ; 2 bits    ; 42 ALUTs      ; 22 ALUTs             ; 20 ALUTs               ; Yes        ; |modelCPU|control:inst|74273:inst2|14          ;
+; 8:1                ; 4 bits    ; 20 ALUTs      ; 16 ALUTs             ; 4 ALUTs                ; No         ; |modelCPU|showOut:inst5|mux4_6_1:inst2|dout[2] ;
+; 5:1                ; 2 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |modelCPU|showOut:inst5|decoder3_6:inst|seg[1] ;
+; 7:1                ; 8 bits    ; 32 ALUTs      ; 24 ALUTs             ; 8 ALUTs                ; No         ; |modelCPU|CPU:inst6|aluBus:inst|Add0           ;
+; 26:1               ; 7 bits    ; 119 ALUTs     ; 91 ALUTs             ; 28 ALUTs               ; No         ; |modelCPU|CPU:inst6|aluBus:inst|bus_Reg[3]     ;
+; 5:1                ; 8 bits    ; 24 ALUTs      ; 16 ALUTs             ; 8 ALUTs                ; No         ; |modelCPU|CPU:inst6|aluBus:inst|Add0           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for CPU:inst6|memories:inst1|LPM_RAM_IO:inst|altram:sram|altsyncram:ram_block|altsyncram_m1a1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                 ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:inst6|memories:inst1|LPM_RAM_IO:inst ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTH              ; 8              ; Signed Integer                              ;
+; LPM_WIDTHAD            ; 8              ; Signed Integer                              ;
+; LPM_NUMWORDS           ; 256            ; Signed Integer                              ;
+; LPM_INDATA             ; REGISTERED     ; Untyped                                     ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED     ; Untyped                                     ;
+; LPM_OUTDATA            ; UNREGISTERED   ; Untyped                                     ;
+; LPM_FILE               ; ./memories.mif ; Untyped                                     ;
+; USE_EAB                ; ON             ; Untyped                                     ;
+; DEVICE_FAMILY          ; Stratix II     ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: getData:inst2|74161:inst ;
++------------------------+------------+---------------------------------+
+; Parameter Name         ; Value      ; Type                            ;
++------------------------+------------+---------------------------------+
+; DEVICE_FAMILY          ; Stratix II ; Untyped                         ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                    ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                  ;
++------------------------+------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: getData:inst2|74161:inst1 ;
++------------------------+------------+----------------------------------+
+; Parameter Name         ; Value      ; Type                             ;
++------------------------+------------+----------------------------------+
+; DEVICE_FAMILY          ; Stratix II ; Untyped                          ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                     ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                   ;
++------------------------+------------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: showOut:inst5|74161:inst4 ;
++------------------------+------------+----------------------------------+
+; Parameter Name         ; Value      ; Type                             ;
++------------------------+------------+----------------------------------+
+; DEVICE_FAMILY          ; Stratix II ; Untyped                          ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                     ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                   ;
++------------------------+------------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Mar 29 10:49:57 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off modelCPU -c modelCPU
+Info: Found 2 design units, including 1 entities, in source file blocks/sourceDesign/mux4_6_1.vhd
+    Info: Found design unit 1: mux4_6_1-mux4_6_1
+    Info: Found entity 1: mux4_6_1
+Info: Found 2 design units, including 1 entities, in source file blocks/sourceDesign/decoder3_6.vhd
+    Info: Found design unit 1: decoder3_6-decoder3_6
+    Info: Found entity 1: decoder3_6
+Info: Found 2 design units, including 1 entities, in source file blocks/sourceDesign/getHex.vhd
+    Info: Found design unit 1: getHex-getHex
+    Info: Found entity 1: getHex
+Info: Found 1 design units, including 1 entities, in source file blocks/sourceDesign/showOut.bdf
+    Info: Found entity 1: showOut
+Info: Found 1 design units, including 1 entities, in source file blocks/sourceDesign/getData.bdf
+    Info: Found entity 1: getData
+Info: Found 2 design units, including 1 entities, in source file blocks/sourceDesign/aluBus.vhd
+    Info: Found design unit 1: aluBus-aluBus
+    Info: Found entity 1: aluBus
+Info: Found 1 design units, including 1 entities, in source file blocks/sourceDesign/control.bdf
+    Info: Found entity 1: control
+Info: Found 1 design units, including 1 entities, in source file blocks/sourceDesign/CPU.bdf
+    Info: Found entity 1: CPU
+Info: Found 1 design units, including 1 entities, in source file blocks/sourceDesign/memories.bdf
+    Info: Found entity 1: memories
+Info: Found 1 design units, including 1 entities, in source file blocks/sourceDesign/micro_control.bdf
+    Info: Found entity 1: micro_control
+Info: Found 2 design units, including 1 entities, in source file blocks/sourceDesign/rom.vhd
+    Info: Found design unit 1: rom-rom
+    Info: Found entity 1: rom
+Info: Found 2 design units, including 1 entities, in source file blocks/sourceDesign/shixu.vhd
+    Info: Found design unit 1: shixu-BEHAVIOR
+    Info: Found entity 1: shixu
+Info: Found 2 design units, including 1 entities, in source file blocks/sourceDesign/sw_pc_ar.vhd
+    Info: Found design unit 1: sw_pc_ar-rtl
+    Info: Found entity 1: sw_pc_ar
+Warning: Can't analyze file -- file C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/blocks/bsfs/modelCPU.bdf is missing
+Warning: Using design file modelCPU.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: modelCPU
+Info: Elaborating entity "modelCPU" for the top level hierarchy
+Info: Elaborating entity "control" for hierarchy "control:inst"
+Info: Elaborating entity "7474" for hierarchy "control:inst|7474:inst7"
+Info: Elaborated megafunction instantiation "control:inst|7474:inst7"
+Info: Elaborating entity "shixu" for hierarchy "control:inst|shixu:inst"
+Info: Elaborating entity "rom" for hierarchy "control:inst|rom:inst9"
+Info (10041): Inferred latch for "temp[1]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[2]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[3]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[4]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[5]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[6]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[7]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[8]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[9]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[10]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[11]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[12]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[13]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[14]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[15]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[16]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[17]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[18]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[19]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[20]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[21]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[22]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[23]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[24]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[25]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[26]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[27]" at rom.vhd(14)
+Info (10041): Inferred latch for "temp[28]" at rom.vhd(14)
+Info: Elaborating entity "74244" for hierarchy "control:inst|74244:inst1"
+Info: Elaborated megafunction instantiation "control:inst|74244:inst1"
+Info: Elaborating entity "74273" for hierarchy "control:inst|74273:inst3"
+Info: Elaborated megafunction instantiation "control:inst|74273:inst3"
+Info: Elaborating entity "CPU" for hierarchy "CPU:inst6"
+Info: Elaborating entity "memories" for hierarchy "CPU:inst6|memories:inst1"
+Info: Elaborating entity "sw_pc_ar" for hierarchy "CPU:inst6|memories:inst1|sw_pc_ar:inst1"
+Info: Elaborating entity "LPM_RAM_IO" for hierarchy "CPU:inst6|memories:inst1|LPM_RAM_IO:inst"
+Info: Elaborated megafunction instantiation "CPU:inst6|memories:inst1|LPM_RAM_IO:inst"
+Info: Instantiated megafunction "CPU:inst6|memories:inst1|LPM_RAM_IO:inst" with the following parameter:
+    Info: Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
+    Info: Parameter "LPM_FILE" = "./memories.mif"
+    Info: Parameter "LPM_INDATA" = "REGISTERED"
+    Info: Parameter "LPM_NUMWORDS" = "256"
+    Info: Parameter "LPM_OUTDATA" = "UNREGISTERED"
+    Info: Parameter "LPM_WIDTH" = "8"
+    Info: Parameter "LPM_WIDTHAD" = "8"
+Info: Elaborating entity "altram" for hierarchy "CPU:inst6|memories:inst1|LPM_RAM_IO:inst|altram:sram"
+Warning: Assertion warning: altram does not support Stratix II device family -- attempting best-case memory conversions, but power-up states and read during write behavior will be different for Stratix II devices
+Info: Elaborated megafunction instantiation "CPU:inst6|memories:inst1|LPM_RAM_IO:inst|altram:sram", which is child of megafunction instantiation "CPU:inst6|memories:inst1|LPM_RAM_IO:inst"
+Info: Elaborating entity "altsyncram" for hierarchy "CPU:inst6|memories:inst1|LPM_RAM_IO:inst|altram:sram|altsyncram:ram_block"
+Info: Elaborated megafunction instantiation "CPU:inst6|memories:inst1|LPM_RAM_IO:inst|altram:sram|altsyncram:ram_block", which is child of megafunction instantiation "CPU:inst6|memories:inst1|LPM_RAM_IO:inst"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_m1a1.tdf
+    Info: Found entity 1: altsyncram_m1a1
+Info: Elaborating entity "altsyncram_m1a1" for hierarchy "CPU:inst6|memories:inst1|LPM_RAM_IO:inst|altram:sram|altsyncram:ram_block|altsyncram_m1a1:auto_generated"
+Info: Elaborating entity "aluBus" for hierarchy "CPU:inst6|aluBus:inst"
+Info: Elaborating entity "getData" for hierarchy "getData:inst2"
+Info: Elaborating entity "74161" for hierarchy "getData:inst2|74161:inst"
+Info: Elaborated megafunction instantiation "getData:inst2|74161:inst"
+Info: Elaborating entity "f74161" for hierarchy "getData:inst2|74161:inst|f74161:sub"
+Info: Elaborated megafunction instantiation "getData:inst2|74161:inst|f74161:sub", which is child of megafunction instantiation "getData:inst2|74161:inst"
+Info: Elaborating entity "74161" for hierarchy "getData:inst2|74161:inst1"
+Info: Elaborated megafunction instantiation "getData:inst2|74161:inst1"
+Info: Elaborating entity "showOut" for hierarchy "showOut:inst5"
+Info: Elaborating entity "getHex" for hierarchy "showOut:inst5|getHex:inst7"
+Info: Elaborating entity "mux4_6_1" for hierarchy "showOut:inst5|mux4_6_1:inst2"
+Info: Elaborating entity "74161" for hierarchy "showOut:inst5|74161:inst4"
+Info: Elaborated megafunction instantiation "showOut:inst5|74161:inst4"
+Info: Elaborating entity "decoder3_6" for hierarchy "showOut:inst5|decoder3_6:inst"
+Info: Ignored 11 buffer(s)
+    Info: Ignored 11 CARRY buffer(s)
+Warning: Tri-state node(s) do not directly drive top-level pin(s)
+    Warning: Converted tri-state buffer "control:inst|74244:inst1|36" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "control:inst|74244:inst1|1" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "control:inst|74244:inst1|6" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "control:inst|74244:inst1|10" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "control:inst|74244:inst1|11" feeding internal logic into a wire
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "alu_sel[1]" is stuck at GND
+    Warning (13410): Pin "ld_reg[2]" is stuck at GND
+Info: Implemented 310 device resources after synthesis - the final resource count might be different
+    Info: Implemented 11 input pins
+    Info: Implemented 43 output pins
+    Info: Implemented 8 bidirectional pins
+    Info: Implemented 240 logic cells
+    Info: Implemented 8 RAM segments
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 264 megabytes
+    Info: Processing ended: Mon Mar 29 10:49:59 2021
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

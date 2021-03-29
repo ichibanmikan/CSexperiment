@@ -1,0 +1,10 @@
+Fitter Status : Successful - Tue Mar 09 13:05:32 2021
+Quartus II Version : 9.0 Build 184 04/29/2009 SP 1 SJ Web Edition
+Revision Name : sw_pc_ar
+Top-level Entity Name : sw_pc_ar
+Family : FLEX10K
+Device : EPF10K10TC144-4
+Timing Models : Final
+Total logic elements : 36 / 576 ( 6 % )
+Total pins : 31 / 102 ( 30 % )
+Total memory bits : 0 / 6,144 ( 0 % )

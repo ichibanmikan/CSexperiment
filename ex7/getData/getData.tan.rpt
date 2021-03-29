@@ -1,0 +1,386 @@
+Classic Timing Analyzer report for getData
+Sun Mar 28 19:42:29 2021
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'cdu_clk'
+  7. Clock Setup: 'cdu_en'
+  8. Clock Hold: 'cdu_clk'
+  9. tsu
+ 10. tco
+ 11. th
+ 12. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                   ;
++------------------------------+------------------------------------------+---------------+------------------------------------------------+----------------------------+----------------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                                    ; From                       ; To                         ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+------------------------------------------------+----------------------------+----------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A                                      ; None          ; 0.956 ns                                       ; cdu_en                     ; 74161:inst|f74161:sub|110  ; --         ; cdu_clk  ; 0            ;
+; Worst-case tco               ; N/A                                      ; None          ; 13.634 ns                                      ; 74161:inst1|f74161:sub|99  ; k[6]                       ; cdu_clk    ; --       ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; 4.513 ns                                       ; cdu_en                     ; 74161:inst1|f74161:sub|87  ; --         ; cdu_clk  ; 0            ;
+; Clock Setup: 'cdu_en'        ; N/A                                      ; None          ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|9   ; 74161:inst1|f74161:sub|110 ; cdu_en     ; cdu_en   ; 0            ;
+; Clock Setup: 'cdu_clk'       ; N/A                                      ; None          ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|9   ; 74161:inst1|f74161:sub|110 ; cdu_clk    ; cdu_clk  ; 0            ;
+; Clock Hold: 'cdu_clk'        ; Not operational: Clock Skew > Data Delay ; None          ; N/A                                            ; 74161:inst1|f74161:sub|110 ; 74161:inst1|f74161:sub|110 ; cdu_clk    ; cdu_clk  ; 6            ;
+; Total number of failed paths ;                                          ;               ;                                                ;                            ;                            ;            ;          ; 6            ;
++------------------------------+------------------------------------------+---------------+------------------------------------------------+----------------------------+----------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C5T144C8        ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; cdu_clk         ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; cdu_en          ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 6      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'cdu_clk'                                                                                                                                                                                                       ;
++-------+------------------------------------------------+----------------------------+----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                       ; To                         ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+----------------------------+----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|9   ; 74161:inst1|f74161:sub|110 ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 1.338 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|99  ; 74161:inst1|f74161:sub|110 ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 1.220 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|9   ; 74161:inst1|f74161:sub|99  ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 1.194 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|87  ; 74161:inst1|f74161:sub|110 ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 1.185 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst|f74161:sub|9    ; 74161:inst|f74161:sub|110  ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 1.767 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|9   ; 74161:inst1|f74161:sub|87  ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 0.769 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|87  ; 74161:inst1|f74161:sub|99  ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 0.759 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst|f74161:sub|99   ; 74161:inst|f74161:sub|110  ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 1.479 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst|f74161:sub|87   ; 74161:inst|f74161:sub|110  ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 1.450 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|110 ; 74161:inst1|f74161:sub|110 ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|99  ; 74161:inst1|f74161:sub|99  ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|87  ; 74161:inst1|f74161:sub|87  ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|9   ; 74161:inst1|f74161:sub|9   ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst|f74161:sub|9    ; 74161:inst|f74161:sub|87   ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 1.188 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst|f74161:sub|9    ; 74161:inst|f74161:sub|99   ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 1.187 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst|f74161:sub|87   ; 74161:inst|f74161:sub|99   ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 0.753 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst|f74161:sub|99   ; 74161:inst|f74161:sub|99   ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst|f74161:sub|87   ; 74161:inst|f74161:sub|87   ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst|f74161:sub|110  ; 74161:inst|f74161:sub|110  ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst|f74161:sub|9    ; 74161:inst|f74161:sub|9    ; cdu_clk    ; cdu_clk  ; None                        ; None                      ; 0.501 ns                ;
++-------+------------------------------------------------+----------------------------+----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'cdu_en'                                                                                                                                                                                                        ;
++-------+------------------------------------------------+----------------------------+----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                       ; To                         ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+----------------------------+----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|9   ; 74161:inst1|f74161:sub|110 ; cdu_en     ; cdu_en   ; None                        ; None                      ; 1.338 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|99  ; 74161:inst1|f74161:sub|110 ; cdu_en     ; cdu_en   ; None                        ; None                      ; 1.220 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|9   ; 74161:inst1|f74161:sub|99  ; cdu_en     ; cdu_en   ; None                        ; None                      ; 1.194 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|87  ; 74161:inst1|f74161:sub|110 ; cdu_en     ; cdu_en   ; None                        ; None                      ; 1.185 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|9   ; 74161:inst1|f74161:sub|87  ; cdu_en     ; cdu_en   ; None                        ; None                      ; 0.769 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|87  ; 74161:inst1|f74161:sub|99  ; cdu_en     ; cdu_en   ; None                        ; None                      ; 0.759 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|110 ; 74161:inst1|f74161:sub|110 ; cdu_en     ; cdu_en   ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|99  ; 74161:inst1|f74161:sub|99  ; cdu_en     ; cdu_en   ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|87  ; 74161:inst1|f74161:sub|87  ; cdu_en     ; cdu_en   ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; 74161:inst1|f74161:sub|9   ; 74161:inst1|f74161:sub|9   ; cdu_en     ; cdu_en   ; None                        ; None                      ; 0.501 ns                ;
++-------+------------------------------------------------+----------------------------+----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'cdu_clk'                                                                                                                                                                                           ;
++------------------------------------------+----------------------------+----------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                       ; To                         ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+----------------------------+----------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; 74161:inst1|f74161:sub|110 ; 74161:inst1|f74161:sub|110 ; cdu_clk    ; cdu_clk  ; None                       ; None                       ; 0.501 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74161:inst1|f74161:sub|99  ; 74161:inst1|f74161:sub|99  ; cdu_clk    ; cdu_clk  ; None                       ; None                       ; 0.501 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74161:inst1|f74161:sub|87  ; 74161:inst1|f74161:sub|87  ; cdu_clk    ; cdu_clk  ; None                       ; None                       ; 0.501 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74161:inst1|f74161:sub|9   ; 74161:inst1|f74161:sub|9   ; cdu_clk    ; cdu_clk  ; None                       ; None                       ; 0.501 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74161:inst1|f74161:sub|87  ; 74161:inst1|f74161:sub|99  ; cdu_clk    ; cdu_clk  ; None                       ; None                       ; 0.759 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74161:inst1|f74161:sub|9   ; 74161:inst1|f74161:sub|87  ; cdu_clk    ; cdu_clk  ; None                       ; None                       ; 0.769 ns                 ;
++------------------------------------------+----------------------------+----------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++------------------------------------------------------------------------------------+
+; tsu                                                                                ;
++-------+--------------+------------+--------+----------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From   ; To                         ; To Clock ;
++-------+--------------+------------+--------+----------------------------+----------+
+; N/A   ; None         ; 0.956 ns   ; cdu_en ; 74161:inst|f74161:sub|110  ; cdu_clk  ;
+; N/A   ; None         ; 0.048 ns   ; cdu_en ; 74161:inst|f74161:sub|9    ; cdu_clk  ;
+; N/A   ; None         ; 0.027 ns   ; cdu_en ; 74161:inst|f74161:sub|99   ; cdu_clk  ;
+; N/A   ; None         ; -0.448 ns  ; cdu_en ; 74161:inst|f74161:sub|87   ; cdu_clk  ;
+; N/A   ; None         ; -2.858 ns  ; cdu_en ; 74161:inst1|f74161:sub|110 ; cdu_en   ;
+; N/A   ; None         ; -3.027 ns  ; cdu_en ; 74161:inst1|f74161:sub|110 ; cdu_clk  ;
+; N/A   ; None         ; -3.102 ns  ; cdu_en ; 74161:inst1|f74161:sub|9   ; cdu_en   ;
+; N/A   ; None         ; -3.158 ns  ; cdu_en ; 74161:inst1|f74161:sub|99  ; cdu_en   ;
+; N/A   ; None         ; -3.170 ns  ; cdu_en ; 74161:inst1|f74161:sub|87  ; cdu_en   ;
+; N/A   ; None         ; -3.271 ns  ; cdu_en ; 74161:inst1|f74161:sub|9   ; cdu_clk  ;
+; N/A   ; None         ; -3.327 ns  ; cdu_en ; 74161:inst1|f74161:sub|99  ; cdu_clk  ;
+; N/A   ; None         ; -3.339 ns  ; cdu_en ; 74161:inst1|f74161:sub|87  ; cdu_clk  ;
++-------+--------------+------------+--------+----------------------------+----------+
+
+
++------------------------------------------------------------------------------------+
+; tco                                                                                ;
++-------+--------------+------------+----------------------------+------+------------+
+; Slack ; Required tco ; Actual tco ; From                       ; To   ; From Clock ;
++-------+--------------+------------+----------------------------+------+------------+
+; N/A   ; None         ; 13.634 ns  ; 74161:inst1|f74161:sub|99  ; k[6] ; cdu_clk    ;
+; N/A   ; None         ; 12.557 ns  ; 74161:inst1|f74161:sub|99  ; k[6] ; cdu_en     ;
+; N/A   ; None         ; 11.903 ns  ; 74161:inst1|f74161:sub|9   ; k[4] ; cdu_clk    ;
+; N/A   ; None         ; 11.879 ns  ; 74161:inst1|f74161:sub|87  ; k[5] ; cdu_clk    ;
+; N/A   ; None         ; 11.748 ns  ; 74161:inst1|f74161:sub|110 ; k[7] ; cdu_clk    ;
+; N/A   ; None         ; 10.826 ns  ; 74161:inst1|f74161:sub|9   ; k[4] ; cdu_en     ;
+; N/A   ; None         ; 10.802 ns  ; 74161:inst1|f74161:sub|87  ; k[5] ; cdu_en     ;
+; N/A   ; None         ; 10.671 ns  ; 74161:inst1|f74161:sub|110 ; k[7] ; cdu_en     ;
+; N/A   ; None         ; 7.603 ns   ; 74161:inst|f74161:sub|99   ; k[2] ; cdu_clk    ;
+; N/A   ; None         ; 7.114 ns   ; 74161:inst|f74161:sub|110  ; k[3] ; cdu_clk    ;
+; N/A   ; None         ; 6.822 ns   ; 74161:inst|f74161:sub|87   ; k[1] ; cdu_clk    ;
+; N/A   ; None         ; 6.815 ns   ; 74161:inst|f74161:sub|9    ; k[0] ; cdu_clk    ;
++-------+--------------+------------+----------------------------+------+------------+
+
+
++------------------------------------------------------------------------------------------+
+; th                                                                                       ;
++---------------+-------------+-----------+--------+----------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From   ; To                         ; To Clock ;
++---------------+-------------+-----------+--------+----------------------------+----------+
+; N/A           ; None        ; 4.513 ns  ; cdu_en ; 74161:inst1|f74161:sub|87  ; cdu_clk  ;
+; N/A           ; None        ; 4.501 ns  ; cdu_en ; 74161:inst1|f74161:sub|99  ; cdu_clk  ;
+; N/A           ; None        ; 4.445 ns  ; cdu_en ; 74161:inst1|f74161:sub|9   ; cdu_clk  ;
+; N/A           ; None        ; 4.201 ns  ; cdu_en ; 74161:inst1|f74161:sub|110 ; cdu_clk  ;
+; N/A           ; None        ; 3.436 ns  ; cdu_en ; 74161:inst1|f74161:sub|87  ; cdu_en   ;
+; N/A           ; None        ; 3.424 ns  ; cdu_en ; 74161:inst1|f74161:sub|99  ; cdu_en   ;
+; N/A           ; None        ; 3.368 ns  ; cdu_en ; 74161:inst1|f74161:sub|9   ; cdu_en   ;
+; N/A           ; None        ; 3.124 ns  ; cdu_en ; 74161:inst1|f74161:sub|110 ; cdu_en   ;
+; N/A           ; None        ; 0.714 ns  ; cdu_en ; 74161:inst|f74161:sub|87   ; cdu_clk  ;
+; N/A           ; None        ; 0.239 ns  ; cdu_en ; 74161:inst|f74161:sub|99   ; cdu_clk  ;
+; N/A           ; None        ; 0.218 ns  ; cdu_en ; 74161:inst|f74161:sub|9    ; cdu_clk  ;
+; N/A           ; None        ; -0.690 ns ; cdu_en ; 74161:inst|f74161:sub|110  ; cdu_clk  ;
++---------------+-------------+-----------+--------+----------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Mar 28 19:42:29 2021
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off getData -c getData --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "cdu_clk" is an undefined clock
+    Info: Assuming node "cdu_en" is an undefined clock
+Warning: Found 6 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "74161:inst|f74161:sub|9" as buffer
+    Info: Detected ripple clock "74161:inst|f74161:sub|110" as buffer
+    Info: Detected ripple clock "74161:inst|f74161:sub|87" as buffer
+    Info: Detected gated clock "74161:inst|f74161:sub|89~0" as buffer
+    Info: Detected ripple clock "74161:inst|f74161:sub|99" as buffer
+    Info: Detected gated clock "74161:inst|f74161:sub|104" as buffer
+Info: Clock "cdu_clk" Internal fmax is restricted to 340.02 MHz between source register "74161:inst1|f74161:sub|9" and destination register "74161:inst1|f74161:sub|110"
+    Info: fmax restricted to clock pin edge rate 2.941 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 1.338 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X2_Y6_N27; Fanout = 5; REG Node = '74161:inst1|f74161:sub|9'
+            Info: 2: + IC(0.455 ns) + CELL(0.206 ns) = 0.661 ns; Loc. = LCCOMB_X2_Y6_N18; Fanout = 1; COMB Node = '74161:inst1|f74161:sub|89~0'
+            Info: 3: + IC(0.363 ns) + CELL(0.206 ns) = 1.230 ns; Loc. = LCCOMB_X2_Y6_N20; Fanout = 1; COMB Node = '74161:inst1|f74161:sub|110~0'
+            Info: 4: + IC(0.000 ns) + CELL(0.108 ns) = 1.338 ns; Loc. = LCFF_X2_Y6_N21; Fanout = 2; REG Node = '74161:inst1|f74161:sub|110'
+            Info: Total cell delay = 0.520 ns ( 38.86 % )
+            Info: Total interconnect delay = 0.818 ns ( 61.14 % )
+        Info: - Smallest clock skew is -0.908 ns
+            Info: + Shortest clock path from clock "cdu_clk" to destination register is 6.068 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_21; Fanout = 4; CLK Node = 'cdu_clk'
+                Info: 2: + IC(0.538 ns) + CELL(0.970 ns) = 2.608 ns; Loc. = LCFF_X1_Y6_N17; Fanout = 3; REG Node = '74161:inst|f74161:sub|110'
+                Info: 3: + IC(0.730 ns) + CELL(0.206 ns) = 3.544 ns; Loc. = LCCOMB_X2_Y6_N8; Fanout = 1; COMB Node = '74161:inst|f74161:sub|104'
+                Info: 4: + IC(1.046 ns) + CELL(0.000 ns) = 4.590 ns; Loc. = CLKCTRL_G0; Fanout = 4; COMB Node = '74161:inst|f74161:sub|104~clkctrl'
+                Info: 5: + IC(0.812 ns) + CELL(0.666 ns) = 6.068 ns; Loc. = LCFF_X2_Y6_N21; Fanout = 2; REG Node = '74161:inst1|f74161:sub|110'
+                Info: Total cell delay = 2.942 ns ( 48.48 % )
+                Info: Total interconnect delay = 3.126 ns ( 51.52 % )
+            Info: - Longest clock path from clock "cdu_clk" to source register is 6.976 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_21; Fanout = 4; CLK Node = 'cdu_clk'
+                Info: 2: + IC(0.540 ns) + CELL(0.970 ns) = 2.610 ns; Loc. = LCFF_X1_Y6_N15; Fanout = 5; REG Node = '74161:inst|f74161:sub|9'
+                Info: 3: + IC(0.663 ns) + CELL(0.206 ns) = 3.479 ns; Loc. = LCCOMB_X2_Y6_N30; Fanout = 2; COMB Node = '74161:inst|f74161:sub|89~0'
+                Info: 4: + IC(0.384 ns) + CELL(0.589 ns) = 4.452 ns; Loc. = LCCOMB_X2_Y6_N8; Fanout = 1; COMB Node = '74161:inst|f74161:sub|104'
+                Info: 5: + IC(1.046 ns) + CELL(0.000 ns) = 5.498 ns; Loc. = CLKCTRL_G0; Fanout = 4; COMB Node = '74161:inst|f74161:sub|104~clkctrl'
+                Info: 6: + IC(0.812 ns) + CELL(0.666 ns) = 6.976 ns; Loc. = LCFF_X2_Y6_N27; Fanout = 5; REG Node = '74161:inst1|f74161:sub|9'
+                Info: Total cell delay = 3.531 ns ( 50.62 % )
+                Info: Total interconnect delay = 3.445 ns ( 49.38 % )
+        Info: + Micro clock to output delay of source is 0.304 ns
+        Info: + Micro setup delay of destination is -0.040 ns
+Info: Clock "cdu_en" Internal fmax is restricted to 340.02 MHz between source register "74161:inst1|f74161:sub|9" and destination register "74161:inst1|f74161:sub|110"
+    Info: fmax restricted to clock pin edge rate 2.941 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 1.338 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X2_Y6_N27; Fanout = 5; REG Node = '74161:inst1|f74161:sub|9'
+            Info: 2: + IC(0.455 ns) + CELL(0.206 ns) = 0.661 ns; Loc. = LCCOMB_X2_Y6_N18; Fanout = 1; COMB Node = '74161:inst1|f74161:sub|89~0'
+            Info: 3: + IC(0.363 ns) + CELL(0.206 ns) = 1.230 ns; Loc. = LCCOMB_X2_Y6_N20; Fanout = 1; COMB Node = '74161:inst1|f74161:sub|110~0'
+            Info: 4: + IC(0.000 ns) + CELL(0.108 ns) = 1.338 ns; Loc. = LCFF_X2_Y6_N21; Fanout = 2; REG Node = '74161:inst1|f74161:sub|110'
+            Info: Total cell delay = 0.520 ns ( 38.86 % )
+            Info: Total interconnect delay = 0.818 ns ( 61.14 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "cdu_en" to destination register is 5.899 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.090 ns) = 1.090 ns; Loc. = PIN_18; Fanout = 8; CLK Node = 'cdu_en'
+                Info: 2: + IC(0.946 ns) + CELL(0.366 ns) = 2.402 ns; Loc. = LCCOMB_X2_Y6_N30; Fanout = 2; COMB Node = '74161:inst|f74161:sub|89~0'
+                Info: 3: + IC(0.384 ns) + CELL(0.589 ns) = 3.375 ns; Loc. = LCCOMB_X2_Y6_N8; Fanout = 1; COMB Node = '74161:inst|f74161:sub|104'
+                Info: 4: + IC(1.046 ns) + CELL(0.000 ns) = 4.421 ns; Loc. = CLKCTRL_G0; Fanout = 4; COMB Node = '74161:inst|f74161:sub|104~clkctrl'
+                Info: 5: + IC(0.812 ns) + CELL(0.666 ns) = 5.899 ns; Loc. = LCFF_X2_Y6_N21; Fanout = 2; REG Node = '74161:inst1|f74161:sub|110'
+                Info: Total cell delay = 2.711 ns ( 45.96 % )
+                Info: Total interconnect delay = 3.188 ns ( 54.04 % )
+            Info: - Longest clock path from clock "cdu_en" to source register is 5.899 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.090 ns) = 1.090 ns; Loc. = PIN_18; Fanout = 8; CLK Node = 'cdu_en'
+                Info: 2: + IC(0.946 ns) + CELL(0.366 ns) = 2.402 ns; Loc. = LCCOMB_X2_Y6_N30; Fanout = 2; COMB Node = '74161:inst|f74161:sub|89~0'
+                Info: 3: + IC(0.384 ns) + CELL(0.589 ns) = 3.375 ns; Loc. = LCCOMB_X2_Y6_N8; Fanout = 1; COMB Node = '74161:inst|f74161:sub|104'
+                Info: 4: + IC(1.046 ns) + CELL(0.000 ns) = 4.421 ns; Loc. = CLKCTRL_G0; Fanout = 4; COMB Node = '74161:inst|f74161:sub|104~clkctrl'
+                Info: 5: + IC(0.812 ns) + CELL(0.666 ns) = 5.899 ns; Loc. = LCFF_X2_Y6_N27; Fanout = 5; REG Node = '74161:inst1|f74161:sub|9'
+                Info: Total cell delay = 2.711 ns ( 45.96 % )
+                Info: Total interconnect delay = 3.188 ns ( 54.04 % )
+        Info: + Micro clock to output delay of source is 0.304 ns
+        Info: + Micro setup delay of destination is -0.040 ns
+Warning: Circuit may not operate. Detected 6 non-operational path(s) clocked by clock "cdu_clk" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "74161:inst1|f74161:sub|110" and destination pin or register "74161:inst1|f74161:sub|110" for clock "cdu_clk" (Hold time is 409 ps)
+    Info: + Largest clock skew is 0.908 ns
+        Info: + Longest clock path from clock "cdu_clk" to destination register is 6.976 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_21; Fanout = 4; CLK Node = 'cdu_clk'
+            Info: 2: + IC(0.540 ns) + CELL(0.970 ns) = 2.610 ns; Loc. = LCFF_X1_Y6_N15; Fanout = 5; REG Node = '74161:inst|f74161:sub|9'
+            Info: 3: + IC(0.663 ns) + CELL(0.206 ns) = 3.479 ns; Loc. = LCCOMB_X2_Y6_N30; Fanout = 2; COMB Node = '74161:inst|f74161:sub|89~0'
+            Info: 4: + IC(0.384 ns) + CELL(0.589 ns) = 4.452 ns; Loc. = LCCOMB_X2_Y6_N8; Fanout = 1; COMB Node = '74161:inst|f74161:sub|104'
+            Info: 5: + IC(1.046 ns) + CELL(0.000 ns) = 5.498 ns; Loc. = CLKCTRL_G0; Fanout = 4; COMB Node = '74161:inst|f74161:sub|104~clkctrl'
+            Info: 6: + IC(0.812 ns) + CELL(0.666 ns) = 6.976 ns; Loc. = LCFF_X2_Y6_N21; Fanout = 2; REG Node = '74161:inst1|f74161:sub|110'
+            Info: Total cell delay = 3.531 ns ( 50.62 % )
+            Info: Total interconnect delay = 3.445 ns ( 49.38 % )
+        Info: - Shortest clock path from clock "cdu_clk" to source register is 6.068 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_21; Fanout = 4; CLK Node = 'cdu_clk'
+            Info: 2: + IC(0.538 ns) + CELL(0.970 ns) = 2.608 ns; Loc. = LCFF_X1_Y6_N17; Fanout = 3; REG Node = '74161:inst|f74161:sub|110'
+            Info: 3: + IC(0.730 ns) + CELL(0.206 ns) = 3.544 ns; Loc. = LCCOMB_X2_Y6_N8; Fanout = 1; COMB Node = '74161:inst|f74161:sub|104'
+            Info: 4: + IC(1.046 ns) + CELL(0.000 ns) = 4.590 ns; Loc. = CLKCTRL_G0; Fanout = 4; COMB Node = '74161:inst|f74161:sub|104~clkctrl'
+            Info: 5: + IC(0.812 ns) + CELL(0.666 ns) = 6.068 ns; Loc. = LCFF_X2_Y6_N21; Fanout = 2; REG Node = '74161:inst1|f74161:sub|110'
+            Info: Total cell delay = 2.942 ns ( 48.48 % )
+            Info: Total interconnect delay = 3.126 ns ( 51.52 % )
+    Info: - Micro clock to output delay of source is 0.304 ns
+    Info: - Shortest register to register delay is 0.501 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X2_Y6_N21; Fanout = 2; REG Node = '74161:inst1|f74161:sub|110'
+        Info: 2: + IC(0.000 ns) + CELL(0.393 ns) = 0.393 ns; Loc. = LCCOMB_X2_Y6_N20; Fanout = 1; COMB Node = '74161:inst1|f74161:sub|110~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.108 ns) = 0.501 ns; Loc. = LCFF_X2_Y6_N21; Fanout = 2; REG Node = '74161:inst1|f74161:sub|110'
+        Info: Total cell delay = 0.501 ns ( 100.00 % )
+    Info: + Micro hold delay of destination is 0.306 ns
+Info: tsu for register "74161:inst|f74161:sub|110" (data pin = "cdu_en", clock pin = "cdu_clk") is 0.956 ns
+    Info: + Longest pin to register delay is 3.300 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.090 ns) = 1.090 ns; Loc. = PIN_18; Fanout = 8; CLK Node = 'cdu_en'
+        Info: 2: + IC(0.946 ns) + CELL(0.366 ns) = 2.402 ns; Loc. = LCCOMB_X2_Y6_N30; Fanout = 2; COMB Node = '74161:inst|f74161:sub|89~0'
+        Info: 3: + IC(0.584 ns) + CELL(0.206 ns) = 3.192 ns; Loc. = LCCOMB_X1_Y6_N16; Fanout = 1; COMB Node = '74161:inst|f74161:sub|110~0'
+        Info: 4: + IC(0.000 ns) + CELL(0.108 ns) = 3.300 ns; Loc. = LCFF_X1_Y6_N17; Fanout = 3; REG Node = '74161:inst|f74161:sub|110'
+        Info: Total cell delay = 1.770 ns ( 53.64 % )
+        Info: Total interconnect delay = 1.530 ns ( 46.36 % )
+    Info: + Micro setup delay of destination is -0.040 ns
+    Info: - Shortest clock path from clock "cdu_clk" to destination register is 2.304 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_21; Fanout = 4; CLK Node = 'cdu_clk'
+        Info: 2: + IC(0.538 ns) + CELL(0.666 ns) = 2.304 ns; Loc. = LCFF_X1_Y6_N17; Fanout = 3; REG Node = '74161:inst|f74161:sub|110'
+        Info: Total cell delay = 1.766 ns ( 76.65 % )
+        Info: Total interconnect delay = 0.538 ns ( 23.35 % )
+Info: tco from clock "cdu_clk" to destination pin "k[6]" through register "74161:inst1|f74161:sub|99" is 13.634 ns
+    Info: + Longest clock path from clock "cdu_clk" to source register is 6.976 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_21; Fanout = 4; CLK Node = 'cdu_clk'
+        Info: 2: + IC(0.540 ns) + CELL(0.970 ns) = 2.610 ns; Loc. = LCFF_X1_Y6_N15; Fanout = 5; REG Node = '74161:inst|f74161:sub|9'
+        Info: 3: + IC(0.663 ns) + CELL(0.206 ns) = 3.479 ns; Loc. = LCCOMB_X2_Y6_N30; Fanout = 2; COMB Node = '74161:inst|f74161:sub|89~0'
+        Info: 4: + IC(0.384 ns) + CELL(0.589 ns) = 4.452 ns; Loc. = LCCOMB_X2_Y6_N8; Fanout = 1; COMB Node = '74161:inst|f74161:sub|104'
+        Info: 5: + IC(1.046 ns) + CELL(0.000 ns) = 5.498 ns; Loc. = CLKCTRL_G0; Fanout = 4; COMB Node = '74161:inst|f74161:sub|104~clkctrl'
+        Info: 6: + IC(0.812 ns) + CELL(0.666 ns) = 6.976 ns; Loc. = LCFF_X2_Y6_N25; Fanout = 3; REG Node = '74161:inst1|f74161:sub|99'
+        Info: Total cell delay = 3.531 ns ( 50.62 % )
+        Info: Total interconnect delay = 3.445 ns ( 49.38 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Longest register to pin delay is 6.354 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X2_Y6_N25; Fanout = 3; REG Node = '74161:inst1|f74161:sub|99'
+        Info: 2: + IC(3.108 ns) + CELL(3.246 ns) = 6.354 ns; Loc. = PIN_72; Fanout = 0; PIN Node = 'k[6]'
+        Info: Total cell delay = 3.246 ns ( 51.09 % )
+        Info: Total interconnect delay = 3.108 ns ( 48.91 % )
+Info: th for register "74161:inst1|f74161:sub|87" (data pin = "cdu_en", clock pin = "cdu_clk") is 4.513 ns
+    Info: + Longest clock path from clock "cdu_clk" to destination register is 6.976 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_21; Fanout = 4; CLK Node = 'cdu_clk'
+        Info: 2: + IC(0.540 ns) + CELL(0.970 ns) = 2.610 ns; Loc. = LCFF_X1_Y6_N15; Fanout = 5; REG Node = '74161:inst|f74161:sub|9'
+        Info: 3: + IC(0.663 ns) + CELL(0.206 ns) = 3.479 ns; Loc. = LCCOMB_X2_Y6_N30; Fanout = 2; COMB Node = '74161:inst|f74161:sub|89~0'
+        Info: 4: + IC(0.384 ns) + CELL(0.589 ns) = 4.452 ns; Loc. = LCCOMB_X2_Y6_N8; Fanout = 1; COMB Node = '74161:inst|f74161:sub|104'
+        Info: 5: + IC(1.046 ns) + CELL(0.000 ns) = 5.498 ns; Loc. = CLKCTRL_G0; Fanout = 4; COMB Node = '74161:inst|f74161:sub|104~clkctrl'
+        Info: 6: + IC(0.812 ns) + CELL(0.666 ns) = 6.976 ns; Loc. = LCFF_X2_Y6_N23; Fanout = 4; REG Node = '74161:inst1|f74161:sub|87'
+        Info: Total cell delay = 3.531 ns ( 50.62 % )
+        Info: Total interconnect delay = 3.445 ns ( 49.38 % )
+    Info: + Micro hold delay of destination is 0.306 ns
+    Info: - Shortest pin to register delay is 2.769 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.090 ns) = 1.090 ns; Loc. = PIN_18; Fanout = 8; CLK Node = 'cdu_en'
+        Info: 2: + IC(0.947 ns) + CELL(0.624 ns) = 2.661 ns; Loc. = LCCOMB_X2_Y6_N22; Fanout = 1; COMB Node = '74161:inst1|f74161:sub|87~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.108 ns) = 2.769 ns; Loc. = LCFF_X2_Y6_N23; Fanout = 4; REG Node = '74161:inst1|f74161:sub|87'
+        Info: Total cell delay = 1.822 ns ( 65.80 % )
+        Info: Total interconnect delay = 0.947 ns ( 34.20 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 201 megabytes
+    Info: Processing ended: Sun Mar 28 19:42:29 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

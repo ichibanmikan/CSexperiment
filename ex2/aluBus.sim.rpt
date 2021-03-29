@@ -1,0 +1,773 @@
+Simulator report for aluBus
+Tue Mar 02 15:42:00 2021
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 420 nodes    ;
+; Simulation Coverage         ;      65.62 % ;
+; Total Number of Transitions ; 5925         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
+; Device                      ; EP2S15F484C3 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      65.62 % ;
+; Total nodes checked                                 ; 420          ;
+; Total output ports checked                          ; 573          ;
+; Total output ports with complete 1/0-value coverage ; 376          ;
+; Total output ports with no 1/0-value coverage       ; 39           ;
+; Total output ports with no 1-value coverage         ; 120          ;
+; Total output ports with no 0-value coverage         ; 116          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                       ;
++-----------------------+------------------------+------------------+
+; Node Name             ; Output Port Name       ; Output Port Type ;
++-----------------------+------------------------+------------------+
+; |aluBus|Add13~1       ; |aluBus|Add13~1        ; sumout           ;
+; |aluBus|Add12~1       ; |aluBus|Add12~1        ; sumout           ;
+; |aluBus|Add12~1       ; |aluBus|Add12~2        ; cout             ;
+; |aluBus|Add11~1       ; |aluBus|Add11~1        ; sumout           ;
+; |aluBus|Add10~1       ; |aluBus|Add10~1        ; sumout           ;
+; |aluBus|Add10~1       ; |aluBus|Add10~2        ; cout             ;
+; |aluBus|Add5~1        ; |aluBus|Add5~2         ; cout             ;
+; |aluBus|Add7~5        ; |aluBus|Add7~5         ; sumout           ;
+; |aluBus|Mux7~8        ; |aluBus|Mux7~8         ; combout          ;
+; |aluBus|Mux7~13       ; |aluBus|Mux7~13        ; combout          ;
+; |aluBus|Mux7~22       ; |aluBus|Mux7~22        ; combout          ;
+; |aluBus|Mux7~27       ; |aluBus|Mux7~27        ; combout          ;
+; |aluBus|Add6~1        ; |aluBus|Add6~2         ; cout             ;
+; |aluBus|Add9~1        ; |aluBus|Add9~1         ; sumout           ;
+; |aluBus|Add9~1        ; |aluBus|Add9~2         ; cout             ;
+; |aluBus|Add8~1        ; |aluBus|Add8~1         ; sumout           ;
+; |aluBus|Add8~1        ; |aluBus|Add8~2         ; cout             ;
+; |aluBus|Mux7~38       ; |aluBus|Mux7~38        ; combout          ;
+; |aluBus|Mux7~43       ; |aluBus|Mux7~43        ; combout          ;
+; |aluBus|Add5~5        ; |aluBus|Add5~5         ; sumout           ;
+; |aluBus|Add5~5        ; |aluBus|Add5~6         ; cout             ;
+; |aluBus|Add11~5       ; |aluBus|Add11~6        ; cout             ;
+; |aluBus|Add9~5        ; |aluBus|Add9~5         ; sumout           ;
+; |aluBus|Add9~5        ; |aluBus|Add9~6         ; cout             ;
+; |aluBus|Add16~5       ; |aluBus|Add16~5        ; sumout           ;
+; |aluBus|Add16~5       ; |aluBus|Add16~6        ; cout             ;
+; |aluBus|Add21~5       ; |aluBus|Add21~5        ; sumout           ;
+; |aluBus|Add6~5        ; |aluBus|Add6~5         ; sumout           ;
+; |aluBus|Add6~5        ; |aluBus|Add6~6         ; cout             ;
+; |aluBus|Add13~5       ; |aluBus|Add13~5        ; sumout           ;
+; |aluBus|Add13~5       ; |aluBus|Add13~6        ; cout             ;
+; |aluBus|Add18~5       ; |aluBus|Add18~5        ; sumout           ;
+; |aluBus|Add7~9        ; |aluBus|Add7~9         ; sumout           ;
+; |aluBus|Add7~9        ; |aluBus|Add7~10        ; cout             ;
+; |aluBus|Add8~5        ; |aluBus|Add8~5         ; sumout           ;
+; |aluBus|Add20~5       ; |aluBus|Add20~5        ; sumout           ;
+; |aluBus|Add20~5       ; |aluBus|Add20~6        ; cout             ;
+; |aluBus|Add15~5       ; |aluBus|Add15~5        ; sumout           ;
+; |aluBus|Add15~5       ; |aluBus|Add15~6        ; cout             ;
+; |aluBus|Add4~5        ; |aluBus|Add4~5         ; sumout           ;
+; |aluBus|Add0~5        ; |aluBus|Add0~5         ; sumout           ;
+; |aluBus|Add0~5        ; |aluBus|Add0~6         ; cout             ;
+; |aluBus|Add1~5        ; |aluBus|Add1~5         ; sumout           ;
+; |aluBus|Add17~5       ; |aluBus|Add17~5        ; sumout           ;
+; |aluBus|Add12~5       ; |aluBus|Add12~5        ; sumout           ;
+; |aluBus|Add12~5       ; |aluBus|Add12~6        ; cout             ;
+; |aluBus|Add2~5        ; |aluBus|Add2~5         ; sumout           ;
+; |aluBus|Add2~5        ; |aluBus|Add2~6         ; cout             ;
+; |aluBus|Add5~9        ; |aluBus|Add5~9         ; sumout           ;
+; |aluBus|Add5~9        ; |aluBus|Add5~10        ; cout             ;
+; |aluBus|Add11~9       ; |aluBus|Add11~9        ; sumout           ;
+; |aluBus|Add11~9       ; |aluBus|Add11~10       ; cout             ;
+; |aluBus|Add9~9        ; |aluBus|Add9~9         ; sumout           ;
+; |aluBus|Add9~9        ; |aluBus|Add9~10        ; cout             ;
+; |aluBus|Add16~9       ; |aluBus|Add16~9        ; sumout           ;
+; |aluBus|Add16~9       ; |aluBus|Add16~10       ; cout             ;
+; |aluBus|Add21~9       ; |aluBus|Add21~9        ; sumout           ;
+; |aluBus|Add6~9        ; |aluBus|Add6~10        ; cout             ;
+; |aluBus|Add13~9       ; |aluBus|Add13~9        ; sumout           ;
+; |aluBus|Add13~9       ; |aluBus|Add13~10       ; cout             ;
+; |aluBus|Add18~9       ; |aluBus|Add18~9        ; sumout           ;
+; |aluBus|Add18~9       ; |aluBus|Add18~10       ; cout             ;
+; |aluBus|Add7~13       ; |aluBus|Add7~13        ; sumout           ;
+; |aluBus|Add7~13       ; |aluBus|Add7~14        ; cout             ;
+; |aluBus|Add8~9        ; |aluBus|Add8~9         ; sumout           ;
+; |aluBus|Add20~9       ; |aluBus|Add20~9        ; sumout           ;
+; |aluBus|Add20~9       ; |aluBus|Add20~10       ; cout             ;
+; |aluBus|Add15~9       ; |aluBus|Add15~9        ; sumout           ;
+; |aluBus|Add15~9       ; |aluBus|Add15~10       ; cout             ;
+; |aluBus|Add10~9       ; |aluBus|Add10~9        ; sumout           ;
+; |aluBus|Add4~9        ; |aluBus|Add4~9         ; sumout           ;
+; |aluBus|Add0~9        ; |aluBus|Add0~9         ; sumout           ;
+; |aluBus|Add0~9        ; |aluBus|Add0~10        ; cout             ;
+; |aluBus|Add1~9        ; |aluBus|Add1~9         ; sumout           ;
+; |aluBus|Add1~9        ; |aluBus|Add1~10        ; cout             ;
+; |aluBus|Add17~9       ; |aluBus|Add17~9        ; sumout           ;
+; |aluBus|Add12~9       ; |aluBus|Add12~9        ; sumout           ;
+; |aluBus|Add12~9       ; |aluBus|Add12~10       ; cout             ;
+; |aluBus|Add14~9       ; |aluBus|Add14~9        ; sumout           ;
+; |aluBus|Add19~9       ; |aluBus|Add19~9        ; sumout           ;
+; |aluBus|Add19~9       ; |aluBus|Add19~10       ; cout             ;
+; |aluBus|Add2~9        ; |aluBus|Add2~9         ; sumout           ;
+; |aluBus|Add2~9        ; |aluBus|Add2~10        ; cout             ;
+; |aluBus|Add5~13       ; |aluBus|Add5~13        ; sumout           ;
+; |aluBus|Add5~13       ; |aluBus|Add5~14        ; cout             ;
+; |aluBus|Add11~13      ; |aluBus|Add11~13       ; sumout           ;
+; |aluBus|Add9~13       ; |aluBus|Add9~13        ; sumout           ;
+; |aluBus|Add9~13       ; |aluBus|Add9~14        ; cout             ;
+; |aluBus|Add16~13      ; |aluBus|Add16~13       ; sumout           ;
+; |aluBus|Add21~13      ; |aluBus|Add21~13       ; sumout           ;
+; |aluBus|Add6~13       ; |aluBus|Add6~13        ; sumout           ;
+; |aluBus|Add6~13       ; |aluBus|Add6~14        ; cout             ;
+; |aluBus|Add13~13      ; |aluBus|Add13~13       ; sumout           ;
+; |aluBus|Add18~13      ; |aluBus|Add18~13       ; sumout           ;
+; |aluBus|Add7~17       ; |aluBus|Add7~17        ; sumout           ;
+; |aluBus|Add7~17       ; |aluBus|Add7~18        ; cout             ;
+; |aluBus|Add8~13       ; |aluBus|Add8~13        ; sumout           ;
+; |aluBus|Add20~13      ; |aluBus|Add20~13       ; sumout           ;
+; |aluBus|Add20~13      ; |aluBus|Add20~14       ; cout             ;
+; |aluBus|Add15~13      ; |aluBus|Add15~13       ; sumout           ;
+; |aluBus|Add10~13      ; |aluBus|Add10~13       ; sumout           ;
+; |aluBus|Add4~13       ; |aluBus|Add4~13        ; sumout           ;
+; |aluBus|Add0~13       ; |aluBus|Add0~13        ; sumout           ;
+; |aluBus|Add0~13       ; |aluBus|Add0~14        ; cout             ;
+; |aluBus|Add1~13       ; |aluBus|Add1~13        ; sumout           ;
+; |aluBus|Add1~13       ; |aluBus|Add1~14        ; cout             ;
+; |aluBus|Add17~13      ; |aluBus|Add17~13       ; sumout           ;
+; |aluBus|Add12~13      ; |aluBus|Add12~13       ; sumout           ;
+; |aluBus|Add12~13      ; |aluBus|Add12~14       ; cout             ;
+; |aluBus|Add14~13      ; |aluBus|Add14~13       ; sumout           ;
+; |aluBus|Add19~13      ; |aluBus|Add19~13       ; sumout           ;
+; |aluBus|Add2~13       ; |aluBus|Add2~13        ; sumout           ;
+; |aluBus|Add2~13       ; |aluBus|Add2~14        ; cout             ;
+; |aluBus|Add5~17       ; |aluBus|Add5~17        ; sumout           ;
+; |aluBus|Add5~17       ; |aluBus|Add5~18        ; cout             ;
+; |aluBus|Add11~17      ; |aluBus|Add11~17       ; sumout           ;
+; |aluBus|Add11~17      ; |aluBus|Add11~18       ; cout             ;
+; |aluBus|Add9~17       ; |aluBus|Add9~17        ; sumout           ;
+; |aluBus|Add21~17      ; |aluBus|Add21~17       ; sumout           ;
+; |aluBus|Add6~17       ; |aluBus|Add6~17        ; sumout           ;
+; |aluBus|Add13~17      ; |aluBus|Add13~17       ; sumout           ;
+; |aluBus|Add7~21       ; |aluBus|Add7~21        ; sumout           ;
+; |aluBus|Add7~21       ; |aluBus|Add7~22        ; cout             ;
+; |aluBus|Add8~17       ; |aluBus|Add8~17        ; sumout           ;
+; |aluBus|Add20~17      ; |aluBus|Add20~17       ; sumout           ;
+; |aluBus|Add20~17      ; |aluBus|Add20~18       ; cout             ;
+; |aluBus|Add10~17      ; |aluBus|Add10~17       ; sumout           ;
+; |aluBus|Add4~17       ; |aluBus|Add4~17        ; sumout           ;
+; |aluBus|Add1~17       ; |aluBus|Add1~17        ; sumout           ;
+; |aluBus|Add12~17      ; |aluBus|Add12~17       ; sumout           ;
+; |aluBus|Add12~17      ; |aluBus|Add12~18       ; cout             ;
+; |aluBus|Add14~17      ; |aluBus|Add14~17       ; sumout           ;
+; |aluBus|Add19~17      ; |aluBus|Add19~17       ; sumout           ;
+; |aluBus|Add2~17       ; |aluBus|Add2~17        ; sumout           ;
+; |aluBus|Add2~17       ; |aluBus|Add2~18        ; cout             ;
+; |aluBus|Add5~21       ; |aluBus|Add5~21        ; sumout           ;
+; |aluBus|Add11~21      ; |aluBus|Add11~21       ; sumout           ;
+; |aluBus|Add7~25       ; |aluBus|Add7~25        ; sumout           ;
+; |aluBus|Add7~25       ; |aluBus|Add7~26        ; cout             ;
+; |aluBus|Add8~21       ; |aluBus|Add8~21        ; sumout           ;
+; |aluBus|Add20~21      ; |aluBus|Add20~21       ; sumout           ;
+; |aluBus|Add20~21      ; |aluBus|Add20~22       ; cout             ;
+; |aluBus|Add14~21      ; |aluBus|Add14~21       ; sumout           ;
+; |aluBus|Add19~21      ; |aluBus|Add19~21       ; sumout           ;
+; |aluBus|Add2~21       ; |aluBus|Add2~21        ; sumout           ;
+; |aluBus|Add2~21       ; |aluBus|Add2~22        ; cout             ;
+; |aluBus|Add7~29       ; |aluBus|Add7~29        ; sumout           ;
+; |aluBus|Add7~29       ; |aluBus|Add7~30        ; cout             ;
+; |aluBus|Add8~25       ; |aluBus|Add8~25        ; sumout           ;
+; |aluBus|Add20~25      ; |aluBus|Add20~25       ; sumout           ;
+; |aluBus|Add20~25      ; |aluBus|Add20~26       ; cout             ;
+; |aluBus|Add14~25      ; |aluBus|Add14~25       ; sumout           ;
+; |aluBus|Add19~25      ; |aluBus|Add19~25       ; sumout           ;
+; |aluBus|Add2~25       ; |aluBus|Add2~25        ; sumout           ;
+; |aluBus|Add2~25       ; |aluBus|Add2~26        ; cout             ;
+; |aluBus|Add3~2        ; |aluBus|Add3~2         ; cout             ;
+; |aluBus|Add3~5        ; |aluBus|Add3~5         ; sumout           ;
+; |aluBus|Add3~5        ; |aluBus|Add3~6         ; cout             ;
+; |aluBus|Add3~9        ; |aluBus|Add3~9         ; sumout           ;
+; |aluBus|Add3~9        ; |aluBus|Add3~10        ; cout             ;
+; |aluBus|Add3~13       ; |aluBus|Add3~13        ; sumout           ;
+; |aluBus|Add3~13       ; |aluBus|Add3~14        ; cout             ;
+; |aluBus|Add3~17       ; |aluBus|Add3~17        ; sumout           ;
+; |aluBus|Add3~17       ; |aluBus|Add3~18        ; cout             ;
+; |aluBus|Add3~21       ; |aluBus|Add3~21        ; sumout           ;
+; |aluBus|Add3~21       ; |aluBus|Add3~22        ; cout             ;
+; |aluBus|Add3~25       ; |aluBus|Add3~25        ; sumout           ;
+; |aluBus|Add3~25       ; |aluBus|Add3~26        ; cout             ;
+; |aluBus|Add14~29      ; |aluBus|Add14~29       ; sumout           ;
+; |aluBus|Add20~29      ; |aluBus|Add20~29       ; sumout           ;
+; |aluBus|Add19~29      ; |aluBus|Add19~29       ; sumout           ;
+; |aluBus|Add7~33       ; |aluBus|Add7~33        ; sumout           ;
+; |aluBus|Add2~29       ; |aluBus|Add2~29        ; sumout           ;
+; |aluBus|Add3~29       ; |aluBus|Add3~29        ; sumout           ;
+; |aluBus|Add8~29       ; |aluBus|Add8~29        ; sumout           ;
+; |aluBus|Mux0~14       ; |aluBus|Mux0~14        ; combout          ;
+; |aluBus|Mux1~12       ; |aluBus|Mux1~12        ; combout          ;
+; |aluBus|Mux2~12       ; |aluBus|Mux2~12        ; combout          ;
+; |aluBus|bus_Reg[4]~58 ; |aluBus|bus_Reg[4]~58  ; combout          ;
+; |aluBus|Mux3~12       ; |aluBus|Mux3~12        ; combout          ;
+; |aluBus|Mux4~12       ; |aluBus|Mux4~12        ; combout          ;
+; |aluBus|bus_Reg[2]~62 ; |aluBus|bus_Reg[2]~62  ; combout          ;
+; |aluBus|Mux5~12       ; |aluBus|Mux5~12        ; combout          ;
+; |aluBus|Mux6~25       ; |aluBus|Mux6~25        ; combout          ;
+; |aluBus|bus_Reg~34    ; |aluBus|bus_Reg~34     ; combout          ;
+; |aluBus|bus_Reg[0]~37 ; |aluBus|bus_Reg[0]~37  ; combout          ;
+; |aluBus|bus_Reg[0]~38 ; |aluBus|bus_Reg[0]~38  ; combout          ;
+; |aluBus|bus_Reg[0]~39 ; |aluBus|bus_Reg[0]~39  ; combout          ;
+; |aluBus|Mux7~1        ; |aluBus|Mux7~1         ; combout          ;
+; |aluBus|Mux7~3        ; |aluBus|Mux7~3         ; combout          ;
+; |aluBus|Mux7~4        ; |aluBus|Mux7~4         ; combout          ;
+; |aluBus|Mux7~5        ; |aluBus|Mux7~5         ; combout          ;
+; |aluBus|Mux7~6        ; |aluBus|Mux7~6         ; combout          ;
+; |aluBus|Mux7~7        ; |aluBus|Mux7~7         ; combout          ;
+; |aluBus|Mux7~17       ; |aluBus|Mux7~17        ; combout          ;
+; |aluBus|Mux7~18       ; |aluBus|Mux7~18        ; combout          ;
+; |aluBus|Mux7~19       ; |aluBus|Mux7~19        ; combout          ;
+; |aluBus|Mux7~20       ; |aluBus|Mux7~20        ; combout          ;
+; |aluBus|Mux7~21       ; |aluBus|Mux7~21        ; combout          ;
+; |aluBus|Mux7~31       ; |aluBus|Mux7~31        ; combout          ;
+; |aluBus|Mux7~33       ; |aluBus|Mux7~33        ; combout          ;
+; |aluBus|Mux7~34       ; |aluBus|Mux7~34        ; combout          ;
+; |aluBus|Mux7~35       ; |aluBus|Mux7~35        ; combout          ;
+; |aluBus|Mux7~36       ; |aluBus|Mux7~36        ; combout          ;
+; |aluBus|Mux7~37       ; |aluBus|Mux7~37        ; combout          ;
+; |aluBus|Mux7~47       ; |aluBus|Mux7~47        ; combout          ;
+; |aluBus|bus_Reg[0]~40 ; |aluBus|bus_Reg[0]~40  ; combout          ;
+; |aluBus|bus_Reg[0]~41 ; |aluBus|bus_Reg[0]~41  ; combout          ;
+; |aluBus|d~18          ; |aluBus|d~18           ; combout          ;
+; |aluBus|r4[1]         ; |aluBus|r4[1]          ; regout           ;
+; |aluBus|Mux6~1        ; |aluBus|Mux6~1         ; combout          ;
+; |aluBus|dr1[1]        ; |aluBus|dr1[1]         ; regout           ;
+; |aluBus|dr2[1]        ; |aluBus|dr2[1]         ; regout           ;
+; |aluBus|Mux6~2        ; |aluBus|Mux6~2         ; combout          ;
+; |aluBus|Mux6~3        ; |aluBus|Mux6~3         ; combout          ;
+; |aluBus|Mux6~4        ; |aluBus|Mux6~4         ; combout          ;
+; |aluBus|Mux6~5        ; |aluBus|Mux6~5         ; combout          ;
+; |aluBus|Mux6~6        ; |aluBus|Mux6~6         ; combout          ;
+; |aluBus|Mux6~7        ; |aluBus|Mux6~7         ; combout          ;
+; |aluBus|Mux6~8        ; |aluBus|Mux6~8         ; combout          ;
+; |aluBus|Mux6~9        ; |aluBus|Mux6~9         ; combout          ;
+; |aluBus|Mux6~10       ; |aluBus|Mux6~10        ; combout          ;
+; |aluBus|Mux6~11       ; |aluBus|Mux6~11        ; combout          ;
+; |aluBus|Mux6~12       ; |aluBus|Mux6~12        ; combout          ;
+; |aluBus|Mux6~13       ; |aluBus|Mux6~13        ; combout          ;
+; |aluBus|Mux6~16       ; |aluBus|Mux6~16        ; combout          ;
+; |aluBus|Mux6~17       ; |aluBus|Mux6~17        ; combout          ;
+; |aluBus|Mux6~18       ; |aluBus|Mux6~18        ; combout          ;
+; |aluBus|Mux6~19       ; |aluBus|Mux6~19        ; combout          ;
+; |aluBus|Mux6~20       ; |aluBus|Mux6~20        ; combout          ;
+; |aluBus|Mux6~21       ; |aluBus|Mux6~21        ; combout          ;
+; |aluBus|Mux6~22       ; |aluBus|Mux6~22        ; combout          ;
+; |aluBus|Mux6~23       ; |aluBus|Mux6~23        ; combout          ;
+; |aluBus|Mux6~24       ; |aluBus|Mux6~24        ; combout          ;
+; |aluBus|bus_Reg[1]~42 ; |aluBus|bus_Reg[1]~42  ; combout          ;
+; |aluBus|bus_Reg[1]~43 ; |aluBus|bus_Reg[1]~43  ; combout          ;
+; |aluBus|bus_Reg[1]~44 ; |aluBus|bus_Reg[1]~44  ; combout          ;
+; |aluBus|r4[2]         ; |aluBus|r4[2]          ; regout           ;
+; |aluBus|dr1[2]        ; |aluBus|dr1[2]         ; regout           ;
+; |aluBus|Mux5~1        ; |aluBus|Mux5~1         ; combout          ;
+; |aluBus|Mux5~2        ; |aluBus|Mux5~2         ; combout          ;
+; |aluBus|Mux5~3        ; |aluBus|Mux5~3         ; combout          ;
+; |aluBus|Mux5~4        ; |aluBus|Mux5~4         ; combout          ;
+; |aluBus|Mux5~5        ; |aluBus|Mux5~5         ; combout          ;
+; |aluBus|Mux5~6        ; |aluBus|Mux5~6         ; combout          ;
+; |aluBus|Mux5~7        ; |aluBus|Mux5~7         ; combout          ;
+; |aluBus|Mux5~8        ; |aluBus|Mux5~8         ; combout          ;
+; |aluBus|Mux5~9        ; |aluBus|Mux5~9         ; combout          ;
+; |aluBus|Mux5~10       ; |aluBus|Mux5~10        ; combout          ;
+; |aluBus|Mux5~11       ; |aluBus|Mux5~11        ; combout          ;
+; |aluBus|aluout~71     ; |aluBus|aluout~71      ; combout          ;
+; |aluBus|bus_Reg[2]~45 ; |aluBus|bus_Reg[2]~45  ; combout          ;
+; |aluBus|r4[3]         ; |aluBus|r4[3]          ; regout           ;
+; |aluBus|dr2[3]        ; |aluBus|dr2[3]         ; regout           ;
+; |aluBus|Mux4~1        ; |aluBus|Mux4~1         ; combout          ;
+; |aluBus|Mux4~2        ; |aluBus|Mux4~2         ; combout          ;
+; |aluBus|Mux4~3        ; |aluBus|Mux4~3         ; combout          ;
+; |aluBus|Mux4~4        ; |aluBus|Mux4~4         ; combout          ;
+; |aluBus|Mux4~5        ; |aluBus|Mux4~5         ; combout          ;
+; |aluBus|Mux4~6        ; |aluBus|Mux4~6         ; combout          ;
+; |aluBus|Mux4~7        ; |aluBus|Mux4~7         ; combout          ;
+; |aluBus|Mux4~8        ; |aluBus|Mux4~8         ; combout          ;
+; |aluBus|Mux4~9        ; |aluBus|Mux4~9         ; combout          ;
+; |aluBus|Mux4~10       ; |aluBus|Mux4~10        ; combout          ;
+; |aluBus|Mux4~11       ; |aluBus|Mux4~11        ; combout          ;
+; |aluBus|bus_Reg[3]~46 ; |aluBus|bus_Reg[3]~46  ; combout          ;
+; |aluBus|bus_Reg[3]~47 ; |aluBus|bus_Reg[3]~47  ; combout          ;
+; |aluBus|bus_Reg[3]~48 ; |aluBus|bus_Reg[3]~48  ; combout          ;
+; |aluBus|r4[4]         ; |aluBus|r4[4]          ; regout           ;
+; |aluBus|dr1[4]        ; |aluBus|dr1[4]         ; regout           ;
+; |aluBus|Mux3~1        ; |aluBus|Mux3~1         ; combout          ;
+; |aluBus|Mux3~2        ; |aluBus|Mux3~2         ; combout          ;
+; |aluBus|Mux3~3        ; |aluBus|Mux3~3         ; combout          ;
+; |aluBus|Mux3~4        ; |aluBus|Mux3~4         ; combout          ;
+; |aluBus|Mux3~5        ; |aluBus|Mux3~5         ; combout          ;
+; |aluBus|Mux3~6        ; |aluBus|Mux3~6         ; combout          ;
+; |aluBus|Mux3~7        ; |aluBus|Mux3~7         ; combout          ;
+; |aluBus|Mux3~8        ; |aluBus|Mux3~8         ; combout          ;
+; |aluBus|Mux3~9        ; |aluBus|Mux3~9         ; combout          ;
+; |aluBus|Mux3~10       ; |aluBus|Mux3~10        ; combout          ;
+; |aluBus|Mux3~11       ; |aluBus|Mux3~11        ; combout          ;
+; |aluBus|bus_Reg[4]~49 ; |aluBus|bus_Reg[4]~49  ; combout          ;
+; |aluBus|Mux2~1        ; |aluBus|Mux2~1         ; combout          ;
+; |aluBus|Mux2~2        ; |aluBus|Mux2~2         ; combout          ;
+; |aluBus|Mux2~3        ; |aluBus|Mux2~3         ; combout          ;
+; |aluBus|Mux2~4        ; |aluBus|Mux2~4         ; combout          ;
+; |aluBus|Mux2~5        ; |aluBus|Mux2~5         ; combout          ;
+; |aluBus|Mux2~6        ; |aluBus|Mux2~6         ; combout          ;
+; |aluBus|Mux2~7        ; |aluBus|Mux2~7         ; combout          ;
+; |aluBus|Mux2~8        ; |aluBus|Mux2~8         ; combout          ;
+; |aluBus|Mux2~9        ; |aluBus|Mux2~9         ; combout          ;
+; |aluBus|Mux2~10       ; |aluBus|Mux2~10        ; combout          ;
+; |aluBus|Mux2~11       ; |aluBus|Mux2~11        ; combout          ;
+; |aluBus|bus_Reg[5]~50 ; |aluBus|bus_Reg[5]~50  ; combout          ;
+; |aluBus|bus_Reg[5]~51 ; |aluBus|bus_Reg[5]~51  ; combout          ;
+; |aluBus|bus_Reg[5]~52 ; |aluBus|bus_Reg[5]~52  ; combout          ;
+; |aluBus|Mux1~1        ; |aluBus|Mux1~1         ; combout          ;
+; |aluBus|Mux1~2        ; |aluBus|Mux1~2         ; combout          ;
+; |aluBus|Mux1~3        ; |aluBus|Mux1~3         ; combout          ;
+; |aluBus|Mux1~4        ; |aluBus|Mux1~4         ; combout          ;
+; |aluBus|Mux1~5        ; |aluBus|Mux1~5         ; combout          ;
+; |aluBus|Mux1~6        ; |aluBus|Mux1~6         ; combout          ;
+; |aluBus|Mux1~7        ; |aluBus|Mux1~7         ; combout          ;
+; |aluBus|Mux1~8        ; |aluBus|Mux1~8         ; combout          ;
+; |aluBus|Mux1~9        ; |aluBus|Mux1~9         ; combout          ;
+; |aluBus|Mux1~10       ; |aluBus|Mux1~10        ; combout          ;
+; |aluBus|Mux1~11       ; |aluBus|Mux1~11        ; combout          ;
+; |aluBus|bus_Reg[6]~53 ; |aluBus|bus_Reg[6]~53  ; combout          ;
+; |aluBus|bus_Reg[6]~54 ; |aluBus|bus_Reg[6]~54  ; combout          ;
+; |aluBus|bus_Reg[6]~55 ; |aluBus|bus_Reg[6]~55  ; combout          ;
+; |aluBus|bus_Reg[7]~56 ; |aluBus|bus_Reg[7]~56  ; combout          ;
+; |aluBus|bus_Reg[7]~57 ; |aluBus|bus_Reg[7]~57  ; combout          ;
+; |aluBus|dr2[0]~8      ; |aluBus|dr2[0]~8       ; combout          ;
+; |aluBus|r5[0]~24      ; |aluBus|r5[0]~24       ; combout          ;
+; |aluBus|r4[0]~16      ; |aluBus|r4[0]~16       ; combout          ;
+; |aluBus|Mux0~0        ; |aluBus|Mux0~0         ; combout          ;
+; |aluBus|Mux0~1        ; |aluBus|Mux0~1         ; combout          ;
+; |aluBus|Mux0~2        ; |aluBus|Mux0~2         ; combout          ;
+; |aluBus|Mux0~3        ; |aluBus|Mux0~3         ; combout          ;
+; |aluBus|Mux0~4        ; |aluBus|Mux0~4         ; combout          ;
+; |aluBus|Mux0~5        ; |aluBus|Mux0~5         ; combout          ;
+; |aluBus|Mux0~6        ; |aluBus|Mux0~6         ; combout          ;
+; |aluBus|Mux0~7        ; |aluBus|Mux0~7         ; combout          ;
+; |aluBus|Mux0~8        ; |aluBus|Mux0~8         ; combout          ;
+; |aluBus|Mux0~9        ; |aluBus|Mux0~9         ; combout          ;
+; |aluBus|Mux0~10       ; |aluBus|Mux0~10        ; combout          ;
+; |aluBus|Mux0~11       ; |aluBus|Mux0~11        ; combout          ;
+; |aluBus|Mux0~12       ; |aluBus|Mux0~12        ; combout          ;
+; |aluBus|Mux0~13       ; |aluBus|Mux0~13        ; combout          ;
+; |aluBus|Mux6~30       ; |aluBus|Mux6~30        ; combout          ;
+; |aluBus|Mux5~16       ; |aluBus|Mux5~16        ; combout          ;
+; |aluBus|Mux5~17       ; |aluBus|Mux5~17        ; combout          ;
+; |aluBus|Mux4~16       ; |aluBus|Mux4~16        ; combout          ;
+; |aluBus|Mux4~17       ; |aluBus|Mux4~17        ; combout          ;
+; |aluBus|Mux3~16       ; |aluBus|Mux3~16        ; combout          ;
+; |aluBus|Mux3~17       ; |aluBus|Mux3~17        ; combout          ;
+; |aluBus|Mux2~16       ; |aluBus|Mux2~16        ; combout          ;
+; |aluBus|Mux2~17       ; |aluBus|Mux2~17        ; combout          ;
+; |aluBus|Mux1~16       ; |aluBus|Mux1~16        ; combout          ;
+; |aluBus|Mux1~17       ; |aluBus|Mux1~17        ; combout          ;
+; |aluBus|d[0]          ; |aluBus|d[0]~15        ; combout          ;
+; |aluBus|d[0]          ; |aluBus|d[0]~output    ; padio            ;
+; |aluBus|d[1]          ; |aluBus|d[1]~14        ; combout          ;
+; |aluBus|d[1]          ; |aluBus|d[1]~output    ; padio            ;
+; |aluBus|d[2]          ; |aluBus|d[2]~13        ; combout          ;
+; |aluBus|d[2]          ; |aluBus|d[2]~output    ; padio            ;
+; |aluBus|d[3]          ; |aluBus|d[3]~12        ; combout          ;
+; |aluBus|d[3]          ; |aluBus|d[3]~output    ; padio            ;
+; |aluBus|d[4]          ; |aluBus|d[4]~11        ; combout          ;
+; |aluBus|d[4]          ; |aluBus|d[4]~output    ; padio            ;
+; |aluBus|d[5]          ; |aluBus|d[5]~10        ; combout          ;
+; |aluBus|d[5]          ; |aluBus|d[5]~output    ; padio            ;
+; |aluBus|d[6]          ; |aluBus|d[6]~9         ; combout          ;
+; |aluBus|d[6]          ; |aluBus|d[6]~output    ; padio            ;
+; |aluBus|d[7]          ; |aluBus|d[7]~8         ; combout          ;
+; |aluBus|d[7]          ; |aluBus|d[7]~output    ; padio            ;
+; |aluBus|sw_bus        ; |aluBus|sw_bus~corein  ; combout          ;
+; |aluBus|r4_bus        ; |aluBus|r4_bus~corein  ; combout          ;
+; |aluBus|ALU_bus       ; |aluBus|ALU_bus~corein ; combout          ;
+; |aluBus|r5_bus        ; |aluBus|r5_bus~corein  ; combout          ;
+; |aluBus|k[0]          ; |aluBus|k[0]~corein    ; combout          ;
+; |aluBus|m             ; |aluBus|m~corein       ; combout          ;
+; |aluBus|cn            ; |aluBus|cn~corein      ; combout          ;
+; |aluBus|s[2]          ; |aluBus|s[2]~corein    ; combout          ;
+; |aluBus|s[3]          ; |aluBus|s[3]~corein    ; combout          ;
+; |aluBus|s[1]          ; |aluBus|s[1]~corein    ; combout          ;
+; |aluBus|s[0]          ; |aluBus|s[0]~corein    ; combout          ;
+; |aluBus|k[1]          ; |aluBus|k[1]~corein    ; combout          ;
+; |aluBus|k[2]          ; |aluBus|k[2]~corein    ; combout          ;
+; |aluBus|k[3]          ; |aluBus|k[3]~corein    ; combout          ;
+; |aluBus|Clk           ; |aluBus|Clk~corein     ; combout          ;
+; |aluBus|lddr1         ; |aluBus|lddr1~corein   ; combout          ;
+; |aluBus|lddr2         ; |aluBus|lddr2~corein   ; combout          ;
+; |aluBus|ldr5          ; |aluBus|ldr5~corein    ; combout          ;
+; |aluBus|ldr4          ; |aluBus|ldr4~corein    ; combout          ;
+; |aluBus|Clk~clkctrl   ; |aluBus|Clk~clkctrl    ; outclk           ;
++-----------------------+------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-----------------------------------------------------------+
+; Missing 1-Value Coverage                                  ;
++------------------+---------------------+------------------+
+; Node Name        ; Output Port Name    ; Output Port Type ;
++------------------+---------------------+------------------+
+; |aluBus|Add18~1  ; |aluBus|Add18~1     ; sumout           ;
+; |aluBus|Add17~1  ; |aluBus|Add17~2     ; cout             ;
+; |aluBus|Add1~1   ; |aluBus|Add1~1      ; sumout           ;
+; |aluBus|Add4~1   ; |aluBus|Add4~1      ; sumout           ;
+; |aluBus|Add0~1   ; |aluBus|Add0~1      ; sumout           ;
+; |aluBus|Add7~2   ; |aluBus|Add7~2      ; cout             ;
+; |aluBus|Add2~1   ; |aluBus|Add2~1      ; sumout           ;
+; |aluBus|Add20~1  ; |aluBus|Add20~1     ; sumout           ;
+; |aluBus|Add19~1  ; |aluBus|Add19~2     ; cout             ;
+; |aluBus|Add15~1  ; |aluBus|Add15~1     ; sumout           ;
+; |aluBus|Add14~1  ; |aluBus|Add14~2     ; cout             ;
+; |aluBus|Add21~1  ; |aluBus|Add21~1     ; sumout           ;
+; |aluBus|Add16~1  ; |aluBus|Add16~1     ; sumout           ;
+; |aluBus|Add10~5  ; |aluBus|Add10~6     ; cout             ;
+; |aluBus|Add4~5   ; |aluBus|Add4~6      ; cout             ;
+; |aluBus|Add17~5  ; |aluBus|Add17~6     ; cout             ;
+; |aluBus|Add14~5  ; |aluBus|Add14~6     ; cout             ;
+; |aluBus|Add19~5  ; |aluBus|Add19~6     ; cout             ;
+; |aluBus|Add10~9  ; |aluBus|Add10~10    ; cout             ;
+; |aluBus|Add4~9   ; |aluBus|Add4~10     ; cout             ;
+; |aluBus|Add17~9  ; |aluBus|Add17~10    ; cout             ;
+; |aluBus|Add14~9  ; |aluBus|Add14~10    ; cout             ;
+; |aluBus|Add10~13 ; |aluBus|Add10~14    ; cout             ;
+; |aluBus|Add4~13  ; |aluBus|Add4~14     ; cout             ;
+; |aluBus|Add17~13 ; |aluBus|Add17~14    ; cout             ;
+; |aluBus|Add14~13 ; |aluBus|Add14~14    ; cout             ;
+; |aluBus|Add19~13 ; |aluBus|Add19~14    ; cout             ;
+; |aluBus|Add16~17 ; |aluBus|Add16~17    ; sumout           ;
+; |aluBus|Add15~17 ; |aluBus|Add15~17    ; sumout           ;
+; |aluBus|Add10~17 ; |aluBus|Add10~18    ; cout             ;
+; |aluBus|Add4~17  ; |aluBus|Add4~18     ; cout             ;
+; |aluBus|Add0~17  ; |aluBus|Add0~18     ; cout             ;
+; |aluBus|Add17~17 ; |aluBus|Add17~18    ; cout             ;
+; |aluBus|Add14~17 ; |aluBus|Add14~18    ; cout             ;
+; |aluBus|Add19~17 ; |aluBus|Add19~18    ; cout             ;
+; |aluBus|Add5~21  ; |aluBus|Add5~22     ; cout             ;
+; |aluBus|Add11~21 ; |aluBus|Add11~22    ; cout             ;
+; |aluBus|Add9~21  ; |aluBus|Add9~21     ; sumout           ;
+; |aluBus|Add16~21 ; |aluBus|Add16~21    ; sumout           ;
+; |aluBus|Add21~21 ; |aluBus|Add21~21    ; sumout           ;
+; |aluBus|Add6~21  ; |aluBus|Add6~22     ; cout             ;
+; |aluBus|Add13~21 ; |aluBus|Add13~22    ; cout             ;
+; |aluBus|Add18~21 ; |aluBus|Add18~22    ; cout             ;
+; |aluBus|Add15~21 ; |aluBus|Add15~21    ; sumout           ;
+; |aluBus|Add10~21 ; |aluBus|Add10~22    ; cout             ;
+; |aluBus|Add4~21  ; |aluBus|Add4~22     ; cout             ;
+; |aluBus|Add0~21  ; |aluBus|Add0~21     ; sumout           ;
+; |aluBus|Add0~21  ; |aluBus|Add0~22     ; cout             ;
+; |aluBus|Add1~21  ; |aluBus|Add1~22     ; cout             ;
+; |aluBus|Add17~21 ; |aluBus|Add17~22    ; cout             ;
+; |aluBus|Add12~21 ; |aluBus|Add12~22    ; cout             ;
+; |aluBus|Add14~21 ; |aluBus|Add14~22    ; cout             ;
+; |aluBus|Add19~21 ; |aluBus|Add19~22    ; cout             ;
+; |aluBus|Add5~25  ; |aluBus|Add5~25     ; sumout           ;
+; |aluBus|Add5~25  ; |aluBus|Add5~26     ; cout             ;
+; |aluBus|Add11~25 ; |aluBus|Add11~25    ; sumout           ;
+; |aluBus|Add11~25 ; |aluBus|Add11~26    ; cout             ;
+; |aluBus|Add9~25  ; |aluBus|Add9~25     ; sumout           ;
+; |aluBus|Add16~25 ; |aluBus|Add16~25    ; sumout           ;
+; |aluBus|Add21~25 ; |aluBus|Add21~25    ; sumout           ;
+; |aluBus|Add6~25  ; |aluBus|Add6~25     ; sumout           ;
+; |aluBus|Add6~25  ; |aluBus|Add6~26     ; cout             ;
+; |aluBus|Add13~25 ; |aluBus|Add13~25    ; sumout           ;
+; |aluBus|Add13~25 ; |aluBus|Add13~26    ; cout             ;
+; |aluBus|Add18~25 ; |aluBus|Add18~25    ; sumout           ;
+; |aluBus|Add18~25 ; |aluBus|Add18~26    ; cout             ;
+; |aluBus|Add15~25 ; |aluBus|Add15~25    ; sumout           ;
+; |aluBus|Add10~25 ; |aluBus|Add10~25    ; sumout           ;
+; |aluBus|Add10~25 ; |aluBus|Add10~26    ; cout             ;
+; |aluBus|Add4~25  ; |aluBus|Add4~25     ; sumout           ;
+; |aluBus|Add4~25  ; |aluBus|Add4~26     ; cout             ;
+; |aluBus|Add0~25  ; |aluBus|Add0~25     ; sumout           ;
+; |aluBus|Add0~25  ; |aluBus|Add0~26     ; cout             ;
+; |aluBus|Add1~25  ; |aluBus|Add1~25     ; sumout           ;
+; |aluBus|Add1~25  ; |aluBus|Add1~26     ; cout             ;
+; |aluBus|Add17~25 ; |aluBus|Add17~25    ; sumout           ;
+; |aluBus|Add17~25 ; |aluBus|Add17~26    ; cout             ;
+; |aluBus|Add12~25 ; |aluBus|Add12~25    ; sumout           ;
+; |aluBus|Add12~25 ; |aluBus|Add12~26    ; cout             ;
+; |aluBus|Add14~25 ; |aluBus|Add14~26    ; cout             ;
+; |aluBus|Add19~25 ; |aluBus|Add19~26    ; cout             ;
+; |aluBus|Add11~29 ; |aluBus|Add11~29    ; sumout           ;
+; |aluBus|Add10~29 ; |aluBus|Add10~29    ; sumout           ;
+; |aluBus|Add5~29  ; |aluBus|Add5~29     ; sumout           ;
+; |aluBus|Add4~29  ; |aluBus|Add4~29     ; sumout           ;
+; |aluBus|Add0~29  ; |aluBus|Add0~29     ; sumout           ;
+; |aluBus|Add1~29  ; |aluBus|Add1~29     ; sumout           ;
+; |aluBus|Add18~29 ; |aluBus|Add18~29    ; sumout           ;
+; |aluBus|Add17~29 ; |aluBus|Add17~29    ; sumout           ;
+; |aluBus|Add13~29 ; |aluBus|Add13~29    ; sumout           ;
+; |aluBus|Add12~29 ; |aluBus|Add12~29    ; sumout           ;
+; |aluBus|Add15~29 ; |aluBus|Add15~29    ; sumout           ;
+; |aluBus|Add9~29  ; |aluBus|Add9~29     ; sumout           ;
+; |aluBus|Add16~29 ; |aluBus|Add16~29    ; sumout           ;
+; |aluBus|Add21~29 ; |aluBus|Add21~29    ; sumout           ;
+; |aluBus|Add6~29  ; |aluBus|Add6~29     ; sumout           ;
+; |aluBus|Mux7~32  ; |aluBus|Mux7~32     ; combout          ;
+; |aluBus|Mux7~42  ; |aluBus|Mux7~42     ; combout          ;
+; |aluBus|r5[0]    ; |aluBus|r5[0]       ; regout           ;
+; |aluBus|Mux6~14  ; |aluBus|Mux6~14     ; combout          ;
+; |aluBus|r5[2]    ; |aluBus|r5[2]       ; regout           ;
+; |aluBus|r5[4]    ; |aluBus|r5[4]       ; regout           ;
+; |aluBus|dr2[4]   ; |aluBus|dr2[4]      ; regout           ;
+; |aluBus|r5[5]    ; |aluBus|r5[5]       ; regout           ;
+; |aluBus|r4[5]    ; |aluBus|r4[5]       ; regout           ;
+; |aluBus|dr1[5]   ; |aluBus|dr1[5]      ; regout           ;
+; |aluBus|dr2[5]   ; |aluBus|dr2[5]      ; regout           ;
+; |aluBus|r5[6]    ; |aluBus|r5[6]       ; regout           ;
+; |aluBus|r4[6]    ; |aluBus|r4[6]       ; regout           ;
+; |aluBus|dr1[6]   ; |aluBus|dr1[6]      ; regout           ;
+; |aluBus|dr2[6]   ; |aluBus|dr2[6]      ; regout           ;
+; |aluBus|r5[7]    ; |aluBus|r5[7]       ; regout           ;
+; |aluBus|r4[7]    ; |aluBus|r4[7]       ; regout           ;
+; |aluBus|dr1[7]   ; |aluBus|dr1[7]      ; regout           ;
+; |aluBus|dr2[7]   ; |aluBus|dr2[7]      ; regout           ;
+; |aluBus|Mux6~29  ; |aluBus|Mux6~29     ; combout          ;
+; |aluBus|k[4]     ; |aluBus|k[4]~corein ; combout          ;
+; |aluBus|k[5]     ; |aluBus|k[5]~corein ; combout          ;
+; |aluBus|k[6]     ; |aluBus|k[6]~corein ; combout          ;
+; |aluBus|k[7]     ; |aluBus|k[7]~corein ; combout          ;
++------------------+---------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------+
+; Missing 0-Value Coverage                                   ;
++-------------------+---------------------+------------------+
+; Node Name         ; Output Port Name    ; Output Port Type ;
++-------------------+---------------------+------------------+
+; |aluBus|Add18~1   ; |aluBus|Add18~2     ; cout             ;
+; |aluBus|Add17~1   ; |aluBus|Add17~1     ; sumout           ;
+; |aluBus|Add13~1   ; |aluBus|Add13~2     ; cout             ;
+; |aluBus|Add11~1   ; |aluBus|Add11~2     ; cout             ;
+; |aluBus|Add1~1    ; |aluBus|Add1~2      ; cout             ;
+; |aluBus|Add5~1    ; |aluBus|Add5~1      ; sumout           ;
+; |aluBus|Add4~1    ; |aluBus|Add4~2      ; cout             ;
+; |aluBus|Add0~1    ; |aluBus|Add0~2      ; cout             ;
+; |aluBus|Add7~2    ; |aluBus|Add7~2      ; cout             ;
+; |aluBus|Add7~5    ; |aluBus|Add7~6      ; cout             ;
+; |aluBus|Add2~1    ; |aluBus|Add2~2      ; cout             ;
+; |aluBus|Add20~1   ; |aluBus|Add20~2     ; cout             ;
+; |aluBus|Add19~1   ; |aluBus|Add19~1     ; sumout           ;
+; |aluBus|Add15~1   ; |aluBus|Add15~2     ; cout             ;
+; |aluBus|Add14~1   ; |aluBus|Add14~1     ; sumout           ;
+; |aluBus|Add21~1   ; |aluBus|Add21~2     ; cout             ;
+; |aluBus|Add16~1   ; |aluBus|Add16~2     ; cout             ;
+; |aluBus|Add6~1    ; |aluBus|Add6~1      ; sumout           ;
+; |aluBus|Add11~5   ; |aluBus|Add11~5     ; sumout           ;
+; |aluBus|Add21~5   ; |aluBus|Add21~6     ; cout             ;
+; |aluBus|Add18~5   ; |aluBus|Add18~6     ; cout             ;
+; |aluBus|Add8~5    ; |aluBus|Add8~6      ; cout             ;
+; |aluBus|Add10~5   ; |aluBus|Add10~5     ; sumout           ;
+; |aluBus|Add10~5   ; |aluBus|Add10~6     ; cout             ;
+; |aluBus|Add4~5    ; |aluBus|Add4~6      ; cout             ;
+; |aluBus|Add1~5    ; |aluBus|Add1~6      ; cout             ;
+; |aluBus|Add14~5   ; |aluBus|Add14~5     ; sumout           ;
+; |aluBus|Add19~5   ; |aluBus|Add19~5     ; sumout           ;
+; |aluBus|Add21~9   ; |aluBus|Add21~10    ; cout             ;
+; |aluBus|Add6~9    ; |aluBus|Add6~9      ; sumout           ;
+; |aluBus|Add8~9    ; |aluBus|Add8~10     ; cout             ;
+; |aluBus|Add10~9   ; |aluBus|Add10~10    ; cout             ;
+; |aluBus|Add4~9    ; |aluBus|Add4~10     ; cout             ;
+; |aluBus|Add11~13  ; |aluBus|Add11~14    ; cout             ;
+; |aluBus|Add16~13  ; |aluBus|Add16~14    ; cout             ;
+; |aluBus|Add21~13  ; |aluBus|Add21~14    ; cout             ;
+; |aluBus|Add13~13  ; |aluBus|Add13~14    ; cout             ;
+; |aluBus|Add18~13  ; |aluBus|Add18~14    ; cout             ;
+; |aluBus|Add8~13   ; |aluBus|Add8~14     ; cout             ;
+; |aluBus|Add15~13  ; |aluBus|Add15~14    ; cout             ;
+; |aluBus|Add10~13  ; |aluBus|Add10~14    ; cout             ;
+; |aluBus|Add4~13   ; |aluBus|Add4~14     ; cout             ;
+; |aluBus|Add9~17   ; |aluBus|Add9~18     ; cout             ;
+; |aluBus|Add16~17  ; |aluBus|Add16~18    ; cout             ;
+; |aluBus|Add21~17  ; |aluBus|Add21~18    ; cout             ;
+; |aluBus|Add6~17   ; |aluBus|Add6~18     ; cout             ;
+; |aluBus|Add13~17  ; |aluBus|Add13~18    ; cout             ;
+; |aluBus|Add18~17  ; |aluBus|Add18~17    ; sumout           ;
+; |aluBus|Add18~17  ; |aluBus|Add18~18    ; cout             ;
+; |aluBus|Add8~17   ; |aluBus|Add8~18     ; cout             ;
+; |aluBus|Add15~17  ; |aluBus|Add15~18    ; cout             ;
+; |aluBus|Add10~17  ; |aluBus|Add10~18    ; cout             ;
+; |aluBus|Add4~17   ; |aluBus|Add4~18     ; cout             ;
+; |aluBus|Add0~17   ; |aluBus|Add0~17     ; sumout           ;
+; |aluBus|Add1~17   ; |aluBus|Add1~18     ; cout             ;
+; |aluBus|Add17~17  ; |aluBus|Add17~17    ; sumout           ;
+; |aluBus|Add9~21   ; |aluBus|Add9~22     ; cout             ;
+; |aluBus|Add16~21  ; |aluBus|Add16~22    ; cout             ;
+; |aluBus|Add21~21  ; |aluBus|Add21~22    ; cout             ;
+; |aluBus|Add6~21   ; |aluBus|Add6~21     ; sumout           ;
+; |aluBus|Add13~21  ; |aluBus|Add13~21    ; sumout           ;
+; |aluBus|Add18~21  ; |aluBus|Add18~21    ; sumout           ;
+; |aluBus|Add8~21   ; |aluBus|Add8~22     ; cout             ;
+; |aluBus|Add15~21  ; |aluBus|Add15~22    ; cout             ;
+; |aluBus|Add10~21  ; |aluBus|Add10~21    ; sumout           ;
+; |aluBus|Add4~21   ; |aluBus|Add4~21     ; sumout           ;
+; |aluBus|Add1~21   ; |aluBus|Add1~21     ; sumout           ;
+; |aluBus|Add17~21  ; |aluBus|Add17~21    ; sumout           ;
+; |aluBus|Add12~21  ; |aluBus|Add12~21    ; sumout           ;
+; |aluBus|Add12~21  ; |aluBus|Add12~22    ; cout             ;
+; |aluBus|Add9~25   ; |aluBus|Add9~26     ; cout             ;
+; |aluBus|Add16~25  ; |aluBus|Add16~26    ; cout             ;
+; |aluBus|Add21~25  ; |aluBus|Add21~26    ; cout             ;
+; |aluBus|Add6~25   ; |aluBus|Add6~25     ; sumout           ;
+; |aluBus|Add13~25  ; |aluBus|Add13~25    ; sumout           ;
+; |aluBus|Add18~25  ; |aluBus|Add18~25    ; sumout           ;
+; |aluBus|Add8~25   ; |aluBus|Add8~26     ; cout             ;
+; |aluBus|Add15~25  ; |aluBus|Add15~26    ; cout             ;
+; |aluBus|Add1~25   ; |aluBus|Add1~25     ; sumout           ;
+; |aluBus|Add17~25  ; |aluBus|Add17~25    ; sumout           ;
+; |aluBus|Add12~25  ; |aluBus|Add12~25    ; sumout           ;
+; |aluBus|Add12~25  ; |aluBus|Add12~26    ; cout             ;
+; |aluBus|Add1~29   ; |aluBus|Add1~29     ; sumout           ;
+; |aluBus|Add18~29  ; |aluBus|Add18~29    ; sumout           ;
+; |aluBus|Add17~29  ; |aluBus|Add17~29    ; sumout           ;
+; |aluBus|Add13~29  ; |aluBus|Add13~29    ; sumout           ;
+; |aluBus|Add12~29  ; |aluBus|Add12~29    ; sumout           ;
+; |aluBus|Add6~29   ; |aluBus|Add6~29     ; sumout           ;
+; |aluBus|dr1[0]    ; |aluBus|dr1[0]      ; regout           ;
+; |aluBus|dr2[0]    ; |aluBus|dr2[0]      ; regout           ;
+; |aluBus|Mux7~2    ; |aluBus|Mux7~2      ; combout          ;
+; |aluBus|Mux7~12   ; |aluBus|Mux7~12     ; combout          ;
+; |aluBus|Mux7~26   ; |aluBus|Mux7~26     ; combout          ;
+; |aluBus|r5[0]     ; |aluBus|r5[0]       ; regout           ;
+; |aluBus|r4[0]     ; |aluBus|r4[0]       ; regout           ;
+; |aluBus|r5[1]     ; |aluBus|r5[1]       ; regout           ;
+; |aluBus|Mux6~15   ; |aluBus|Mux6~15     ; combout          ;
+; |aluBus|r5[2]     ; |aluBus|r5[2]       ; regout           ;
+; |aluBus|dr2[2]    ; |aluBus|dr2[2]      ; regout           ;
+; |aluBus|r5[3]     ; |aluBus|r5[3]       ; regout           ;
+; |aluBus|dr1[3]    ; |aluBus|dr1[3]      ; regout           ;
+; |aluBus|r5[4]     ; |aluBus|r5[4]       ; regout           ;
+; |aluBus|dr2[4]    ; |aluBus|dr2[4]      ; regout           ;
+; |aluBus|aluout~72 ; |aluBus|aluout~72   ; combout          ;
+; |aluBus|r5[5]     ; |aluBus|r5[5]       ; regout           ;
+; |aluBus|r4[5]     ; |aluBus|r4[5]       ; regout           ;
+; |aluBus|r5[6]     ; |aluBus|r5[6]       ; regout           ;
+; |aluBus|r4[6]     ; |aluBus|r4[6]       ; regout           ;
+; |aluBus|dr2[6]    ; |aluBus|dr2[6]      ; regout           ;
+; |aluBus|r5[7]     ; |aluBus|r5[7]       ; regout           ;
+; |aluBus|r4[7]     ; |aluBus|r4[7]       ; regout           ;
+; |aluBus|dr2[7]    ; |aluBus|dr2[7]      ; regout           ;
+; |aluBus|k[4]      ; |aluBus|k[4]~corein ; combout          ;
+; |aluBus|k[5]      ; |aluBus|k[5]~corein ; combout          ;
+; |aluBus|k[6]      ; |aluBus|k[6]~corein ; combout          ;
+; |aluBus|k[7]      ; |aluBus|k[7]~corein ; combout          ;
++-------------------+---------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Mar 02 15:42:00 2021
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off aluBus -c aluBus
+Info: Using vector source file "C:/Users/86150/Desktop/mylearn/CSexperiment/ex2/aluBus.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      65.62 %
+Info: Number of transitions in simulation is 5925
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 170 megabytes
+    Info: Processing ended: Tue Mar 02 15:42:00 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

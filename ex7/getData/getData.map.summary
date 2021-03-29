@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Mar 28 19:42:25 2021
+Quartus II Version : 9.0 Build 184 04/29/2009 SP 1 SJ Web Edition
+Revision Name : getData
+Top-level Entity Name : getData
+Family : Cyclone II
+Total logic elements : 11
+    Total combinational functions : 11
+    Dedicated logic registers : 8
+Total registers : 8
+Total pins : 11
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

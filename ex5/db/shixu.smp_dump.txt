@@ -1,0 +1,11 @@
+
+State Machine - |shixu|fstate
+Name fstate.s_st4 fstate.st4 fstate.s_st3 fstate.st2 fstate.st3 fstate.st1 fstate.s_st2 fstate.idle 
+fstate.idle 0 0 0 0 0 0 0 0 
+fstate.s_st2 0 0 0 0 0 0 1 1 
+fstate.st1 0 0 0 0 0 1 0 1 
+fstate.st3 0 0 0 0 1 0 0 1 
+fstate.st2 0 0 0 1 0 0 0 1 
+fstate.s_st3 0 0 1 0 0 0 0 1 
+fstate.st4 0 1 0 0 0 0 0 1 
+fstate.s_st4 1 0 0 0 0 0 0 1 

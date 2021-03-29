@@ -1,0 +1,899 @@
+Simulator report for rom
+Sat Mar 20 12:32:25 2021
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 546 nodes    ;
+; Simulation Coverage         ;      65.20 % ;
+; Total Number of Transitions ; 2630         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      65.20 % ;
+; Total nodes checked                                 ; 546          ;
+; Total output ports checked                          ; 546          ;
+; Total output ports with complete 1/0-value coverage ; 356          ;
+; Total output ports with no 1/0-value coverage       ; 188          ;
+; Total output ports with no 1-value coverage         ; 189          ;
+; Total output ports with no 0-value coverage         ; 189          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------+
+; Complete 1/0-Value Coverage                          ;
++----------------+------------------+------------------+
+; Node Name      ; Output Port Name ; Output Port Type ;
++----------------+------------------+------------------+
+; |rom|temp~9    ; |rom|temp~9      ; out              ;
+; |rom|temp~12   ; |rom|temp~12     ; out              ;
+; |rom|temp~14   ; |rom|temp~14     ; out              ;
+; |rom|temp~16   ; |rom|temp~16     ; out              ;
+; |rom|temp~20   ; |rom|temp~20     ; out              ;
+; |rom|temp~22   ; |rom|temp~22     ; out              ;
+; |rom|temp~24   ; |rom|temp~24     ; out              ;
+; |rom|temp~30   ; |rom|temp~30     ; out              ;
+; |rom|temp~33   ; |rom|temp~33     ; out              ;
+; |rom|temp~35   ; |rom|temp~35     ; out              ;
+; |rom|temp~43   ; |rom|temp~43     ; out              ;
+; |rom|temp~46   ; |rom|temp~46     ; out              ;
+; |rom|temp~48   ; |rom|temp~48     ; out              ;
+; |rom|temp~58   ; |rom|temp~58     ; out              ;
+; |rom|temp~62   ; |rom|temp~62     ; out              ;
+; |rom|temp~65   ; |rom|temp~65     ; out              ;
+; |rom|temp~66   ; |rom|temp~66     ; out              ;
+; |rom|temp~68   ; |rom|temp~68     ; out              ;
+; |rom|temp~70   ; |rom|temp~70     ; out              ;
+; |rom|temp~75   ; |rom|temp~75     ; out              ;
+; |rom|temp~76   ; |rom|temp~76     ; out              ;
+; |rom|temp~79   ; |rom|temp~79     ; out              ;
+; |rom|temp~82   ; |rom|temp~82     ; out              ;
+; |rom|temp~83   ; |rom|temp~83     ; out              ;
+; |rom|temp~85   ; |rom|temp~85     ; out              ;
+; |rom|temp~87   ; |rom|temp~87     ; out              ;
+; |rom|temp~92   ; |rom|temp~92     ; out              ;
+; |rom|temp~93   ; |rom|temp~93     ; out              ;
+; |rom|temp~96   ; |rom|temp~96     ; out              ;
+; |rom|temp~99   ; |rom|temp~99     ; out              ;
+; |rom|temp~100  ; |rom|temp~100    ; out              ;
+; |rom|temp~102  ; |rom|temp~102    ; out              ;
+; |rom|temp~104  ; |rom|temp~104    ; out              ;
+; |rom|temp~105  ; |rom|temp~105    ; out              ;
+; |rom|temp~109  ; |rom|temp~109    ; out              ;
+; |rom|temp~110  ; |rom|temp~110    ; out              ;
+; |rom|temp~112  ; |rom|temp~112    ; out              ;
+; |rom|temp~113  ; |rom|temp~113    ; out              ;
+; |rom|temp~116  ; |rom|temp~116    ; out              ;
+; |rom|temp~117  ; |rom|temp~117    ; out              ;
+; |rom|temp~119  ; |rom|temp~119    ; out              ;
+; |rom|temp~121  ; |rom|temp~121    ; out              ;
+; |rom|temp~122  ; |rom|temp~122    ; out              ;
+; |rom|temp~126  ; |rom|temp~126    ; out              ;
+; |rom|temp~127  ; |rom|temp~127    ; out              ;
+; |rom|temp~129  ; |rom|temp~129    ; out              ;
+; |rom|temp~130  ; |rom|temp~130    ; out              ;
+; |rom|temp~133  ; |rom|temp~133    ; out              ;
+; |rom|temp~134  ; |rom|temp~134    ; out              ;
+; |rom|temp~136  ; |rom|temp~136    ; out              ;
+; |rom|temp~138  ; |rom|temp~138    ; out              ;
+; |rom|temp~139  ; |rom|temp~139    ; out              ;
+; |rom|temp~144  ; |rom|temp~144    ; out              ;
+; |rom|temp~145  ; |rom|temp~145    ; out              ;
+; |rom|temp~147  ; |rom|temp~147    ; out              ;
+; |rom|temp~148  ; |rom|temp~148    ; out              ;
+; |rom|temp~151  ; |rom|temp~151    ; out              ;
+; |rom|temp~152  ; |rom|temp~152    ; out              ;
+; |rom|temp~154  ; |rom|temp~154    ; out              ;
+; |rom|temp~156  ; |rom|temp~156    ; out              ;
+; |rom|temp~157  ; |rom|temp~157    ; out              ;
+; |rom|temp~162  ; |rom|temp~162    ; out              ;
+; |rom|temp~163  ; |rom|temp~163    ; out              ;
+; |rom|temp~165  ; |rom|temp~165    ; out              ;
+; |rom|temp~166  ; |rom|temp~166    ; out              ;
+; |rom|temp~169  ; |rom|temp~169    ; out              ;
+; |rom|temp~170  ; |rom|temp~170    ; out              ;
+; |rom|temp~172  ; |rom|temp~172    ; out              ;
+; |rom|temp~174  ; |rom|temp~174    ; out              ;
+; |rom|temp~175  ; |rom|temp~175    ; out              ;
+; |rom|temp~179  ; |rom|temp~179    ; out              ;
+; |rom|temp~180  ; |rom|temp~180    ; out              ;
+; |rom|temp~181  ; |rom|temp~181    ; out              ;
+; |rom|temp~183  ; |rom|temp~183    ; out              ;
+; |rom|temp~184  ; |rom|temp~184    ; out              ;
+; |rom|temp~187  ; |rom|temp~187    ; out              ;
+; |rom|temp~188  ; |rom|temp~188    ; out              ;
+; |rom|temp~190  ; |rom|temp~190    ; out              ;
+; |rom|temp~192  ; |rom|temp~192    ; out              ;
+; |rom|temp~193  ; |rom|temp~193    ; out              ;
+; |rom|temp~195  ; |rom|temp~195    ; out              ;
+; |rom|temp~197  ; |rom|temp~197    ; out              ;
+; |rom|temp~198  ; |rom|temp~198    ; out              ;
+; |rom|temp~199  ; |rom|temp~199    ; out              ;
+; |rom|temp~200  ; |rom|temp~200    ; out              ;
+; |rom|temp~201  ; |rom|temp~201    ; out              ;
+; |rom|temp~202  ; |rom|temp~202    ; out              ;
+; |rom|temp~203  ; |rom|temp~203    ; out              ;
+; |rom|temp~205  ; |rom|temp~205    ; out              ;
+; |rom|temp~206  ; |rom|temp~206    ; out              ;
+; |rom|temp~207  ; |rom|temp~207    ; out              ;
+; |rom|temp~208  ; |rom|temp~208    ; out              ;
+; |rom|temp~210  ; |rom|temp~210    ; out              ;
+; |rom|temp~211  ; |rom|temp~211    ; out              ;
+; |rom|temp~213  ; |rom|temp~213    ; out              ;
+; |rom|temp~215  ; |rom|temp~215    ; out              ;
+; |rom|temp~216  ; |rom|temp~216    ; out              ;
+; |rom|temp~217  ; |rom|temp~217    ; out              ;
+; |rom|temp~218  ; |rom|temp~218    ; out              ;
+; |rom|temp~219  ; |rom|temp~219    ; out              ;
+; |rom|temp~220  ; |rom|temp~220    ; out              ;
+; |rom|temp~221  ; |rom|temp~221    ; out              ;
+; |rom|temp~223  ; |rom|temp~223    ; out              ;
+; |rom|temp~224  ; |rom|temp~224    ; out              ;
+; |rom|temp~225  ; |rom|temp~225    ; out              ;
+; |rom|temp~226  ; |rom|temp~226    ; out              ;
+; |rom|temp~228  ; |rom|temp~228    ; out              ;
+; |rom|temp~229  ; |rom|temp~229    ; out              ;
+; |rom|temp~231  ; |rom|temp~231    ; out              ;
+; |rom|temp~233  ; |rom|temp~233    ; out              ;
+; |rom|temp~234  ; |rom|temp~234    ; out              ;
+; |rom|temp~235  ; |rom|temp~235    ; out              ;
+; |rom|temp~236  ; |rom|temp~236    ; out              ;
+; |rom|temp~237  ; |rom|temp~237    ; out              ;
+; |rom|temp~238  ; |rom|temp~238    ; out              ;
+; |rom|temp~239  ; |rom|temp~239    ; out              ;
+; |rom|temp~241  ; |rom|temp~241    ; out              ;
+; |rom|temp~242  ; |rom|temp~242    ; out              ;
+; |rom|temp~243  ; |rom|temp~243    ; out              ;
+; |rom|temp~244  ; |rom|temp~244    ; out              ;
+; |rom|temp~246  ; |rom|temp~246    ; out              ;
+; |rom|temp~247  ; |rom|temp~247    ; out              ;
+; |rom|temp~249  ; |rom|temp~249    ; out              ;
+; |rom|temp~251  ; |rom|temp~251    ; out              ;
+; |rom|temp~252  ; |rom|temp~252    ; out              ;
+; |rom|temp~253  ; |rom|temp~253    ; out              ;
+; |rom|temp~254  ; |rom|temp~254    ; out              ;
+; |rom|temp~255  ; |rom|temp~255    ; out              ;
+; |rom|temp~256  ; |rom|temp~256    ; out              ;
+; |rom|temp~257  ; |rom|temp~257    ; out              ;
+; |rom|temp~259  ; |rom|temp~259    ; out              ;
+; |rom|temp~260  ; |rom|temp~260    ; out              ;
+; |rom|temp~261  ; |rom|temp~261    ; out              ;
+; |rom|temp~262  ; |rom|temp~262    ; out              ;
+; |rom|temp~264  ; |rom|temp~264    ; out              ;
+; |rom|temp~265  ; |rom|temp~265    ; out              ;
+; |rom|temp~267  ; |rom|temp~267    ; out              ;
+; |rom|temp~269  ; |rom|temp~269    ; out              ;
+; |rom|temp~270  ; |rom|temp~270    ; out              ;
+; |rom|temp~271  ; |rom|temp~271    ; out              ;
+; |rom|temp~272  ; |rom|temp~272    ; out              ;
+; |rom|temp~273  ; |rom|temp~273    ; out              ;
+; |rom|temp~274  ; |rom|temp~274    ; out              ;
+; |rom|temp~275  ; |rom|temp~275    ; out              ;
+; |rom|temp~277  ; |rom|temp~277    ; out              ;
+; |rom|temp~278  ; |rom|temp~278    ; out              ;
+; |rom|temp~279  ; |rom|temp~279    ; out              ;
+; |rom|temp~280  ; |rom|temp~280    ; out              ;
+; |rom|temp~281  ; |rom|temp~281    ; out              ;
+; |rom|temp~282  ; |rom|temp~282    ; out              ;
+; |rom|temp~283  ; |rom|temp~283    ; out              ;
+; |rom|temp~285  ; |rom|temp~285    ; out              ;
+; |rom|temp~287  ; |rom|temp~287    ; out              ;
+; |rom|temp~288  ; |rom|temp~288    ; out              ;
+; |rom|temp~289  ; |rom|temp~289    ; out              ;
+; |rom|temp~290  ; |rom|temp~290    ; out              ;
+; |rom|temp~291  ; |rom|temp~291    ; out              ;
+; |rom|temp~292  ; |rom|temp~292    ; out              ;
+; |rom|temp~293  ; |rom|temp~293    ; out              ;
+; |rom|temp~295  ; |rom|temp~295    ; out              ;
+; |rom|temp~296  ; |rom|temp~296    ; out              ;
+; |rom|temp~297  ; |rom|temp~297    ; out              ;
+; |rom|temp~298  ; |rom|temp~298    ; out              ;
+; |rom|temp~299  ; |rom|temp~299    ; out              ;
+; |rom|temp~300  ; |rom|temp~300    ; out              ;
+; |rom|temp~301  ; |rom|temp~301    ; out              ;
+; |rom|temp~303  ; |rom|temp~303    ; out              ;
+; |rom|temp~305  ; |rom|temp~305    ; out              ;
+; |rom|temp~306  ; |rom|temp~306    ; out              ;
+; |rom|temp~307  ; |rom|temp~307    ; out              ;
+; |rom|temp~308  ; |rom|temp~308    ; out              ;
+; |rom|temp~309  ; |rom|temp~309    ; out              ;
+; |rom|temp~310  ; |rom|temp~310    ; out              ;
+; |rom|temp~311  ; |rom|temp~311    ; out              ;
+; |rom|temp~313  ; |rom|temp~313    ; out              ;
+; |rom|temp~314  ; |rom|temp~314    ; out              ;
+; |rom|temp~315  ; |rom|temp~315    ; out              ;
+; |rom|temp~316  ; |rom|temp~316    ; out              ;
+; |rom|temp~317  ; |rom|temp~317    ; out              ;
+; |rom|temp~318  ; |rom|temp~318    ; out              ;
+; |rom|temp~319  ; |rom|temp~319    ; out              ;
+; |rom|temp~321  ; |rom|temp~321    ; out              ;
+; |rom|temp~323  ; |rom|temp~323    ; out              ;
+; |rom|temp~324  ; |rom|temp~324    ; out              ;
+; |rom|temp~325  ; |rom|temp~325    ; out              ;
+; |rom|temp~326  ; |rom|temp~326    ; out              ;
+; |rom|temp~327  ; |rom|temp~327    ; out              ;
+; |rom|temp~328  ; |rom|temp~328    ; out              ;
+; |rom|temp~329  ; |rom|temp~329    ; out              ;
+; |rom|temp~331  ; |rom|temp~331    ; out              ;
+; |rom|temp~332  ; |rom|temp~332    ; out              ;
+; |rom|temp~333  ; |rom|temp~333    ; out              ;
+; |rom|temp~334  ; |rom|temp~334    ; out              ;
+; |rom|temp~335  ; |rom|temp~335    ; out              ;
+; |rom|temp~336  ; |rom|temp~336    ; out              ;
+; |rom|temp~337  ; |rom|temp~337    ; out              ;
+; |rom|temp~339  ; |rom|temp~339    ; out              ;
+; |rom|temp~341  ; |rom|temp~341    ; out              ;
+; |rom|temp~342  ; |rom|temp~342    ; out              ;
+; |rom|temp~343  ; |rom|temp~343    ; out              ;
+; |rom|temp~344  ; |rom|temp~344    ; out              ;
+; |rom|temp~345  ; |rom|temp~345    ; out              ;
+; |rom|temp~346  ; |rom|temp~346    ; out              ;
+; |rom|temp~347  ; |rom|temp~347    ; out              ;
+; |rom|temp~349  ; |rom|temp~349    ; out              ;
+; |rom|temp~350  ; |rom|temp~350    ; out              ;
+; |rom|temp~351  ; |rom|temp~351    ; out              ;
+; |rom|temp~352  ; |rom|temp~352    ; out              ;
+; |rom|temp~353  ; |rom|temp~353    ; out              ;
+; |rom|temp~354  ; |rom|temp~354    ; out              ;
+; |rom|temp~355  ; |rom|temp~355    ; out              ;
+; |rom|temp~357  ; |rom|temp~357    ; out              ;
+; |rom|temp~359  ; |rom|temp~359    ; out              ;
+; |rom|temp~360  ; |rom|temp~360    ; out              ;
+; |rom|temp~361  ; |rom|temp~361    ; out              ;
+; |rom|temp~362  ; |rom|temp~362    ; out              ;
+; |rom|temp~363  ; |rom|temp~363    ; out              ;
+; |rom|temp~364  ; |rom|temp~364    ; out              ;
+; |rom|temp~365  ; |rom|temp~365    ; out              ;
+; |rom|temp~367  ; |rom|temp~367    ; out              ;
+; |rom|temp~368  ; |rom|temp~368    ; out              ;
+; |rom|temp~369  ; |rom|temp~369    ; out              ;
+; |rom|temp~370  ; |rom|temp~370    ; out              ;
+; |rom|temp~371  ; |rom|temp~371    ; out              ;
+; |rom|temp~372  ; |rom|temp~372    ; out              ;
+; |rom|temp~373  ; |rom|temp~373    ; out              ;
+; |rom|temp~375  ; |rom|temp~375    ; out              ;
+; |rom|temp~377  ; |rom|temp~377    ; out              ;
+; |rom|temp~378  ; |rom|temp~378    ; out              ;
+; |rom|temp~379  ; |rom|temp~379    ; out              ;
+; |rom|temp~380  ; |rom|temp~380    ; out              ;
+; |rom|temp~381  ; |rom|temp~381    ; out              ;
+; |rom|temp~382  ; |rom|temp~382    ; out              ;
+; |rom|temp~383  ; |rom|temp~383    ; out              ;
+; |rom|temp~385  ; |rom|temp~385    ; out              ;
+; |rom|temp~386  ; |rom|temp~386    ; out              ;
+; |rom|temp~387  ; |rom|temp~387    ; out              ;
+; |rom|temp~388  ; |rom|temp~388    ; out              ;
+; |rom|temp~389  ; |rom|temp~389    ; out              ;
+; |rom|temp~390  ; |rom|temp~390    ; out              ;
+; |rom|temp~391  ; |rom|temp~391    ; out              ;
+; |rom|temp~393  ; |rom|temp~393    ; out              ;
+; |rom|temp~395  ; |rom|temp~395    ; out              ;
+; |rom|temp~396  ; |rom|temp~396    ; out              ;
+; |rom|temp~397  ; |rom|temp~397    ; out              ;
+; |rom|temp~398  ; |rom|temp~398    ; out              ;
+; |rom|temp~399  ; |rom|temp~399    ; out              ;
+; |rom|temp~400  ; |rom|temp~400    ; out              ;
+; |rom|temp~401  ; |rom|temp~401    ; out              ;
+; |rom|temp~403  ; |rom|temp~403    ; out              ;
+; |rom|temp~404  ; |rom|temp~404    ; out              ;
+; |rom|temp~405  ; |rom|temp~405    ; out              ;
+; |rom|temp~406  ; |rom|temp~406    ; out              ;
+; |rom|temp~407  ; |rom|temp~407    ; out              ;
+; |rom|temp~408  ; |rom|temp~408    ; out              ;
+; |rom|temp~409  ; |rom|temp~409    ; out              ;
+; |rom|temp~411  ; |rom|temp~411    ; out              ;
+; |rom|temp~412  ; |rom|temp~412    ; out              ;
+; |rom|temp~413  ; |rom|temp~413    ; out              ;
+; |rom|temp~414  ; |rom|temp~414    ; out              ;
+; |rom|temp~415  ; |rom|temp~415    ; out              ;
+; |rom|temp~416  ; |rom|temp~416    ; out              ;
+; |rom|temp~417  ; |rom|temp~417    ; out              ;
+; |rom|temp~418  ; |rom|temp~418    ; out              ;
+; |rom|temp~419  ; |rom|temp~419    ; out              ;
+; |rom|temp~421  ; |rom|temp~421    ; out              ;
+; |rom|temp~422  ; |rom|temp~422    ; out              ;
+; |rom|temp~423  ; |rom|temp~423    ; out              ;
+; |rom|temp~424  ; |rom|temp~424    ; out              ;
+; |rom|temp~425  ; |rom|temp~425    ; out              ;
+; |rom|temp~426  ; |rom|temp~426    ; out              ;
+; |rom|temp~427  ; |rom|temp~427    ; out              ;
+; |rom|temp~429  ; |rom|temp~429    ; out              ;
+; |rom|temp~430  ; |rom|temp~430    ; out              ;
+; |rom|temp~431  ; |rom|temp~431    ; out              ;
+; |rom|temp~432  ; |rom|temp~432    ; out              ;
+; |rom|temp~433  ; |rom|temp~433    ; out              ;
+; |rom|temp~434  ; |rom|temp~434    ; out              ;
+; |rom|temp~435  ; |rom|temp~435    ; out              ;
+; |rom|temp~436  ; |rom|temp~436    ; out              ;
+; |rom|temp~437  ; |rom|temp~437    ; out              ;
+; |rom|temp~438  ; |rom|temp~438    ; out              ;
+; |rom|temp~440  ; |rom|temp~440    ; out              ;
+; |rom|temp~441  ; |rom|temp~441    ; out              ;
+; |rom|temp~442  ; |rom|temp~442    ; out              ;
+; |rom|temp~443  ; |rom|temp~443    ; out              ;
+; |rom|temp~444  ; |rom|temp~444    ; out              ;
+; |rom|temp~445  ; |rom|temp~445    ; out              ;
+; |rom|temp~446  ; |rom|temp~446    ; out              ;
+; |rom|temp~448  ; |rom|temp~448    ; out              ;
+; |rom|temp~449  ; |rom|temp~449    ; out              ;
+; |rom|temp~450  ; |rom|temp~450    ; out              ;
+; |rom|temp~451  ; |rom|temp~451    ; out              ;
+; |rom|temp~452  ; |rom|temp~452    ; out              ;
+; |rom|temp~453  ; |rom|temp~453    ; out              ;
+; |rom|temp~454  ; |rom|temp~454    ; out              ;
+; |rom|temp~455  ; |rom|temp~455    ; out              ;
+; |rom|temp~456  ; |rom|temp~456    ; out              ;
+; |rom|temp~457  ; |rom|temp~457    ; out              ;
+; |rom|temp~459  ; |rom|temp~459    ; out              ;
+; |rom|temp~460  ; |rom|temp~460    ; out              ;
+; |rom|temp~461  ; |rom|temp~461    ; out              ;
+; |rom|temp~462  ; |rom|temp~462    ; out              ;
+; |rom|temp~463  ; |rom|temp~463    ; out              ;
+; |rom|temp~464  ; |rom|temp~464    ; out              ;
+; |rom|temp~465  ; |rom|temp~465    ; out              ;
+; |rom|temp~467  ; |rom|temp~467    ; out              ;
+; |rom|temp~468  ; |rom|temp~468    ; out              ;
+; |rom|temp~469  ; |rom|temp~469    ; out              ;
+; |rom|temp~470  ; |rom|temp~470    ; out              ;
+; |rom|temp~471  ; |rom|temp~471    ; out              ;
+; |rom|temp~472  ; |rom|temp~472    ; out              ;
+; |rom|temp~473  ; |rom|temp~473    ; out              ;
+; |rom|temp~474  ; |rom|temp~474    ; out              ;
+; |rom|temp~475  ; |rom|temp~475    ; out              ;
+; |rom|temp~476  ; |rom|temp~476    ; out              ;
+; |rom|a4        ; |rom|a4          ; out              ;
+; |rom|a3        ; |rom|a3          ; out              ;
+; |rom|a2        ; |rom|a2          ; out              ;
+; |rom|a1        ; |rom|a1          ; out              ;
+; |rom|a0        ; |rom|a0          ; out              ;
+; |rom|d[1]      ; |rom|d[1]        ; pin_out          ;
+; |rom|d[2]      ; |rom|d[2]        ; pin_out          ;
+; |rom|d[3]      ; |rom|d[3]        ; pin_out          ;
+; |rom|d[4]      ; |rom|d[4]        ; pin_out          ;
+; |rom|d[5]      ; |rom|d[5]        ; pin_out          ;
+; |rom|d[6]      ; |rom|d[6]        ; pin_out          ;
+; |rom|d[7]      ; |rom|d[7]        ; pin_out          ;
+; |rom|d[8]      ; |rom|d[8]        ; pin_out          ;
+; |rom|d[15]     ; |rom|d[15]       ; pin_out          ;
+; |rom|d[16]     ; |rom|d[16]       ; pin_out          ;
+; |rom|d[18]     ; |rom|d[18]       ; pin_out          ;
+; |rom|d[20]     ; |rom|d[20]       ; pin_out          ;
+; |rom|d[21]     ; |rom|d[21]       ; pin_out          ;
+; |rom|d[22]     ; |rom|d[22]       ; pin_out          ;
+; |rom|d[23]     ; |rom|d[23]       ; pin_out          ;
+; |rom|d[25]     ; |rom|d[25]       ; pin_out          ;
+; |rom|d[26]     ; |rom|d[26]       ; pin_out          ;
+; |rom|outa[0]   ; |rom|outa[0]     ; pin_out          ;
+; |rom|outa[1]   ; |rom|outa[1]     ; pin_out          ;
+; |rom|outa[2]   ; |rom|outa[2]     ; pin_out          ;
+; |rom|outa[3]   ; |rom|outa[3]     ; pin_out          ;
+; |rom|outa[4]   ; |rom|outa[4]     ; pin_out          ;
+; |rom|Equal3~0  ; |rom|Equal3~0    ; out0             ;
+; |rom|Equal8~0  ; |rom|Equal8~0    ; out0             ;
+; |rom|Equal10~0 ; |rom|Equal10~0   ; out0             ;
+; |rom|Equal13~0 ; |rom|Equal13~0   ; out0             ;
+; |rom|Equal14~0 ; |rom|Equal14~0   ; out0             ;
+; |rom|Equal15~0 ; |rom|Equal15~0   ; out0             ;
+; |rom|Equal16~0 ; |rom|Equal16~0   ; out0             ;
+; |rom|Equal17~0 ; |rom|Equal17~0   ; out0             ;
+; |rom|Equal19~0 ; |rom|Equal19~0   ; out0             ;
+; |rom|Equal20~0 ; |rom|Equal20~0   ; out0             ;
+; |rom|Equal24~0 ; |rom|Equal24~0   ; out0             ;
+; |rom|Equal26~0 ; |rom|Equal26~0   ; out0             ;
+; |rom|Equal27~0 ; |rom|Equal27~0   ; out0             ;
++----------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------+
+; Missing 1-Value Coverage                             ;
++----------------+------------------+------------------+
+; Node Name      ; Output Port Name ; Output Port Type ;
++----------------+------------------+------------------+
+; |rom|temp~0    ; |rom|temp~0      ; out              ;
+; |rom|temp~1    ; |rom|temp~1      ; out              ;
+; |rom|temp~2    ; |rom|temp~2      ; out              ;
+; |rom|temp~3    ; |rom|temp~3      ; out              ;
+; |rom|temp~4    ; |rom|temp~4      ; out              ;
+; |rom|temp~5    ; |rom|temp~5      ; out              ;
+; |rom|temp~6    ; |rom|temp~6      ; out              ;
+; |rom|temp~7    ; |rom|temp~7      ; out              ;
+; |rom|temp~8    ; |rom|temp~8      ; out              ;
+; |rom|temp~10   ; |rom|temp~10     ; out              ;
+; |rom|temp~11   ; |rom|temp~11     ; out              ;
+; |rom|temp~13   ; |rom|temp~13     ; out              ;
+; |rom|temp~15   ; |rom|temp~15     ; out              ;
+; |rom|temp~17   ; |rom|temp~17     ; out              ;
+; |rom|temp~18   ; |rom|temp~18     ; out              ;
+; |rom|temp~19   ; |rom|temp~19     ; out              ;
+; |rom|temp~21   ; |rom|temp~21     ; out              ;
+; |rom|temp~23   ; |rom|temp~23     ; out              ;
+; |rom|temp~25   ; |rom|temp~25     ; out              ;
+; |rom|temp~26   ; |rom|temp~26     ; out              ;
+; |rom|temp~27   ; |rom|temp~27     ; out              ;
+; |rom|temp~28   ; |rom|temp~28     ; out              ;
+; |rom|temp~29   ; |rom|temp~29     ; out              ;
+; |rom|temp~31   ; |rom|temp~31     ; out              ;
+; |rom|temp~32   ; |rom|temp~32     ; out              ;
+; |rom|temp~34   ; |rom|temp~34     ; out              ;
+; |rom|temp~36   ; |rom|temp~36     ; out              ;
+; |rom|temp~37   ; |rom|temp~37     ; out              ;
+; |rom|temp~38   ; |rom|temp~38     ; out              ;
+; |rom|temp~39   ; |rom|temp~39     ; out              ;
+; |rom|temp~40   ; |rom|temp~40     ; out              ;
+; |rom|temp~41   ; |rom|temp~41     ; out              ;
+; |rom|temp~42   ; |rom|temp~42     ; out              ;
+; |rom|temp~44   ; |rom|temp~44     ; out              ;
+; |rom|temp~45   ; |rom|temp~45     ; out              ;
+; |rom|temp~47   ; |rom|temp~47     ; out              ;
+; |rom|temp~49   ; |rom|temp~49     ; out              ;
+; |rom|temp~50   ; |rom|temp~50     ; out              ;
+; |rom|temp~51   ; |rom|temp~51     ; out              ;
+; |rom|temp~52   ; |rom|temp~52     ; out              ;
+; |rom|temp~53   ; |rom|temp~53     ; out              ;
+; |rom|temp~54   ; |rom|temp~54     ; out              ;
+; |rom|temp~55   ; |rom|temp~55     ; out              ;
+; |rom|temp~56   ; |rom|temp~56     ; out              ;
+; |rom|temp~57   ; |rom|temp~57     ; out              ;
+; |rom|temp~59   ; |rom|temp~59     ; out              ;
+; |rom|temp~60   ; |rom|temp~60     ; out              ;
+; |rom|temp~61   ; |rom|temp~61     ; out              ;
+; |rom|temp~63   ; |rom|temp~63     ; out              ;
+; |rom|temp~64   ; |rom|temp~64     ; out              ;
+; |rom|temp~67   ; |rom|temp~67     ; out              ;
+; |rom|temp~69   ; |rom|temp~69     ; out              ;
+; |rom|temp~71   ; |rom|temp~71     ; out              ;
+; |rom|temp~72   ; |rom|temp~72     ; out              ;
+; |rom|temp~73   ; |rom|temp~73     ; out              ;
+; |rom|temp~74   ; |rom|temp~74     ; out              ;
+; |rom|temp~77   ; |rom|temp~77     ; out              ;
+; |rom|temp~78   ; |rom|temp~78     ; out              ;
+; |rom|temp~80   ; |rom|temp~80     ; out              ;
+; |rom|temp~81   ; |rom|temp~81     ; out              ;
+; |rom|temp~84   ; |rom|temp~84     ; out              ;
+; |rom|temp~86   ; |rom|temp~86     ; out              ;
+; |rom|temp~88   ; |rom|temp~88     ; out              ;
+; |rom|temp~89   ; |rom|temp~89     ; out              ;
+; |rom|temp~90   ; |rom|temp~90     ; out              ;
+; |rom|temp~91   ; |rom|temp~91     ; out              ;
+; |rom|temp~94   ; |rom|temp~94     ; out              ;
+; |rom|temp~95   ; |rom|temp~95     ; out              ;
+; |rom|temp~97   ; |rom|temp~97     ; out              ;
+; |rom|temp~98   ; |rom|temp~98     ; out              ;
+; |rom|temp~101  ; |rom|temp~101    ; out              ;
+; |rom|temp~103  ; |rom|temp~103    ; out              ;
+; |rom|temp~106  ; |rom|temp~106    ; out              ;
+; |rom|temp~107  ; |rom|temp~107    ; out              ;
+; |rom|temp~108  ; |rom|temp~108    ; out              ;
+; |rom|temp~111  ; |rom|temp~111    ; out              ;
+; |rom|temp~114  ; |rom|temp~114    ; out              ;
+; |rom|temp~115  ; |rom|temp~115    ; out              ;
+; |rom|temp~118  ; |rom|temp~118    ; out              ;
+; |rom|temp~120  ; |rom|temp~120    ; out              ;
+; |rom|temp~123  ; |rom|temp~123    ; out              ;
+; |rom|temp~124  ; |rom|temp~124    ; out              ;
+; |rom|temp~125  ; |rom|temp~125    ; out              ;
+; |rom|temp~128  ; |rom|temp~128    ; out              ;
+; |rom|temp~131  ; |rom|temp~131    ; out              ;
+; |rom|temp~132  ; |rom|temp~132    ; out              ;
+; |rom|temp~135  ; |rom|temp~135    ; out              ;
+; |rom|temp~137  ; |rom|temp~137    ; out              ;
+; |rom|temp~140  ; |rom|temp~140    ; out              ;
+; |rom|temp~141  ; |rom|temp~141    ; out              ;
+; |rom|temp~142  ; |rom|temp~142    ; out              ;
+; |rom|temp~143  ; |rom|temp~143    ; out              ;
+; |rom|temp~146  ; |rom|temp~146    ; out              ;
+; |rom|temp~149  ; |rom|temp~149    ; out              ;
+; |rom|temp~150  ; |rom|temp~150    ; out              ;
+; |rom|temp~153  ; |rom|temp~153    ; out              ;
+; |rom|temp~155  ; |rom|temp~155    ; out              ;
+; |rom|temp~158  ; |rom|temp~158    ; out              ;
+; |rom|temp~159  ; |rom|temp~159    ; out              ;
+; |rom|temp~160  ; |rom|temp~160    ; out              ;
+; |rom|temp~161  ; |rom|temp~161    ; out              ;
+; |rom|temp~164  ; |rom|temp~164    ; out              ;
+; |rom|temp~167  ; |rom|temp~167    ; out              ;
+; |rom|temp~168  ; |rom|temp~168    ; out              ;
+; |rom|temp~171  ; |rom|temp~171    ; out              ;
+; |rom|temp~173  ; |rom|temp~173    ; out              ;
+; |rom|temp~176  ; |rom|temp~176    ; out              ;
+; |rom|temp~177  ; |rom|temp~177    ; out              ;
+; |rom|temp~178  ; |rom|temp~178    ; out              ;
+; |rom|temp~182  ; |rom|temp~182    ; out              ;
+; |rom|temp~185  ; |rom|temp~185    ; out              ;
+; |rom|temp~186  ; |rom|temp~186    ; out              ;
+; |rom|temp~189  ; |rom|temp~189    ; out              ;
+; |rom|temp~191  ; |rom|temp~191    ; out              ;
+; |rom|temp~194  ; |rom|temp~194    ; out              ;
+; |rom|temp~196  ; |rom|temp~196    ; out              ;
+; |rom|temp~204  ; |rom|temp~204    ; out              ;
+; |rom|temp~209  ; |rom|temp~209    ; out              ;
+; |rom|temp~212  ; |rom|temp~212    ; out              ;
+; |rom|temp~214  ; |rom|temp~214    ; out              ;
+; |rom|temp~222  ; |rom|temp~222    ; out              ;
+; |rom|temp~227  ; |rom|temp~227    ; out              ;
+; |rom|temp~230  ; |rom|temp~230    ; out              ;
+; |rom|temp~232  ; |rom|temp~232    ; out              ;
+; |rom|temp~240  ; |rom|temp~240    ; out              ;
+; |rom|temp~245  ; |rom|temp~245    ; out              ;
+; |rom|temp~248  ; |rom|temp~248    ; out              ;
+; |rom|temp~250  ; |rom|temp~250    ; out              ;
+; |rom|temp~258  ; |rom|temp~258    ; out              ;
+; |rom|temp~263  ; |rom|temp~263    ; out              ;
+; |rom|temp~266  ; |rom|temp~266    ; out              ;
+; |rom|temp~268  ; |rom|temp~268    ; out              ;
+; |rom|temp~276  ; |rom|temp~276    ; out              ;
+; |rom|temp~284  ; |rom|temp~284    ; out              ;
+; |rom|temp~286  ; |rom|temp~286    ; out              ;
+; |rom|temp~294  ; |rom|temp~294    ; out              ;
+; |rom|temp~302  ; |rom|temp~302    ; out              ;
+; |rom|temp~304  ; |rom|temp~304    ; out              ;
+; |rom|temp~312  ; |rom|temp~312    ; out              ;
+; |rom|temp~320  ; |rom|temp~320    ; out              ;
+; |rom|temp~322  ; |rom|temp~322    ; out              ;
+; |rom|temp~330  ; |rom|temp~330    ; out              ;
+; |rom|temp~338  ; |rom|temp~338    ; out              ;
+; |rom|temp~340  ; |rom|temp~340    ; out              ;
+; |rom|temp~348  ; |rom|temp~348    ; out              ;
+; |rom|temp~356  ; |rom|temp~356    ; out              ;
+; |rom|temp~358  ; |rom|temp~358    ; out              ;
+; |rom|temp~366  ; |rom|temp~366    ; out              ;
+; |rom|temp~374  ; |rom|temp~374    ; out              ;
+; |rom|temp~376  ; |rom|temp~376    ; out              ;
+; |rom|temp~384  ; |rom|temp~384    ; out              ;
+; |rom|temp~392  ; |rom|temp~392    ; out              ;
+; |rom|temp~394  ; |rom|temp~394    ; out              ;
+; |rom|temp~402  ; |rom|temp~402    ; out              ;
+; |rom|temp~410  ; |rom|temp~410    ; out              ;
+; |rom|temp~420  ; |rom|temp~420    ; out              ;
+; |rom|temp~428  ; |rom|temp~428    ; out              ;
+; |rom|temp~439  ; |rom|temp~439    ; out              ;
+; |rom|temp~447  ; |rom|temp~447    ; out              ;
+; |rom|temp~458  ; |rom|temp~458    ; out              ;
+; |rom|temp~466  ; |rom|temp~466    ; out              ;
+; |rom|d[9]      ; |rom|d[9]        ; pin_out          ;
+; |rom|d[10]     ; |rom|d[10]       ; pin_out          ;
+; |rom|d[11]     ; |rom|d[11]       ; pin_out          ;
+; |rom|d[12]     ; |rom|d[12]       ; pin_out          ;
+; |rom|d[13]     ; |rom|d[13]       ; pin_out          ;
+; |rom|d[14]     ; |rom|d[14]       ; pin_out          ;
+; |rom|d[17]     ; |rom|d[17]       ; pin_out          ;
+; |rom|d[19]     ; |rom|d[19]       ; pin_out          ;
+; |rom|d[24]     ; |rom|d[24]       ; pin_out          ;
+; |rom|d[27]     ; |rom|d[27]       ; pin_out          ;
+; |rom|d[28]     ; |rom|d[28]       ; pin_out          ;
+; |rom|Equal0~0  ; |rom|Equal0~0    ; out0             ;
+; |rom|Equal1~0  ; |rom|Equal1~0    ; out0             ;
+; |rom|Equal2~0  ; |rom|Equal2~0    ; out0             ;
+; |rom|Equal4~0  ; |rom|Equal4~0    ; out0             ;
+; |rom|Equal5~0  ; |rom|Equal5~0    ; out0             ;
+; |rom|Equal6~0  ; |rom|Equal6~0    ; out0             ;
+; |rom|Equal7~0  ; |rom|Equal7~0    ; out0             ;
+; |rom|Equal9~0  ; |rom|Equal9~0    ; out0             ;
+; |rom|Equal11~0 ; |rom|Equal11~0   ; out0             ;
+; |rom|Equal12~0 ; |rom|Equal12~0   ; out0             ;
+; |rom|Equal18~0 ; |rom|Equal18~0   ; out0             ;
+; |rom|Equal21~0 ; |rom|Equal21~0   ; out0             ;
+; |rom|Equal22~0 ; |rom|Equal22~0   ; out0             ;
+; |rom|Equal23~0 ; |rom|Equal23~0   ; out0             ;
+; |rom|Equal25~0 ; |rom|Equal25~0   ; out0             ;
+; |rom|Equal28~0 ; |rom|Equal28~0   ; out0             ;
+; |rom|Equal29~0 ; |rom|Equal29~0   ; out0             ;
++----------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------+
+; Missing 0-Value Coverage                             ;
++----------------+------------------+------------------+
+; Node Name      ; Output Port Name ; Output Port Type ;
++----------------+------------------+------------------+
+; |rom|temp~0    ; |rom|temp~0      ; out              ;
+; |rom|temp~1    ; |rom|temp~1      ; out              ;
+; |rom|temp~2    ; |rom|temp~2      ; out              ;
+; |rom|temp~3    ; |rom|temp~3      ; out              ;
+; |rom|temp~4    ; |rom|temp~4      ; out              ;
+; |rom|temp~5    ; |rom|temp~5      ; out              ;
+; |rom|temp~6    ; |rom|temp~6      ; out              ;
+; |rom|temp~7    ; |rom|temp~7      ; out              ;
+; |rom|temp~8    ; |rom|temp~8      ; out              ;
+; |rom|temp~10   ; |rom|temp~10     ; out              ;
+; |rom|temp~11   ; |rom|temp~11     ; out              ;
+; |rom|temp~13   ; |rom|temp~13     ; out              ;
+; |rom|temp~15   ; |rom|temp~15     ; out              ;
+; |rom|temp~17   ; |rom|temp~17     ; out              ;
+; |rom|temp~18   ; |rom|temp~18     ; out              ;
+; |rom|temp~19   ; |rom|temp~19     ; out              ;
+; |rom|temp~21   ; |rom|temp~21     ; out              ;
+; |rom|temp~23   ; |rom|temp~23     ; out              ;
+; |rom|temp~25   ; |rom|temp~25     ; out              ;
+; |rom|temp~26   ; |rom|temp~26     ; out              ;
+; |rom|temp~27   ; |rom|temp~27     ; out              ;
+; |rom|temp~28   ; |rom|temp~28     ; out              ;
+; |rom|temp~29   ; |rom|temp~29     ; out              ;
+; |rom|temp~31   ; |rom|temp~31     ; out              ;
+; |rom|temp~32   ; |rom|temp~32     ; out              ;
+; |rom|temp~34   ; |rom|temp~34     ; out              ;
+; |rom|temp~36   ; |rom|temp~36     ; out              ;
+; |rom|temp~37   ; |rom|temp~37     ; out              ;
+; |rom|temp~38   ; |rom|temp~38     ; out              ;
+; |rom|temp~39   ; |rom|temp~39     ; out              ;
+; |rom|temp~40   ; |rom|temp~40     ; out              ;
+; |rom|temp~41   ; |rom|temp~41     ; out              ;
+; |rom|temp~42   ; |rom|temp~42     ; out              ;
+; |rom|temp~44   ; |rom|temp~44     ; out              ;
+; |rom|temp~45   ; |rom|temp~45     ; out              ;
+; |rom|temp~47   ; |rom|temp~47     ; out              ;
+; |rom|temp~49   ; |rom|temp~49     ; out              ;
+; |rom|temp~50   ; |rom|temp~50     ; out              ;
+; |rom|temp~51   ; |rom|temp~51     ; out              ;
+; |rom|temp~52   ; |rom|temp~52     ; out              ;
+; |rom|temp~53   ; |rom|temp~53     ; out              ;
+; |rom|temp~54   ; |rom|temp~54     ; out              ;
+; |rom|temp~55   ; |rom|temp~55     ; out              ;
+; |rom|temp~56   ; |rom|temp~56     ; out              ;
+; |rom|temp~57   ; |rom|temp~57     ; out              ;
+; |rom|temp~59   ; |rom|temp~59     ; out              ;
+; |rom|temp~60   ; |rom|temp~60     ; out              ;
+; |rom|temp~61   ; |rom|temp~61     ; out              ;
+; |rom|temp~63   ; |rom|temp~63     ; out              ;
+; |rom|temp~64   ; |rom|temp~64     ; out              ;
+; |rom|temp~67   ; |rom|temp~67     ; out              ;
+; |rom|temp~69   ; |rom|temp~69     ; out              ;
+; |rom|temp~71   ; |rom|temp~71     ; out              ;
+; |rom|temp~72   ; |rom|temp~72     ; out              ;
+; |rom|temp~73   ; |rom|temp~73     ; out              ;
+; |rom|temp~74   ; |rom|temp~74     ; out              ;
+; |rom|temp~77   ; |rom|temp~77     ; out              ;
+; |rom|temp~78   ; |rom|temp~78     ; out              ;
+; |rom|temp~80   ; |rom|temp~80     ; out              ;
+; |rom|temp~81   ; |rom|temp~81     ; out              ;
+; |rom|temp~84   ; |rom|temp~84     ; out              ;
+; |rom|temp~86   ; |rom|temp~86     ; out              ;
+; |rom|temp~88   ; |rom|temp~88     ; out              ;
+; |rom|temp~89   ; |rom|temp~89     ; out              ;
+; |rom|temp~90   ; |rom|temp~90     ; out              ;
+; |rom|temp~91   ; |rom|temp~91     ; out              ;
+; |rom|temp~94   ; |rom|temp~94     ; out              ;
+; |rom|temp~95   ; |rom|temp~95     ; out              ;
+; |rom|temp~97   ; |rom|temp~97     ; out              ;
+; |rom|temp~98   ; |rom|temp~98     ; out              ;
+; |rom|temp~101  ; |rom|temp~101    ; out              ;
+; |rom|temp~103  ; |rom|temp~103    ; out              ;
+; |rom|temp~106  ; |rom|temp~106    ; out              ;
+; |rom|temp~107  ; |rom|temp~107    ; out              ;
+; |rom|temp~108  ; |rom|temp~108    ; out              ;
+; |rom|temp~111  ; |rom|temp~111    ; out              ;
+; |rom|temp~114  ; |rom|temp~114    ; out              ;
+; |rom|temp~115  ; |rom|temp~115    ; out              ;
+; |rom|temp~118  ; |rom|temp~118    ; out              ;
+; |rom|temp~120  ; |rom|temp~120    ; out              ;
+; |rom|temp~123  ; |rom|temp~123    ; out              ;
+; |rom|temp~124  ; |rom|temp~124    ; out              ;
+; |rom|temp~125  ; |rom|temp~125    ; out              ;
+; |rom|temp~128  ; |rom|temp~128    ; out              ;
+; |rom|temp~131  ; |rom|temp~131    ; out              ;
+; |rom|temp~132  ; |rom|temp~132    ; out              ;
+; |rom|temp~135  ; |rom|temp~135    ; out              ;
+; |rom|temp~137  ; |rom|temp~137    ; out              ;
+; |rom|temp~140  ; |rom|temp~140    ; out              ;
+; |rom|temp~141  ; |rom|temp~141    ; out              ;
+; |rom|temp~142  ; |rom|temp~142    ; out              ;
+; |rom|temp~143  ; |rom|temp~143    ; out              ;
+; |rom|temp~146  ; |rom|temp~146    ; out              ;
+; |rom|temp~149  ; |rom|temp~149    ; out              ;
+; |rom|temp~150  ; |rom|temp~150    ; out              ;
+; |rom|temp~153  ; |rom|temp~153    ; out              ;
+; |rom|temp~155  ; |rom|temp~155    ; out              ;
+; |rom|temp~158  ; |rom|temp~158    ; out              ;
+; |rom|temp~159  ; |rom|temp~159    ; out              ;
+; |rom|temp~160  ; |rom|temp~160    ; out              ;
+; |rom|temp~161  ; |rom|temp~161    ; out              ;
+; |rom|temp~164  ; |rom|temp~164    ; out              ;
+; |rom|temp~167  ; |rom|temp~167    ; out              ;
+; |rom|temp~168  ; |rom|temp~168    ; out              ;
+; |rom|temp~171  ; |rom|temp~171    ; out              ;
+; |rom|temp~173  ; |rom|temp~173    ; out              ;
+; |rom|temp~176  ; |rom|temp~176    ; out              ;
+; |rom|temp~177  ; |rom|temp~177    ; out              ;
+; |rom|temp~178  ; |rom|temp~178    ; out              ;
+; |rom|temp~182  ; |rom|temp~182    ; out              ;
+; |rom|temp~185  ; |rom|temp~185    ; out              ;
+; |rom|temp~186  ; |rom|temp~186    ; out              ;
+; |rom|temp~189  ; |rom|temp~189    ; out              ;
+; |rom|temp~191  ; |rom|temp~191    ; out              ;
+; |rom|temp~194  ; |rom|temp~194    ; out              ;
+; |rom|temp~196  ; |rom|temp~196    ; out              ;
+; |rom|temp~204  ; |rom|temp~204    ; out              ;
+; |rom|temp~209  ; |rom|temp~209    ; out              ;
+; |rom|temp~212  ; |rom|temp~212    ; out              ;
+; |rom|temp~214  ; |rom|temp~214    ; out              ;
+; |rom|temp~222  ; |rom|temp~222    ; out              ;
+; |rom|temp~227  ; |rom|temp~227    ; out              ;
+; |rom|temp~230  ; |rom|temp~230    ; out              ;
+; |rom|temp~232  ; |rom|temp~232    ; out              ;
+; |rom|temp~240  ; |rom|temp~240    ; out              ;
+; |rom|temp~245  ; |rom|temp~245    ; out              ;
+; |rom|temp~248  ; |rom|temp~248    ; out              ;
+; |rom|temp~250  ; |rom|temp~250    ; out              ;
+; |rom|temp~258  ; |rom|temp~258    ; out              ;
+; |rom|temp~263  ; |rom|temp~263    ; out              ;
+; |rom|temp~266  ; |rom|temp~266    ; out              ;
+; |rom|temp~268  ; |rom|temp~268    ; out              ;
+; |rom|temp~276  ; |rom|temp~276    ; out              ;
+; |rom|temp~284  ; |rom|temp~284    ; out              ;
+; |rom|temp~286  ; |rom|temp~286    ; out              ;
+; |rom|temp~294  ; |rom|temp~294    ; out              ;
+; |rom|temp~302  ; |rom|temp~302    ; out              ;
+; |rom|temp~304  ; |rom|temp~304    ; out              ;
+; |rom|temp~312  ; |rom|temp~312    ; out              ;
+; |rom|temp~320  ; |rom|temp~320    ; out              ;
+; |rom|temp~322  ; |rom|temp~322    ; out              ;
+; |rom|temp~330  ; |rom|temp~330    ; out              ;
+; |rom|temp~338  ; |rom|temp~338    ; out              ;
+; |rom|temp~340  ; |rom|temp~340    ; out              ;
+; |rom|temp~348  ; |rom|temp~348    ; out              ;
+; |rom|temp~356  ; |rom|temp~356    ; out              ;
+; |rom|temp~358  ; |rom|temp~358    ; out              ;
+; |rom|temp~366  ; |rom|temp~366    ; out              ;
+; |rom|temp~374  ; |rom|temp~374    ; out              ;
+; |rom|temp~376  ; |rom|temp~376    ; out              ;
+; |rom|temp~384  ; |rom|temp~384    ; out              ;
+; |rom|temp~392  ; |rom|temp~392    ; out              ;
+; |rom|temp~394  ; |rom|temp~394    ; out              ;
+; |rom|temp~402  ; |rom|temp~402    ; out              ;
+; |rom|temp~410  ; |rom|temp~410    ; out              ;
+; |rom|temp~420  ; |rom|temp~420    ; out              ;
+; |rom|temp~428  ; |rom|temp~428    ; out              ;
+; |rom|temp~439  ; |rom|temp~439    ; out              ;
+; |rom|temp~447  ; |rom|temp~447    ; out              ;
+; |rom|temp~458  ; |rom|temp~458    ; out              ;
+; |rom|temp~466  ; |rom|temp~466    ; out              ;
+; |rom|d[9]      ; |rom|d[9]        ; pin_out          ;
+; |rom|d[10]     ; |rom|d[10]       ; pin_out          ;
+; |rom|d[11]     ; |rom|d[11]       ; pin_out          ;
+; |rom|d[12]     ; |rom|d[12]       ; pin_out          ;
+; |rom|d[13]     ; |rom|d[13]       ; pin_out          ;
+; |rom|d[14]     ; |rom|d[14]       ; pin_out          ;
+; |rom|d[17]     ; |rom|d[17]       ; pin_out          ;
+; |rom|d[19]     ; |rom|d[19]       ; pin_out          ;
+; |rom|d[24]     ; |rom|d[24]       ; pin_out          ;
+; |rom|d[27]     ; |rom|d[27]       ; pin_out          ;
+; |rom|d[28]     ; |rom|d[28]       ; pin_out          ;
+; |rom|Equal0~0  ; |rom|Equal0~0    ; out0             ;
+; |rom|Equal1~0  ; |rom|Equal1~0    ; out0             ;
+; |rom|Equal2~0  ; |rom|Equal2~0    ; out0             ;
+; |rom|Equal4~0  ; |rom|Equal4~0    ; out0             ;
+; |rom|Equal5~0  ; |rom|Equal5~0    ; out0             ;
+; |rom|Equal6~0  ; |rom|Equal6~0    ; out0             ;
+; |rom|Equal7~0  ; |rom|Equal7~0    ; out0             ;
+; |rom|Equal9~0  ; |rom|Equal9~0    ; out0             ;
+; |rom|Equal11~0 ; |rom|Equal11~0   ; out0             ;
+; |rom|Equal12~0 ; |rom|Equal12~0   ; out0             ;
+; |rom|Equal18~0 ; |rom|Equal18~0   ; out0             ;
+; |rom|Equal21~0 ; |rom|Equal21~0   ; out0             ;
+; |rom|Equal22~0 ; |rom|Equal22~0   ; out0             ;
+; |rom|Equal23~0 ; |rom|Equal23~0   ; out0             ;
+; |rom|Equal25~0 ; |rom|Equal25~0   ; out0             ;
+; |rom|Equal29~0 ; |rom|Equal29~0   ; out0             ;
+; |rom|Equal30~0 ; |rom|Equal30~0   ; out0             ;
++----------------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Mar 20 12:32:24 2021
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off rom -c rom
+Info: Using vector source file "C:/Users/86150/Desktop/mylearn/CSexperiment/ex6/rom/rom.vwf"
+Warning: Ignored node in vector source file. Can't find corresponding node name "a[4]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "a[3]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "a[2]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "a[1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "a[0]" in design.
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      65.20 %
+Info: Number of transitions in simulation is 2630
+Info: Quartus II Simulator was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 163 megabytes
+    Info: Processing ended: Sat Mar 20 12:32:25 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,106 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.245 ns
+From           : cdu_en
+To             : getData:inst2|74161:inst|f74161:sub|9
+From Clock     : --
+To Clock       : cdu_clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 15.895 ns
+From           : CPU:inst6|memories:inst1|sw_pc_ar:inst1|ar[0]
+To             : q_d
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.618 ns
+From           : dataBus[4]
+To             : q_d
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.758 ns
+From           : dataBus[7]
+To             : control:inst|74273:inst4|14
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 196.27 MHz ( period = 5.095 ns )
+From           : CPU:inst6|aluBus:inst|dr1[0]
+To             : CPU:inst6|aluBus:inst|dr1[3]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'showClk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
+From           : showOut:inst5|74161:inst4|f74161:sub|9
+To             : showOut:inst5|inst3
+From Clock     : showClk
+To Clock       : showClk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'cdu_en'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
+From           : getData:inst2|74161:inst1|f74161:sub|9
+To             : getData:inst2|74161:inst1|f74161:sub|110
+From Clock     : cdu_en
+To Clock       : cdu_en
+Failed Paths   : 0
+
+Type           : Clock Setup: 'cdu_clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
+From           : getData:inst2|74161:inst1|f74161:sub|9
+To             : getData:inst2|74161:inst1|f74161:sub|110
+From Clock     : cdu_clk
+To Clock       : cdu_clk
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : control:inst|74273:inst3|14
+To             : CPU:inst6|memories:inst1|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_m1a1:auto_generated|ram_block1a0~porta_we_reg
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 13
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 13
+
+--------------------------------------------------------------------------------------
+

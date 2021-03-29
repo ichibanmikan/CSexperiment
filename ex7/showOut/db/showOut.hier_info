@@ -1,0 +1,191 @@
+|showOut
+qa <= getHex:inst7.qa
+datain0[0] => mux4_6_1:inst2.d0[0]
+datain0[1] => mux4_6_1:inst2.d0[1]
+datain0[2] => mux4_6_1:inst2.d0[2]
+datain0[3] => mux4_6_1:inst2.d0[3]
+datain1[0] => mux4_6_1:inst2.d1[0]
+datain1[1] => mux4_6_1:inst2.d1[1]
+datain1[2] => mux4_6_1:inst2.d1[2]
+datain1[3] => mux4_6_1:inst2.d1[3]
+datain2[0] => mux4_6_1:inst2.d2[0]
+datain2[1] => mux4_6_1:inst2.d2[1]
+datain2[2] => mux4_6_1:inst2.d2[2]
+datain2[3] => mux4_6_1:inst2.d2[3]
+datain3[0] => mux4_6_1:inst2.d3[0]
+datain3[1] => mux4_6_1:inst2.d3[1]
+datain3[2] => mux4_6_1:inst2.d3[2]
+datain3[3] => mux4_6_1:inst2.d3[3]
+datain4[0] => mux4_6_1:inst2.d4[0]
+datain4[1] => mux4_6_1:inst2.d4[1]
+datain4[2] => mux4_6_1:inst2.d4[2]
+datain4[3] => mux4_6_1:inst2.d4[3]
+datain5[0] => mux4_6_1:inst2.d5[0]
+datain5[1] => mux4_6_1:inst2.d5[1]
+datain5[2] => mux4_6_1:inst2.d5[2]
+datain5[3] => mux4_6_1:inst2.d5[3]
+clk => inst3.CLK
+clk => 74161:inst4.CLK
+qb <= getHex:inst7.qb
+qc <= getHex:inst7.qc
+qd <= getHex:inst7.qd
+qe <= getHex:inst7.qe
+qf <= getHex:inst7.qf
+qg <= getHex:inst7.qg
+
+
+|showOut|getHex:inst7
+dout[0] => Mux6.IN19
+dout[0] => Mux5.IN19
+dout[0] => Mux4.IN19
+dout[0] => Mux3.IN19
+dout[0] => Mux2.IN19
+dout[0] => Mux1.IN19
+dout[0] => Mux0.IN19
+dout[1] => Mux6.IN18
+dout[1] => Mux5.IN18
+dout[1] => Mux4.IN18
+dout[1] => Mux3.IN18
+dout[1] => Mux2.IN18
+dout[1] => Mux1.IN18
+dout[1] => Mux0.IN18
+dout[2] => Mux6.IN17
+dout[2] => Mux5.IN17
+dout[2] => Mux4.IN17
+dout[2] => Mux3.IN17
+dout[2] => Mux2.IN17
+dout[2] => Mux1.IN17
+dout[2] => Mux0.IN17
+dout[3] => Mux6.IN16
+dout[3] => Mux5.IN16
+dout[3] => Mux4.IN16
+dout[3] => Mux3.IN16
+dout[3] => Mux2.IN16
+dout[3] => Mux1.IN16
+dout[3] => Mux0.IN16
+qa <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+qb <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+qc <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+qd <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+qe <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+qf <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+qg <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|showOut|mux4_6_1:inst2
+d0[0] => dout~19.DATAB
+d0[1] => dout~18.DATAB
+d0[2] => dout~17.DATAB
+d0[3] => dout~16.DATAB
+d1[0] => dout~15.DATAB
+d1[1] => dout~14.DATAB
+d1[2] => dout~13.DATAB
+d1[3] => dout~12.DATAB
+d2[0] => dout~11.DATAB
+d2[1] => dout~10.DATAB
+d2[2] => dout~9.DATAB
+d2[3] => dout~8.DATAB
+d3[0] => dout~7.DATAB
+d3[1] => dout~6.DATAB
+d3[2] => dout~5.DATAB
+d3[3] => dout~4.DATAB
+d4[0] => dout~3.DATAB
+d4[1] => dout~2.DATAB
+d4[2] => dout~1.DATAB
+d4[3] => dout~0.DATAB
+d5[0] => dout~3.DATAA
+d5[1] => dout~2.DATAA
+d5[2] => dout~1.DATAA
+d5[3] => dout~0.DATAA
+sel[0] => Equal0.IN0
+sel[0] => Equal1.IN1
+sel[0] => Equal2.IN0
+sel[0] => Equal3.IN2
+sel[0] => Equal4.IN0
+sel[1] => Equal0.IN1
+sel[1] => Equal1.IN2
+sel[1] => Equal2.IN2
+sel[1] => Equal3.IN0
+sel[1] => Equal4.IN1
+sel[2] => Equal0.IN2
+sel[2] => Equal1.IN0
+sel[2] => Equal2.IN1
+sel[2] => Equal3.IN1
+sel[2] => Equal4.IN2
+dout[0] <= dout~19.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout~18.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout~17.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout~16.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|showOut|74161:inst4
+clk => f74161:sub.clk
+ldn => ~NO_FANOUT~
+clrn => f74161:sub.clrn
+enp => f74161:sub.enp
+ent => f74161:sub.ent
+d => ~NO_FANOUT~
+c => ~NO_FANOUT~
+b => ~NO_FANOUT~
+a => ~NO_FANOUT~
+qd <= f74161:sub.qd
+qc <= f74161:sub.qc
+qb <= f74161:sub.qb
+qa <= f74161:sub.qa
+rco <= f74161:sub.rco
+
+
+|showOut|74161:inst4|f74161:sub
+RCO <= 105.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => 110.ACLR
+CLRN => 99.ACLR
+CLRN => 87.ACLR
+CLRN => 9.ACLR
+CLK => 110.CLK
+CLK => 99.CLK
+CLK => 87.CLK
+CLK => 9.CLK
+D => 113.IN0
+LDN => 117.IN0
+LDN => 77.IN1
+LDN => 86.IN1
+LDN => 98.IN1
+LDN => 108.IN1
+ENP => 106.IN0
+ENP => 96.IN0
+ENP => 89.IN0
+ENP => 79.IN0
+C => 101.IN0
+B => 91.IN0
+A => 76.IN0
+ENT => 82.DATAIN
+QD <= 110.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 99.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 87.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|showOut|decoder3_6:inst
+data[0] => Equal0.IN0
+data[0] => Equal1.IN1
+data[0] => Equal2.IN0
+data[0] => Equal3.IN2
+data[0] => Equal4.IN0
+data[1] => Equal0.IN1
+data[1] => Equal1.IN2
+data[1] => Equal2.IN2
+data[1] => Equal3.IN0
+data[1] => Equal4.IN1
+data[2] => Equal0.IN2
+data[2] => Equal1.IN0
+data[2] => Equal2.IN1
+data[2] => Equal3.IN1
+data[2] => Equal4.IN2
+seg[0] <= seg~13.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= seg~12.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= seg~11.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg~10.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg~9.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= Equal4.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,279 @@
+Simulator report for dataBus
+Thu Mar 04 18:51:49 2021
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 2.0 us       ;
+; Simulation Netlist Size     ; 105 nodes    ;
+; Simulation Coverage         ;      68.04 % ;
+; Total Number of Transitions ; 902          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
+; Device                      ; EP2S15F484C3 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      68.04 % ;
+; Total nodes checked                                 ; 105          ;
+; Total output ports checked                          ; 97           ;
+; Total output ports with complete 1/0-value coverage ; 66           ;
+; Total output ports with no 1/0-value coverage       ; 21           ;
+; Total output ports with no 1-value coverage         ; 23           ;
+; Total output ports with no 0-value coverage         ; 29           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++---------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                         ;
++------------------------+-------------------------+------------------+
+; Node Name              ; Output Port Name        ; Output Port Type ;
++------------------------+-------------------------+------------------+
+; |dataBus|r3[0]         ; |dataBus|r3[0]          ; regout           ;
+; |dataBus|r3[1]         ; |dataBus|r3[1]          ; regout           ;
+; |dataBus|r3[4]         ; |dataBus|r3[4]          ; regout           ;
+; |dataBus|r3[5]         ; |dataBus|r3[5]          ; regout           ;
+; |dataBus|r1[0]         ; |dataBus|r1[0]          ; regout           ;
+; |dataBus|r1[1]         ; |dataBus|r1[1]          ; regout           ;
+; |dataBus|r1[4]         ; |dataBus|r1[4]          ; regout           ;
+; |dataBus|r1[5]         ; |dataBus|r1[5]          ; regout           ;
+; |dataBus|r2[0]         ; |dataBus|r2[0]          ; regout           ;
+; |dataBus|r2[1]         ; |dataBus|r2[1]          ; regout           ;
+; |dataBus|r2[4]         ; |dataBus|r2[4]          ; regout           ;
+; |dataBus|r2[5]         ; |dataBus|r2[5]          ; regout           ;
+; |dataBus|r2[6]         ; |dataBus|r2[6]          ; regout           ;
+; |dataBus|r2[7]         ; |dataBus|r2[7]          ; regout           ;
+; |dataBus|r3[0]~16      ; |dataBus|r3[0]~16       ; combout          ;
+; |dataBus|r2[0]~8       ; |dataBus|r2[0]~8        ; combout          ;
+; |dataBus|l~19          ; |dataBus|l~19           ; combout          ;
+; |dataBus|bus_Reg~35    ; |dataBus|bus_Reg~35     ; combout          ;
+; |dataBus|bus_Reg[0]~36 ; |dataBus|bus_Reg[0]~36  ; combout          ;
+; |dataBus|bus_Reg[7]~37 ; |dataBus|bus_Reg[7]~37  ; combout          ;
+; |dataBus|bus_Reg[6]~38 ; |dataBus|bus_Reg[6]~38  ; combout          ;
+; |dataBus|bus_Reg[5]~39 ; |dataBus|bus_Reg[5]~39  ; combout          ;
+; |dataBus|bus_Reg[5]~40 ; |dataBus|bus_Reg[5]~40  ; combout          ;
+; |dataBus|bus_Reg[4]~41 ; |dataBus|bus_Reg[4]~41  ; combout          ;
+; |dataBus|bus_Reg[4]~42 ; |dataBus|bus_Reg[4]~42  ; combout          ;
+; |dataBus|bus_Reg[1]~47 ; |dataBus|bus_Reg[1]~47  ; combout          ;
+; |dataBus|bus_Reg[1]~48 ; |dataBus|bus_Reg[1]~48  ; combout          ;
+; |dataBus|bus_Reg[0]~49 ; |dataBus|bus_Reg[0]~49  ; combout          ;
+; |dataBus|bus_Reg[0]~50 ; |dataBus|bus_Reg[0]~50  ; combout          ;
+; |dataBus|bus_Reg[7]~51 ; |dataBus|bus_Reg[7]~51  ; combout          ;
+; |dataBus|bus_Reg[6]~52 ; |dataBus|bus_Reg[6]~52  ; combout          ;
+; |dataBus|l[0]          ; |dataBus|l[0]~output    ; padio            ;
+; |dataBus|l[1]          ; |dataBus|l[1]~output    ; padio            ;
+; |dataBus|l[4]          ; |dataBus|l[4]~output    ; padio            ;
+; |dataBus|l[5]          ; |dataBus|l[5]~output    ; padio            ;
+; |dataBus|l[6]          ; |dataBus|l[6]~output    ; padio            ;
+; |dataBus|l[7]          ; |dataBus|l[7]~output    ; padio            ;
+; |dataBus|outr3[0]      ; |dataBus|outr3[0]       ; padio            ;
+; |dataBus|outr3[1]      ; |dataBus|outr3[1]       ; padio            ;
+; |dataBus|outr3[4]      ; |dataBus|outr3[4]       ; padio            ;
+; |dataBus|outr3[5]      ; |dataBus|outr3[5]       ; padio            ;
+; |dataBus|outr1[0]      ; |dataBus|outr1[0]       ; padio            ;
+; |dataBus|outr1[1]      ; |dataBus|outr1[1]       ; padio            ;
+; |dataBus|outr1[4]      ; |dataBus|outr1[4]       ; padio            ;
+; |dataBus|outr1[5]      ; |dataBus|outr1[5]       ; padio            ;
+; |dataBus|outr2[0]      ; |dataBus|outr2[0]       ; padio            ;
+; |dataBus|outr2[1]      ; |dataBus|outr2[1]       ; padio            ;
+; |dataBus|outr2[4]      ; |dataBus|outr2[4]       ; padio            ;
+; |dataBus|outr2[5]      ; |dataBus|outr2[5]       ; padio            ;
+; |dataBus|outr2[6]      ; |dataBus|outr2[6]       ; padio            ;
+; |dataBus|outr2[7]      ; |dataBus|outr2[7]       ; padio            ;
+; |dataBus|sw_bus        ; |dataBus|sw_bus~corein  ; combout          ;
+; |dataBus|r2_bus        ; |dataBus|r2_bus~corein  ; combout          ;
+; |dataBus|r3_bus        ; |dataBus|r3_bus~corein  ; combout          ;
+; |dataBus|r1_bus        ; |dataBus|r1_bus~corein  ; combout          ;
+; |dataBus|k[0]          ; |dataBus|k[0]~corein    ; combout          ;
+; |dataBus|Clk           ; |dataBus|Clk~corein     ; combout          ;
+; |dataBus|lddr[3]       ; |dataBus|lddr[3]~corein ; combout          ;
+; |dataBus|lddr[1]       ; |dataBus|lddr[1]~corein ; combout          ;
+; |dataBus|lddr[2]       ; |dataBus|lddr[2]~corein ; combout          ;
+; |dataBus|k[1]          ; |dataBus|k[1]~corein    ; combout          ;
+; |dataBus|k[4]          ; |dataBus|k[4]~corein    ; combout          ;
+; |dataBus|k[5]          ; |dataBus|k[5]~corein    ; combout          ;
+; |dataBus|k[6]          ; |dataBus|k[6]~corein    ; combout          ;
+; |dataBus|k[7]          ; |dataBus|k[7]~corein    ; combout          ;
+; |dataBus|Clk~clkctrl   ; |dataBus|Clk~clkctrl    ; outclk           ;
++------------------------+-------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                             ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |dataBus|r3[2]                  ; |dataBus|r3[2]                  ; regout           ;
+; |dataBus|r3[3]                  ; |dataBus|r3[3]                  ; regout           ;
+; |dataBus|r1[2]                  ; |dataBus|r1[2]                  ; regout           ;
+; |dataBus|r1[3]                  ; |dataBus|r1[3]                  ; regout           ;
+; |dataBus|r2[2]                  ; |dataBus|r2[2]                  ; regout           ;
+; |dataBus|r2[3]                  ; |dataBus|r2[3]                  ; regout           ;
+; |dataBus|bus_Reg[3]~43          ; |dataBus|bus_Reg[3]~43          ; combout          ;
+; |dataBus|bus_Reg[3]~44          ; |dataBus|bus_Reg[3]~44          ; combout          ;
+; |dataBus|bus_Reg[2]~45          ; |dataBus|bus_Reg[2]~45          ; combout          ;
+; |dataBus|bus_Reg[2]~46          ; |dataBus|bus_Reg[2]~46          ; combout          ;
+; |dataBus|l[2]                   ; |dataBus|l[2]~output            ; padio            ;
+; |dataBus|l[3]                   ; |dataBus|l[3]~output            ; padio            ;
+; |dataBus|outr3[2]               ; |dataBus|outr3[2]               ; padio            ;
+; |dataBus|outr3[3]               ; |dataBus|outr3[3]               ; padio            ;
+; |dataBus|outr1[2]               ; |dataBus|outr1[2]               ; padio            ;
+; |dataBus|outr1[3]               ; |dataBus|outr1[3]               ; padio            ;
+; |dataBus|outr2[2]               ; |dataBus|outr2[2]               ; padio            ;
+; |dataBus|outr2[3]               ; |dataBus|outr2[3]               ; padio            ;
+; |dataBus|k[2]                   ; |dataBus|k[2]~corein            ; combout          ;
+; |dataBus|k[3]                   ; |dataBus|k[3]~corein            ; combout          ;
+; |dataBus|bus_Reg[2]~46DUPLICATE ; |dataBus|bus_Reg[2]~46DUPLICATE ; combout          ;
+; |dataBus|r2[2]~DUPLICATE        ; |dataBus|r2[2]~DUPLICATE        ; regout           ;
+; |dataBus|r1[2]~feeder           ; |dataBus|r1[2]~feeder           ; combout          ;
++---------------------------------+---------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                             ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |dataBus|r3[2]                  ; |dataBus|r3[2]                  ; regout           ;
+; |dataBus|r3[3]                  ; |dataBus|r3[3]                  ; regout           ;
+; |dataBus|r3[6]                  ; |dataBus|r3[6]                  ; regout           ;
+; |dataBus|r3[7]                  ; |dataBus|r3[7]                  ; regout           ;
+; |dataBus|r1[2]                  ; |dataBus|r1[2]                  ; regout           ;
+; |dataBus|r1[3]                  ; |dataBus|r1[3]                  ; regout           ;
+; |dataBus|r1[6]                  ; |dataBus|r1[6]                  ; regout           ;
+; |dataBus|r1[7]                  ; |dataBus|r1[7]                  ; regout           ;
+; |dataBus|r2[2]                  ; |dataBus|r2[2]                  ; regout           ;
+; |dataBus|r2[3]                  ; |dataBus|r2[3]                  ; regout           ;
+; |dataBus|bus_Reg[3]~43          ; |dataBus|bus_Reg[3]~43          ; combout          ;
+; |dataBus|bus_Reg[3]~44          ; |dataBus|bus_Reg[3]~44          ; combout          ;
+; |dataBus|bus_Reg[2]~45          ; |dataBus|bus_Reg[2]~45          ; combout          ;
+; |dataBus|bus_Reg[2]~46          ; |dataBus|bus_Reg[2]~46          ; combout          ;
+; |dataBus|outr3[2]               ; |dataBus|outr3[2]               ; padio            ;
+; |dataBus|outr3[3]               ; |dataBus|outr3[3]               ; padio            ;
+; |dataBus|outr3[6]               ; |dataBus|outr3[6]               ; padio            ;
+; |dataBus|outr3[7]               ; |dataBus|outr3[7]               ; padio            ;
+; |dataBus|outr1[2]               ; |dataBus|outr1[2]               ; padio            ;
+; |dataBus|outr1[3]               ; |dataBus|outr1[3]               ; padio            ;
+; |dataBus|outr1[6]               ; |dataBus|outr1[6]               ; padio            ;
+; |dataBus|outr1[7]               ; |dataBus|outr1[7]               ; padio            ;
+; |dataBus|outr2[2]               ; |dataBus|outr2[2]               ; padio            ;
+; |dataBus|outr2[3]               ; |dataBus|outr2[3]               ; padio            ;
+; |dataBus|k[2]                   ; |dataBus|k[2]~corein            ; combout          ;
+; |dataBus|k[3]                   ; |dataBus|k[3]~corein            ; combout          ;
+; |dataBus|bus_Reg[2]~46DUPLICATE ; |dataBus|bus_Reg[2]~46DUPLICATE ; combout          ;
+; |dataBus|r2[2]~DUPLICATE        ; |dataBus|r2[2]~DUPLICATE        ; regout           ;
+; |dataBus|r1[2]~feeder           ; |dataBus|r1[2]~feeder           ; combout          ;
++---------------------------------+---------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Mar 04 18:51:48 2021
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off dataBus -c dataBus
+Info: Using vector source file "C:/Users/86150/Desktop/mylearn/CSexperiment/ex1/dataBus.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      68.04 %
+Info: Number of transitions in simulation is 902
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 168 megabytes
+    Info: Processing ended: Thu Mar 04 18:51:49 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
