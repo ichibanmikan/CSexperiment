@@ -1,32 +1,32 @@
 |modelCPU
-p1 <= control:inst.P1
-KWE => control:inst.KWE
-KRD => control:inst.KRD
-CLR => control:inst.CLR
-t2 <= control:inst.t2
-t3 <= control:inst.t3
-alu_sel[0] <= control:inst.S0
-alu_sel[1] <= control:inst.S1
-alu_sel[2] <= control:inst.S2
-alu_sel[3] <= control:inst.S3
-alu_sel[4] <= control:inst.CN
-alu_sel[5] <= control:inst.M
-bus_sel[0] <= control:inst.PC_BUS
-bus_sel[1] <= control:inst.ALU_BUS
-bus_sel[2] <= control:inst.R5_BUS
-bus_sel[3] <= control:inst.R4_BUS
-bus_sel[4] <= control:inst.SW_BUS
+p1 <= control:inst1.P1
+KWE => control:inst1.KWE
+KRD => control:inst1.KRD
+CLR => control:inst1.CLR
+t2 <= control:inst1.t2
+t3 <= control:inst1.t3
+alu_sel[0] <= control:inst1.S0
+alu_sel[1] <= control:inst1.S1
+alu_sel[2] <= control:inst1.S2
+alu_sel[3] <= control:inst1.S3
+alu_sel[4] <= control:inst1.CN
+alu_sel[5] <= control:inst1.M
+bus_sel[0] <= control:inst1.PC_BUS
+bus_sel[1] <= control:inst1.ALU_BUS
+bus_sel[2] <= control:inst1.R5_BUS
+bus_sel[3] <= control:inst1.R4_BUS
+bus_sel[4] <= control:inst1.SW_BUS
 cdu_en => getData:inst2.cdu_en
 cdu_clr => getData:inst2.cdu_clr
 cdu_clk => getData:inst2.cdu_clk
-ld_reg[0] <= control:inst.LDAR
-ld_reg[1] <= control:inst.LDR5
-ld_reg[2] <= control:inst.LDR4
-ld_reg[3] <= control:inst.LDDR2
-ld_reg[4] <= control:inst.LDDR1
-pc_sel[0] <= control:inst.LOAD
-pc_sel[1] <= control:inst.161LDPC
-pc_sel[2] <= control:inst.161CLRN
+ld_reg[0] <= control:inst1.LDAR
+ld_reg[1] <= control:inst1.LDR5
+ld_reg[2] <= control:inst1.LDR4
+ld_reg[3] <= control:inst1.LDDR2
+ld_reg[4] <= control:inst1.LDDR1
+pc_sel[0] <= control:inst1.LOAD
+pc_sel[1] <= control:inst1.161LDPC
+pc_sel[2] <= control:inst1.161CLRN
 dataBus[0] <= CPU:inst6.d[0]
 dataBus[1] <= CPU:inst6.d[1]
 dataBus[2] <= CPU:inst6.d[2]
@@ -35,13 +35,13 @@ dataBus[4] <= CPU:inst6.d[4]
 dataBus[5] <= CPU:inst6.d[5]
 dataBus[6] <= CPU:inst6.d[6]
 dataBus[7] <= CPU:inst6.d[7]
-clk => control:inst.clk
-dp => control:inst.dp
-qd => control:inst.qd
-tj => control:inst.tj
-t1 <= control:inst.t1
-t4 <= control:inst.t4
-irld <= control:inst.IRLD
+clk => control:inst1.clk
+dp => control:inst1.dp
+qd => control:inst1.qd
+tj => control:inst1.tj
+t1 <= control:inst1.t1
+t4 <= control:inst1.t4
+irld <= control:inst1.IRLD
 q_a <= showOut:inst5.qa
 showClk => showOut:inst5.clk
 q_b <= showOut:inst5.qb
@@ -50,11 +50,11 @@ q_d <= showOut:inst5.qd
 q_e <= showOut:inst5.qe
 q_f <= showOut:inst5.qf
 q_g <= showOut:inst5.qg
-a[0] <= control:inst.a0
-a[1] <= control:inst.a1
-a[2] <= control:inst.a2
-a[3] <= control:inst.a3
-a[4] <= control:inst.a4
+a[0] <= control:inst1.a0
+a[1] <= control:inst1.a1
+a[2] <= control:inst1.a2
+a[3] <= control:inst1.a3
+a[4] <= control:inst1.a4
 seg[0] <= showOut:inst5.seg[0]
 seg[1] <= showOut:inst5.seg[1]
 seg[2] <= showOut:inst5.seg[2]
@@ -63,7 +63,7 @@ seg[4] <= showOut:inst5.seg[4]
 seg[5] <= showOut:inst5.seg[5]
 
 
-|modelCPU|control:inst
+|modelCPU|control:inst1
 a0 <= 7474:inst7.1Q
 t2 <= shixu:inst.t2
 clk => shixu:inst.clock
@@ -103,20 +103,20 @@ LOAD <= 74273:inst2.Q3
 P1 <= 74273:inst3.Q7
 M <= 74273:inst8.Q7
 CN <= 74273:inst8.Q8
-S0 <= 74273:inst3.Q1
-S1 <= 74273:inst3.Q2
-S2 <= 74273:inst3.Q3
-S3 <= 74273:inst3.Q4
 WE <= 74273:inst3.Q5
 RD <= ldir.DB_MAX_OUTPUT_PORT_TYPE
 LDR5 <= 74273:inst8.Q1
 LDR4 <= 74273:inst8.Q2
-LDDR1 <= 74273:inst8.Q3
-LDDR2 <= 74273:inst8.Q4
 IRLD <= 74273:inst8.Q6
+LDDR2 <= 74273:inst8.Q3
+LDDR1 <= 74273:inst8.Q4
+S3 <= 74273:inst3.Q1
+S2 <= 74273:inst3.Q2
+S1 <= 74273:inst3.Q3
+S0 <= 74273:inst3.Q4
 
 
-|modelCPU|control:inst|7474:inst7
+|modelCPU|control:inst1|7474:inst7
 1Q <= 9.DB_MAX_OUTPUT_PORT_TYPE
 1CLRN => 9.ACLR
 1CLK => 9.CLK
@@ -131,7 +131,7 @@ IRLD <= 74273:inst8.Q6
 2QN <= 15.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|modelCPU|control:inst|shixu:inst
+|modelCPU|control:inst1|shixu:inst
 qd => Selector0.IN4
 qd => Selector1.IN1
 dp => process_1~1.IN1
@@ -150,7 +150,7 @@ t2 <= t2~0.DB_MAX_OUTPUT_PORT_TYPE
 t1 <= process_1~2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|modelCPU|control:inst|rom:inst9
+|modelCPU|control:inst1|rom:inst9
 a4 => Equal0.IN4
 a4 => Equal1.IN4
 a4 => Equal2.IN3
@@ -341,7 +341,7 @@ d[27] <= temp[27].DB_MAX_OUTPUT_PORT_TYPE
 d[28] <= <VCC>
 
 
-|modelCPU|control:inst|74244:inst1
+|modelCPU|control:inst1|74244:inst1
 2Y4 <= 26.DB_MAX_OUTPUT_PORT_TYPE
 2A4 => 26.DATAIN
 2GN => 33.IN0
@@ -362,7 +362,7 @@ d[28] <= <VCC>
 1A4 => 11.DATAIN
 
 
-|modelCPU|control:inst|7474:inst5
+|modelCPU|control:inst1|7474:inst5
 1Q <= 9.DB_MAX_OUTPUT_PORT_TYPE
 1CLRN => 9.ACLR
 1CLK => 9.CLK
@@ -377,7 +377,7 @@ d[28] <= <VCC>
 2QN <= 15.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|modelCPU|control:inst|7474:inst6
+|modelCPU|control:inst1|7474:inst6
 1Q <= 9.DB_MAX_OUTPUT_PORT_TYPE
 1CLRN => 9.ACLR
 1CLK => 9.CLK
@@ -392,7 +392,7 @@ d[28] <= <VCC>
 2QN <= 15.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|modelCPU|control:inst|74273:inst3
+|modelCPU|control:inst1|74273:inst3
 Q1 <= 19.DB_MAX_OUTPUT_PORT_TYPE
 CLRN => 19.ACLR
 CLRN => 18.ACLR
@@ -427,7 +427,7 @@ Q8 <= 12.DB_MAX_OUTPUT_PORT_TYPE
 D8 => 12.DATAIN
 
 
-|modelCPU|control:inst|74273:inst4
+|modelCPU|control:inst1|74273:inst4
 Q1 <= 19.DB_MAX_OUTPUT_PORT_TYPE
 CLRN => 19.ACLR
 CLRN => 18.ACLR
@@ -462,7 +462,7 @@ Q8 <= 12.DB_MAX_OUTPUT_PORT_TYPE
 D8 => 12.DATAIN
 
 
-|modelCPU|control:inst|74273:inst8
+|modelCPU|control:inst1|74273:inst8
 Q1 <= 19.DB_MAX_OUTPUT_PORT_TYPE
 CLRN => 19.ACLR
 CLRN => 18.ACLR
@@ -497,7 +497,7 @@ Q8 <= 12.DB_MAX_OUTPUT_PORT_TYPE
 D8 => 12.DATAIN
 
 
-|modelCPU|control:inst|74273:inst2
+|modelCPU|control:inst1|74273:inst2
 Q1 <= 19.DB_MAX_OUTPUT_PORT_TYPE
 CLRN => 19.ACLR
 CLRN => 18.ACLR

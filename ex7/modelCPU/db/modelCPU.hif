@@ -19,26 +19,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-control
-# storage
-db|modelCPU.(1).cnf
-db|modelCPU.(1).cnf
-# case_insensitive
-# source_file
-blocks|sourceDesign|control.bdf
-afd1d2f16da1cfd966d62fb3ea9ad4e9
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-control:inst
-}
-# macro_sequence
-
-# end
-# entity
 7474
 # storage
 db|modelCPU.(2).cnf
@@ -53,9 +33,9 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-control:inst|7474:inst7
-control:inst|7474:inst5
-control:inst|7474:inst6
+control:inst1|7474:inst7
+control:inst1|7474:inst5
+control:inst1|7474:inst6
 }
 # macro_sequence
 
@@ -85,7 +65,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-control:inst|shixu:inst
+control:inst1|shixu:inst
 }
 # lmf
 d:|quartus|lmf|maxplus2.lmf
@@ -118,7 +98,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-control:inst|rom:inst9
+control:inst1|rom:inst9
 }
 # lmf
 d:|quartus|lmf|maxplus2.lmf
@@ -141,7 +121,7 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-control:inst|74244:inst1
+control:inst1|74244:inst1
 }
 # macro_sequence
 
@@ -161,10 +141,10 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-control:inst|74273:inst3
-control:inst|74273:inst4
-control:inst|74273:inst8
-control:inst|74273:inst2
+control:inst1|74273:inst3
+control:inst1|74273:inst4
+control:inst1|74273:inst8
+control:inst1|74273:inst2
 }
 # macro_sequence
 
@@ -1324,26 +1304,6 @@ CPU:inst6|memories:inst1
 
 # end
 # entity
-modelCPU
-# storage
-db|modelCPU.(0).cnf
-db|modelCPU.(0).cnf
-# case_insensitive
-# source_file
-modelCPU.bdf
-89ed96e7a079247539f91cc2299d5424
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 CPU
 # storage
 db|modelCPU.(7).cnf
@@ -1393,6 +1353,46 @@ CPU:inst6|aluBus:inst
 # lmf
 d:|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+control
+# storage
+db|modelCPU.(1).cnf
+db|modelCPU.(1).cnf
+# case_insensitive
+# source_file
+blocks|sourceDesign|control.bdf
+b4d873f2ee4e7e4c7e07a52b4feecee
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+control:inst1
+}
+# macro_sequence
+
+# end
+# entity
+modelCPU
+# storage
+db|modelCPU.(0).cnf
+db|modelCPU.(0).cnf
+# case_insensitive
+# source_file
+modelCPU.bdf
+4eb8395c3b7a48f3eb5838d1ba550e4
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
 # macro_sequence
 
 # end

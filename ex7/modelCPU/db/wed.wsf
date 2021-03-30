@@ -698,11 +698,11 @@ VECTOR("C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/modelCPU.vwf")
 VECTOR("C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/db/modelCPU.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 253248;
-		ZEND = 731743;
-		NUMERATOR = 359;
-		DENOMINATOR = 478495;
-		TOP_INDEX = 0;
+		ZBEGIN = 2216346;
+		ZEND = 4217434;
+		NUMERATOR = 1312;
+		DENOMINATOR = 2001088;
+		TOP_INDEX = 15;
 	}
 	CLOCK{
 		PERIOD = 10000;

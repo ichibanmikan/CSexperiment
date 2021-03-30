@@ -1,0 +1,32 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x00eec2fa: CCL_MSG + 0x2c2fa (?garbage_collect_all_pdb_memory@MSG_LOCATION_SCHEMA@@SIXXZ + 0x28a)
+	0x0242beb5: tcl84 + 0xbeb5 (_TclInvokeStringCommand + 0x75)
+	0x0246ca4b: tcl84 + 0x4ca4b (_Tcl_GetCommandFromObj + 0x5b)
+	0x0242c8f9: tcl84 + 0xc8f9 (_TclEvalObjvInternal + 0x229)
+	0x0242df65: tcl84 + 0xdf65 (_Tcl_EvalEx + 0x185)
+	0x0242e304: tcl84 + 0xe304 (_Tcl_Eval + 0x14)
+	0x0242e79a: tcl84 + 0xe79a (_Tcl_GlobalEval + 0x1a)
+	0x00cbf335: ccl_atcl + 0x1f335 (?atcl_flush_queue@@YIX_N0@Z + 0x175)
+	0x1000a8a6: GCL_AFC + 0xa8a6 (?PreTranslateMessage@AFC_APP@@UAEHPAUtagMSG@@@Z + 0x16)
+	0x6689a96e: mfc90 + 0x9a96e
+	0x6689a853: mfc90 + 0x9a853
+	0x01001968: ccl_thr + 0x1968 (thr_thread_var_destroy + 0x28)
+	0x668671e7: mfc90 + 0x671e7
+	0x0044f42e: quartus + 0x4f42e (Pjm_Uninit + 0x401ee)
+	0x75916358: KERNEL32 + 0x16358 (BaseThreadInitThunk + 0x18)
+	0x77898943: ntdll + 0x68943 (RtlGetAppContainerNamedObjectPath + 0xe3)
+	0x77898913: ntdll + 0x68913 (RtlGetAppContainerNamedObjectPath + 0xb3)
+	0xffffffffffffffff:
+	</callstack>
+	<error>Access Violation at 0X00EEC2FA</error>
+	<date>Tue Mar 30 12:43:01 2021</date>
+	<version>Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition</version>
+	<full_error>Access Violation at 0X00EEC2FA
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition </full_error>
+</internal_error>
+
