@@ -2809,7 +2809,7 @@ applicable agreement for further details.
 	(pt 1216 344)
 )
 (connector
-	(text "T1" (rect 959 -331 971 -320)(font "Arial" )(vertical))
+	(text "t2" (rect 956 -334 968 -325)(font "Arial" )(vertical))
 	(pt 976 -344)
 	(pt 976 -16)
 )

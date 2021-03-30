@@ -747,7 +747,7 @@ applicable agreement for further details.
 (symbol
 	(rect 272 -16 408 560)
 	(text "control" (rect 5 0 43 14)(font "Arial" (font_size 8)))
-	(text "inst1" (rect 8 560 31 572)(font "Arial" ))
+	(text "inst" (rect 8 560 25 572)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)

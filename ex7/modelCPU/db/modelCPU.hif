@@ -33,9 +33,9 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-control:inst1|7474:inst7
-control:inst1|7474:inst5
-control:inst1|7474:inst6
+control:inst|7474:inst7
+control:inst|7474:inst5
+control:inst|7474:inst6
 }
 # macro_sequence
 
@@ -65,7 +65,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-control:inst1|shixu:inst
+control:inst|shixu:inst
 }
 # lmf
 d:|quartus|lmf|maxplus2.lmf
@@ -98,7 +98,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-control:inst1|rom:inst9
+control:inst|rom:inst9
 }
 # lmf
 d:|quartus|lmf|maxplus2.lmf
@@ -121,7 +121,7 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-control:inst1|74244:inst1
+control:inst|74244:inst1
 }
 # macro_sequence
 
@@ -141,10 +141,10 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-control:inst1|74273:inst3
-control:inst1|74273:inst4
-control:inst1|74273:inst8
-control:inst1|74273:inst2
+control:inst|74273:inst3
+control:inst|74273:inst4
+control:inst|74273:inst8
+control:inst|74273:inst2
 }
 # macro_sequence
 
@@ -1357,26 +1357,6 @@ d:|quartus|lmf|maxplus2.lmf
 
 # end
 # entity
-control
-# storage
-db|modelCPU.(1).cnf
-db|modelCPU.(1).cnf
-# case_insensitive
-# source_file
-blocks|sourceDesign|control.bdf
-b4d873f2ee4e7e4c7e07a52b4feecee
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-control:inst1
-}
-# macro_sequence
-
-# end
-# entity
 modelCPU
 # storage
 db|modelCPU.(0).cnf
@@ -1384,7 +1364,7 @@ db|modelCPU.(0).cnf
 # case_insensitive
 # source_file
 modelCPU.bdf
-4eb8395c3b7a48f3eb5838d1ba550e4
+c65a6aa9cffa76c46c50a5d1456f7344
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -1392,6 +1372,26 @@ AUTO
 }
 # hierarchies {
 |
+}
+# macro_sequence
+
+# end
+# entity
+control
+# storage
+db|modelCPU.(1).cnf
+db|modelCPU.(1).cnf
+# case_insensitive
+# source_file
+blocks|sourceDesign|control.bdf
+cd9f725e68eb49d3fe04bf184982fdb
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+control:inst
 }
 # macro_sequence
 

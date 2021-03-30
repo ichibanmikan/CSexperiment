@@ -24,7 +24,7 @@ VECTOR("C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/modelCPU.vwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 212236;
+		ZEND = 624995;
 		NUMERATOR = 453;
 		DENOMINATOR = 212236;
 		TOP_INDEX = 2;
@@ -698,11 +698,11 @@ VECTOR("C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/modelCPU.vwf")
 VECTOR("C:/Users/86150/Desktop/mylearn/CSexperiment/ex7/modelCPU/db/modelCPU.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 2216346;
-		ZEND = 4217434;
+		ZBEGIN = 0;
+		ZEND = 2027016;
 		NUMERATOR = 1312;
 		DENOMINATOR = 2001088;
-		TOP_INDEX = 15;
+		TOP_INDEX = 1;
 	}
 	CLOCK{
 		PERIOD = 10000;
