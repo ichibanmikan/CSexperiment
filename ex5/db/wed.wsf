@@ -298,7 +298,7 @@ VECTOR("C:/Users/86150/Desktop/mylearn/CSexperiment/ex5/db/shixu.sim.cvwf")
 	ZOOM{
 		ZBEGIN = 0;
 		ZEND = 1500000;
-		NUMERATOR = 1183;
+		NUMERATOR = 1129;
 		DENOMINATOR = 1500000;
 		TOP_INDEX = 0;
 	}
